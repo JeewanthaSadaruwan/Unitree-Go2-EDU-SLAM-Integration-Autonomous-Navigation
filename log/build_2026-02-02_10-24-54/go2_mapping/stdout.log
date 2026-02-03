@@ -1,0 +1,31 @@
+running develop
+running egg_info
+creating go2_mapping.egg-info
+writing go2_mapping.egg-info/PKG-INFO
+writing dependency_links to go2_mapping.egg-info/dependency_links.txt
+writing entry points to go2_mapping.egg-info/entry_points.txt
+writing requirements to go2_mapping.egg-info/requires.txt
+writing top-level names to go2_mapping.egg-info/top_level.txt
+writing manifest file 'go2_mapping.egg-info/SOURCES.txt'
+reading manifest file 'go2_mapping.egg-info/SOURCES.txt'
+writing manifest file 'go2_mapping.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/site.py
+Creating /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2-mapping.egg-link (link to .)
+Installing odom_to_tf script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+Installing odom_to_tf_planar script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+Installing scan_stamp_fix script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+Installing wifi_topic_relay script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+
+Installed /home/unitree/odom/build/go2_mapping
+running install_data
+creating /home/unitree/odom/install/go2_mapping/share/ament_index
+creating /home/unitree/odom/install/go2_mapping/share/ament_index/resource_index
+creating /home/unitree/odom/install/go2_mapping/share/ament_index/resource_index/packages
+copying resource/go2_mapping -> /home/unitree/odom/install/go2_mapping/share/ament_index/resource_index/packages
+copying package.xml -> /home/unitree/odom/install/go2_mapping/share/go2_mapping
+creating /home/unitree/odom/install/go2_mapping/share/go2_mapping/launch
+copying launch/go2_mapping.launch.py -> /home/unitree/odom/install/go2_mapping/share/go2_mapping/launch
+creating /home/unitree/odom/install/go2_mapping/share/go2_mapping/config
+copying config/slam_params.yaml -> /home/unitree/odom/install/go2_mapping/share/go2_mapping/config
+copying config/slam_params_go2.yaml -> /home/unitree/odom/install/go2_mapping/share/go2_mapping/config

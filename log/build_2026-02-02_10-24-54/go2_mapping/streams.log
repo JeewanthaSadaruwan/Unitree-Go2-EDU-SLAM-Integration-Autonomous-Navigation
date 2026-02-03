@@ -1,0 +1,33 @@
+[1.709s] Invoking command in '/home/unitree/odom/build/go2_mapping': PYTHONPATH=/home/unitree/odom/build/go2_mapping/prefix_override:/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/unitree/odom/build/go2_mapping/build --no-deps install_data
+[2.126s] running develop
+[2.349s] running egg_info
+[2.349s] creating go2_mapping.egg-info
+[2.350s] writing go2_mapping.egg-info/PKG-INFO
+[2.350s] writing dependency_links to go2_mapping.egg-info/dependency_links.txt
+[2.351s] writing entry points to go2_mapping.egg-info/entry_points.txt
+[2.351s] writing requirements to go2_mapping.egg-info/requires.txt
+[2.351s] writing top-level names to go2_mapping.egg-info/top_level.txt
+[2.355s] writing manifest file 'go2_mapping.egg-info/SOURCES.txt'
+[2.410s] reading manifest file 'go2_mapping.egg-info/SOURCES.txt'
+[2.412s] writing manifest file 'go2_mapping.egg-info/SOURCES.txt'
+[2.480s] running build_ext
+[2.480s] Creating /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/site.py
+[2.485s] Creating /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2-mapping.egg-link (link to .)
+[2.487s] Installing odom_to_tf script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+[2.488s] Installing odom_to_tf_planar script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+[2.488s] Installing scan_stamp_fix script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+[2.489s] Installing wifi_topic_relay script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+[2.489s] 
+[2.489s] Installed /home/unitree/odom/build/go2_mapping
+[2.490s] running install_data
+[2.490s] creating /home/unitree/odom/install/go2_mapping/share/ament_index
+[2.490s] creating /home/unitree/odom/install/go2_mapping/share/ament_index/resource_index
+[2.490s] creating /home/unitree/odom/install/go2_mapping/share/ament_index/resource_index/packages
+[2.490s] copying resource/go2_mapping -> /home/unitree/odom/install/go2_mapping/share/ament_index/resource_index/packages
+[2.490s] copying package.xml -> /home/unitree/odom/install/go2_mapping/share/go2_mapping
+[2.491s] creating /home/unitree/odom/install/go2_mapping/share/go2_mapping/launch
+[2.491s] copying launch/go2_mapping.launch.py -> /home/unitree/odom/install/go2_mapping/share/go2_mapping/launch
+[2.491s] creating /home/unitree/odom/install/go2_mapping/share/go2_mapping/config
+[2.491s] copying config/slam_params.yaml -> /home/unitree/odom/install/go2_mapping/share/go2_mapping/config
+[2.491s] copying config/slam_params_go2.yaml -> /home/unitree/odom/install/go2_mapping/share/go2_mapping/config
+[2.585s] Invoked command in '/home/unitree/odom/build/go2_mapping' returned '0': PYTHONPATH=/home/unitree/odom/build/go2_mapping/prefix_override:/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/unitree/odom/build/go2_mapping/build --no-deps install_data
