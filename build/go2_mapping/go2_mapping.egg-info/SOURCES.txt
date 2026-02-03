@@ -1,13 +1,11 @@
 package.xml
 setup.cfg
 setup.py
+config/pointcloud_to_laserscan.yaml
 config/slam_params.yaml
 config/slam_params_go2.yaml
 go2_mapping/__init__.py
 go2_mapping/odom_to_tf.py
-go2_mapping/odom_to_tf_planar.py
-go2_mapping/scan_stamp_fix.py
-go2_mapping/wifi_topic_relay.py
 go2_mapping.egg-info/PKG-INFO
 go2_mapping.egg-info/SOURCES.txt
 go2_mapping.egg-info/dependency_links.txt
@@ -16,4 +14,6 @@ go2_mapping.egg-info/requires.txt
 go2_mapping.egg-info/top_level.txt
 go2_mapping.egg-info/zip-safe
 launch/go2_mapping.launch.py
+launch/go2_slam_full.launch.py
+launch/pointcloud_to_laserscan.launch.py
 resource/go2_mapping

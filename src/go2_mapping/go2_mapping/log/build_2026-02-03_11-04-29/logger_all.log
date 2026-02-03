@@ -1,0 +1,77 @@
+[3.865s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install', '--packages-select', 'go2_mapping']
+[3.865s] DEBUG:colcon:Parsed command line arguments: Namespace(allow_overriding=[], ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff96742f10>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=['go2_mapping'], packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=True, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff96742f10>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff96351d60>)
+[4.051s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[4.051s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[4.052s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[4.052s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[4.052s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[4.052s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[4.052s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/unitree/odom/src/go2_mapping/go2_mapping'
+[4.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[4.052s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[4.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[4.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[4.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[4.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[4.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[4.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[4.053s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[4.077s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[4.077s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[4.077s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[4.077s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[4.077s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['ignore', 'ignore_ament_install']
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'ignore'
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'ignore_ament_install'
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['colcon_pkg']
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'colcon_pkg'
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['colcon_meta']
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'colcon_meta'
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['ros']
+[4.078s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'ros'
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['cmake', 'python']
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'cmake'
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'python'
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extensions ['python_setup_py']
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(__pycache__) by extension 'python_setup_py'
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[4.079s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[4.080s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[4.080s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[4.080s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[4.080s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[4.080s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[4.080s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[4.081s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[4.081s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[4.081s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[4.081s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[4.081s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[4.174s] WARNING:colcon.colcon_core.package_selection:ignoring unknown package 'go2_mapping' in --packages-select
+[4.507s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[4.507s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[4.583s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[4.732s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[4.804s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[4.805s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.806s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.806s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.806s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.881s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.881s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.881s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.908s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.Spawn.ChildExited: Process org.freedesktop.Notifications exited with status 1
+[4.908s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.991s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[4.992s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/unitree/odom/src/go2_mapping/go2_mapping/install/local_setup.ps1'
+[4.994s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/unitree/odom/src/go2_mapping/go2_mapping/install/_local_setup_util_ps1.py'
+[4.997s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/unitree/odom/src/go2_mapping/go2_mapping/install/setup.ps1'
+[5.074s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/unitree/odom/src/go2_mapping/go2_mapping/install/local_setup.sh'
+[5.075s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/unitree/odom/src/go2_mapping/go2_mapping/install/_local_setup_util_sh.py'
+[5.076s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/unitree/odom/src/go2_mapping/go2_mapping/install/setup.sh'
+[5.152s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/unitree/odom/src/go2_mapping/go2_mapping/install/local_setup.bash'
+[5.153s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/unitree/odom/src/go2_mapping/go2_mapping/install/setup.bash'
+[5.232s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/unitree/odom/src/go2_mapping/go2_mapping/install/local_setup.zsh'
+[5.234s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/unitree/odom/src/go2_mapping/go2_mapping/install/setup.zsh'

@@ -25,9 +25,6 @@ setup(
     entry_points={
         'console_scripts': [
             'odom_to_tf = go2_mapping.odom_to_tf:main',
-            'odom_to_tf_planar = go2_mapping.odom_to_tf_planar:main',
-            'scan_stamp_fix = go2_mapping.scan_stamp_fix:main',
-            'wifi_topic_relay = go2_mapping.wifi_topic_relay:main',
         ],
     },
 )
