@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/unitree/xt16_ws/build/hesai_ros_driver/rosidl_generator_py/hesai_ros_driver/libhesai_ros_driver__python.so" "TARGETS" "hesai_ros_driver__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

@@ -1,0 +1,1237 @@
+[0.000000] (-) TimerEvent: {}
+[0.000436] (hesai_ros_driver) JobQueued: {'identifier': 'hesai_ros_driver', 'dependencies': OrderedDict()}
+[0.001192] (hesai_ros_driver) JobStarted: {'identifier': 'hesai_ros_driver'}
+[0.099592] (-) TimerEvent: {}
+[0.200327] (-) TimerEvent: {}
+[0.301164] (-) TimerEvent: {}
+[0.402119] (-) TimerEvent: {}
+[0.503810] (-) TimerEvent: {}
+[0.504775] (hesai_ros_driver) JobProgress: {'identifier': 'hesai_ros_driver', 'progress': 'cmake'}
+[0.505140] (hesai_ros_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/unitree/xt16_ws/install/hesai_ros_driver'], 'cwd': '/home/unitree/xt16_ws/build/hesai_ros_driver', 'env': OrderedDict([('PYENV_VIRTUALENV_INIT', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'unitree'), ('SSH_CLIENT', '192.168.123.99 42326 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.4/lib64:/usr/local/lib:/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp/lib:/home/unitree/cyclonedds_ws/install/cyclonedds/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/unitree'), ('CYCLONEDDS_URI', '/home/unitree/cyclonedds_ws/cyclonedds.xml'), ('OLDPWD', '/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0'), ('SSH_TTY', '/dev/pts/0'), ('PYENV_SHELL', 'bash'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/unitree/xt16_ws/install:/home/unitree/cyclonedds_ws/install:/home/unitree/unitree_test_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'unitree'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/unitree/cyclonedds_ws/install/cyclonedds/lib/aarch64-linux-gnu/pkgconfig:/home/unitree/cyclonedds_ws/install/cyclonedds/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/unitree/.local/bin:/home/unitree/.pyenv/plugins/pyenv-virtualenv/shims:/home/unitree/.pyenv/shims:/home/unitree/.pyenv/bin:/usr/local/cuda-11.4/bin:/home/unitree/cyclonedds_ws/install/cyclonedds/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('CYCLONEDDS_HOME', '/home/unitree/cyclonedds/install'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('PWD', '/home/unitree/xt16_ws/build/hesai_ros_driver'), ('SSH_CONNECTION', '192.168.123.99 42326 192.168.123.18 22'), ('XDG_DATA_DIRS', '/home/unitree/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/usr/local/lib:/usr/local/lib/python3.8/pyrealsense2:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp:/home/unitree/cyclonedds_ws/install/cyclonedds:/opt/ros/foxy')]), 'shell': False}
+[0.604053] (-) TimerEvent: {}
+[0.609908] (hesai_ros_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.699598] (hesai_ros_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.704082] (-) TimerEvent: {}
+[0.707246] (hesai_ros_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.804283] (-) TimerEvent: {}
+[0.834582] (hesai_ros_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.837417] (hesai_ros_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.904454] (-) TimerEvent: {}
+[0.973237] (hesai_ros_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.004620] (-) TimerEvent: {}
+[1.007319] (hesai_ros_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.008072] (hesai_ros_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.013462] (hesai_ros_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[1.104792] (-) TimerEvent: {}
+[1.157416] (hesai_ros_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[1.161131] (hesai_ros_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.204954] (-) TimerEvent: {}
+[1.305621] (-) TimerEvent: {}
+[1.316504] (hesai_ros_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.350309] (hesai_ros_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.351562] (hesai_ros_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.353715] (hesai_ros_driver) StdoutLine: {'line': b'-- cuda not found!\n'}
+[1.354006] (hesai_ros_driver) StderrLine: {'line': b'=============================================================\n'}
+[1.354275] (hesai_ros_driver) StderrLine: {'line': b'-- ROS_VERSION is 2\n'}
+[1.354450] (hesai_ros_driver) StderrLine: {'line': b'=============================================================\n'}
+[1.405778] (-) TimerEvent: {}
+[1.506449] (-) TimerEvent: {}
+[1.539666] (hesai_ros_driver) StdoutLine: {'line': b'-- Found PythonInterp: /home/unitree/.pyenv/shims/python3 (found suitable version "3.11.9", minimum required is "3") \n'}
+[1.540443] (hesai_ros_driver) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/unitree/.pyenv/shims/python3\n'}
+[1.606656] (-) TimerEvent: {}
+[1.707396] (-) TimerEvent: {}
+[1.808202] (-) TimerEvent: {}
+[1.908972] (-) TimerEvent: {}
+[2.009750] (-) TimerEvent: {}
+[2.032095] (hesai_ros_driver) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.109896] (-) TimerEvent: {}
+[2.185366] (hesai_ros_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.198710] (hesai_ros_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[2.209971] (-) TimerEvent: {}
+[2.310442] (-) TimerEvent: {}
+[2.353868] (hesai_ros_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[2.410601] (-) TimerEvent: {}
+[2.412773] (hesai_ros_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[2.510757] (-) TimerEvent: {}
+[2.568479] (hesai_ros_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.610854] (-) TimerEvent: {}
+[2.675996] (hesai_ros_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[2.678793] (hesai_ros_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[2.680650] (hesai_ros_driver) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.711022] (-) TimerEvent: {}
+[2.811642] (-) TimerEvent: {}
+[2.817996] (hesai_ros_driver) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[2.818640] (hesai_ros_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[2.911840] (-) TimerEvent: {}
+[2.958517] (hesai_ros_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[2.959125] (hesai_ros_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[3.012007] (-) TimerEvent: {}
+[3.086605] (hesai_ros_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[3.087385] (hesai_ros_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[3.112181] (-) TimerEvent: {}
+[3.212838] (-) TimerEvent: {}
+[3.230001] (hesai_ros_driver) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[3.234549] (hesai_ros_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.312956] (-) TimerEvent: {}
+[3.413455] (-) TimerEvent: {}
+[3.513917] (-) TimerEvent: {}
+[3.533604] (hesai_ros_driver) StderrLine: {'line': b'=============================================================\n'}
+[3.533966] (hesai_ros_driver) StderrLine: {'line': b'-- ROS2 Found. ROS2 Support is turned On.\n'}
+[3.534118] (hesai_ros_driver) StderrLine: {'line': b'=============================================================\n'}
+[3.536616] (hesai_ros_driver) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[3.614006] (-) TimerEvent: {}
+[3.714366] (-) TimerEvent: {}
+[3.751264] (hesai_ros_driver) StdoutLine: {'line': b'-- Found rclcpp_action: 2.4.3 (/opt/ros/foxy/share/rclcpp_action/cmake)\n'}
+[3.814492] (-) TimerEvent: {}
+[3.896606] (hesai_ros_driver) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[3.914577] (-) TimerEvent: {}
+[4.015009] (-) TimerEvent: {}
+[4.092671] (hesai_ros_driver) StdoutLine: {'line': b'-- Found PythonInterp: /home/unitree/.pyenv/shims/python3 (found version "3.11.9") \n'}
+[4.115184] (-) TimerEvent: {}
+[4.215992] (-) TimerEvent: {}
+[4.316668] (-) TimerEvent: {}
+[4.417336] (-) TimerEvent: {}
+[4.518031] (-) TimerEvent: {}
+[4.618756] (-) TimerEvent: {}
+[4.719430] (-) TimerEvent: {}
+[4.748489] (hesai_ros_driver) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[4.819553] (-) TimerEvent: {}
+[4.920169] (-) TimerEvent: {}
+[5.020772] (-) TimerEvent: {}
+[5.103237] (hesai_ros_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[5.120839] (-) TimerEvent: {}
+[5.221226] (-) TimerEvent: {}
+[5.221675] (hesai_ros_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.321422] (-) TimerEvent: {}
+[5.405549] (hesai_ros_driver) StdoutLine: {'line': b'-- Found PythonInterp: /home/unitree/.pyenv/shims/python3 (found suitable version "3.11.9", minimum required is "3.5") \n'}
+[5.408081] (hesai_ros_driver) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[5.421543] (-) TimerEvent: {}
+[5.522149] (-) TimerEvent: {}
+[5.620510] (hesai_ros_driver) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[5.621030] (hesai_ros_driver) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /home/unitree/.pyenv/shims/python3\n'}
+[5.621204] (hesai_ros_driver) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[5.621344] (hesai_ros_driver) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[5.622182] (-) TimerEvent: {}
+[5.722657] (-) TimerEvent: {}
+[5.802188] (hesai_ros_driver) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[5.822722] (-) TimerEvent: {}
+[5.923225] (-) TimerEvent: {}
+[6.024101] (-) TimerEvent: {}
+[6.124780] (-) TimerEvent: {}
+[6.225439] (-) TimerEvent: {}
+[6.326085] (-) TimerEvent: {}
+[6.426740] (-) TimerEvent: {}
+[6.527409] (-) TimerEvent: {}
+[6.621002] (hesai_ros_driver) StdoutLine: {'line': b'-- Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0") found components: thread \n'}
+[6.624940] (hesai_ros_driver) StdoutLine: {'line': b'-- Found ament_index_cpp: 1.1.0 (/opt/ros/foxy/share/ament_index_cpp/cmake)\n'}
+[6.627453] (-) TimerEvent: {}
+[6.664597] (hesai_ros_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.727659] (-) TimerEvent: {}
+[6.805116] (hesai_ros_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[6.812952] (hesai_ros_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/unitree/xt16_ws/build/hesai_ros_driver\n'}
+[6.827803] (-) TimerEvent: {}
+[6.845420] (hesai_ros_driver) CommandEnded: {'returncode': 0}
+[6.847536] (hesai_ros_driver) JobProgress: {'identifier': 'hesai_ros_driver', 'progress': 'build'}
+[6.849045] (hesai_ros_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/unitree/xt16_ws/build/hesai_ros_driver', '--', '-j4', '-l4'], 'cwd': '/home/unitree/xt16_ws/build/hesai_ros_driver', 'env': OrderedDict([('PYENV_VIRTUALENV_INIT', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'unitree'), ('SSH_CLIENT', '192.168.123.99 42326 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.4/lib64:/usr/local/lib:/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp/lib:/home/unitree/cyclonedds_ws/install/cyclonedds/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/unitree'), ('CYCLONEDDS_URI', '/home/unitree/cyclonedds_ws/cyclonedds.xml'), ('OLDPWD', '/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0'), ('SSH_TTY', '/dev/pts/0'), ('PYENV_SHELL', 'bash'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/unitree/xt16_ws/install:/home/unitree/cyclonedds_ws/install:/home/unitree/unitree_test_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'unitree'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/unitree/cyclonedds_ws/install/cyclonedds/lib/aarch64-linux-gnu/pkgconfig:/home/unitree/cyclonedds_ws/install/cyclonedds/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/unitree/.local/bin:/home/unitree/.pyenv/plugins/pyenv-virtualenv/shims:/home/unitree/.pyenv/shims:/home/unitree/.pyenv/bin:/usr/local/cuda-11.4/bin:/home/unitree/cyclonedds_ws/install/cyclonedds/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('CYCLONEDDS_HOME', '/home/unitree/cyclonedds/install'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('PWD', '/home/unitree/xt16_ws/build/hesai_ros_driver'), ('SSH_CONNECTION', '192.168.123.99 42326 192.168.123.18 22'), ('XDG_DATA_DIRS', '/home/unitree/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/usr/local/lib:/usr/local/lib/python3.8/pyrealsense2:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp:/home/unitree/cyclonedds_ws/install/cyclonedds:/opt/ros/foxy')]), 'shell': False}
+[6.928028] (-) TimerEvent: {}
+[6.942244] (hesai_ros_driver) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[6.942869] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target log_lib\x1b[0m\n'}
+[6.943181] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__cpp\x1b[0m\n'}
+[6.964909] (hesai_ros_driver) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/log_lib.dir/Logger/src/logger.cc.o\x1b[0m\n'}
+[6.965404] (hesai_ros_driver) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[7.028195] (-) TimerEvent: {}
+[7.129387] (-) TimerEvent: {}
+[7.230356] (-) TimerEvent: {}
+[7.331336] (-) TimerEvent: {}
+[7.432326] (-) TimerEvent: {}
+[7.533290] (-) TimerEvent: {}
+[7.634288] (-) TimerEvent: {}
+[7.735254] (-) TimerEvent: {}
+[7.836261] (-) TimerEvent: {}
+[7.937775] (-) TimerEvent: {}
+[8.038813] (-) TimerEvent: {}
+[8.089399] (hesai_ros_driver) StdoutLine: {'line': b'[  3%] Built target hesai_ros_driver__cpp\n'}
+[8.139011] (-) TimerEvent: {}
+[8.147131] (hesai_ros_driver) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[8.185315] (hesai_ros_driver) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[8.239213] (-) TimerEvent: {}
+[8.286979] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__rosidl_generator_c\x1b[0m\n'}
+[8.323204] (hesai_ros_driver) StdoutLine: {'line': b'[  6%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_generator_c.dir/rosidl_generator_c/hesai_ros_driver/msg/detail/udp_packet__functions.c.o\x1b[0m\n'}
+[8.331766] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[8.339405] (-) TimerEvent: {}
+[8.372724] (hesai_ros_driver) StdoutLine: {'line': b'[  7%] \x1b[32m\x1b[1mLinking CXX shared library liblog_lib.so\x1b[0m\n'}
+[8.439642] (-) TimerEvent: {}
+[8.523482] (hesai_ros_driver) StdoutLine: {'line': b'[  7%] Built target log_lib\n'}
+[8.539908] (-) TimerEvent: {}
+[8.543524] (hesai_ros_driver) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_generator_c.dir/rosidl_generator_c/hesai_ros_driver/msg/detail/udp_frame__functions.c.o\x1b[0m\n'}
+[8.544035] (hesai_ros_driver) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_generator_c.dir/rosidl_generator_c/hesai_ros_driver/msg/detail/firetime__functions.c.o\x1b[0m\n'}
+[8.551528] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[8.552029] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[8.640072] (-) TimerEvent: {}
+[8.724651] (hesai_ros_driver) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_generator_c.dir/rosidl_generator_c/hesai_ros_driver/msg/detail/ptp__functions.c.o\x1b[0m\n'}
+[8.733300] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[8.740237] (-) TimerEvent: {}
+[8.761757] (hesai_ros_driver) StdoutLine: {'line': b'[ 11%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[8.840430] (-) TimerEvent: {}
+[8.941418] (-) TimerEvent: {}
+[8.957438] (hesai_ros_driver) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_generator_c.dir/rosidl_generator_c/hesai_ros_driver/msg/detail/loss_packet__functions.c.o\x1b[0m\n'}
+[8.966358] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[9.041615] (-) TimerEvent: {}
+[9.142640] (-) TimerEvent: {}
+[9.182520] (hesai_ros_driver) StdoutLine: {'line': b'[ 13%] \x1b[32m\x1b[1mLinking C shared library libhesai_ros_driver__rosidl_generator_c.so\x1b[0m\n'}
+[9.221507] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[9.242817] (-) TimerEvent: {}
+[9.254650] (hesai_ros_driver) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_packet__type_support.cpp.o\x1b[0m\n'}
+[9.268495] (hesai_ros_driver) StdoutLine: {'line': b'[ 14%] Built target hesai_ros_driver__rosidl_generator_c\n'}
+[9.290286] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target platutils_lib\x1b[0m\n'}
+[9.290954] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[9.316928] (hesai_ros_driver) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/platutils_lib.dir/Common/src/plat_utils.cc.o\x1b[0m\n'}
+[9.328717] (hesai_ros_driver) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hesai_ros_driver/msg/detail/dds_fastrtps/udp_packet__type_support.cpp.o\x1b[0m\n'}
+[9.343009] (-) TimerEvent: {}
+[9.443986] (-) TimerEvent: {}
+[9.544969] (-) TimerEvent: {}
+[9.601495] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_cpp\x1b[0m\n'}
+[9.634996] (hesai_ros_driver) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hesai_ros_driver/msg/udp_packet__type_support.cpp.o\x1b[0m\n'}
+[9.645158] (-) TimerEvent: {}
+[9.746126] (-) TimerEvent: {}
+[9.847191] (-) TimerEvent: {}
+[9.948236] (-) TimerEvent: {}
+[10.049250] (-) TimerEvent: {}
+[10.098909] (hesai_ros_driver) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/udp_frame__type_support.cpp.o\x1b[0m\n'}
+[10.149456] (-) TimerEvent: {}
+[10.250458] (-) TimerEvent: {}
+[10.279545] (hesai_ros_driver) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hesai_ros_driver/msg/udp_frame__type_support.cpp.o\x1b[0m\n'}
+[10.350661] (-) TimerEvent: {}
+[10.366763] (hesai_ros_driver) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hesai_ros_driver/msg/detail/dds_fastrtps/udp_frame__type_support.cpp.o\x1b[0m\n'}
+[10.450872] (-) TimerEvent: {}
+[10.466407] (hesai_ros_driver) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/platutils_lib.dir/Common/src/auto_tick_count.cc.o\x1b[0m\n'}
+[10.551093] (-) TimerEvent: {}
+[10.652204] (-) TimerEvent: {}
+[10.753261] (-) TimerEvent: {}
+[10.854283] (-) TimerEvent: {}
+[10.918531] (hesai_ros_driver) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hesai_ros_driver/msg/firetime__type_support.cpp.o\x1b[0m\n'}
+[10.954495] (-) TimerEvent: {}
+[11.034546] (hesai_ros_driver) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/firetime__type_support.cpp.o\x1b[0m\n'}
+[11.054719] (-) TimerEvent: {}
+[11.155818] (-) TimerEvent: {}
+[11.256911] (-) TimerEvent: {}
+[11.357965] (-) TimerEvent: {}
+[11.453534] (hesai_ros_driver) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hesai_ros_driver/msg/detail/dds_fastrtps/firetime__type_support.cpp.o\x1b[0m\n'}
+[11.458119] (-) TimerEvent: {}
+[11.559107] (-) TimerEvent: {}
+[11.563155] (hesai_ros_driver) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hesai_ros_driver/msg/ptp__type_support.cpp.o\x1b[0m\n'}
+[11.659321] (-) TimerEvent: {}
+[11.760383] (-) TimerEvent: {}
+[11.794980] (hesai_ros_driver) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/ptp__type_support.cpp.o\x1b[0m\n'}
+[11.860587] (-) TimerEvent: {}
+[11.961608] (-) TimerEvent: {}
+[12.062637] (-) TimerEvent: {}
+[12.163670] (-) TimerEvent: {}
+[12.264710] (-) TimerEvent: {}
+[12.281823] (hesai_ros_driver) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/hesai_ros_driver/msg/loss_packet__type_support.cpp.o\x1b[0m\n'}
+[12.364907] (-) TimerEvent: {}
+[12.397816] (hesai_ros_driver) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hesai_ros_driver/msg/detail/dds_fastrtps/ptp__type_support.cpp.o\x1b[0m\n'}
+[12.465103] (-) TimerEvent: {}
+[12.470170] (hesai_ros_driver) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/hesai_ros_driver/msg/detail/loss_packet__type_support.cpp.o\x1b[0m\n'}
+[12.565302] (-) TimerEvent: {}
+[12.616473] (hesai_ros_driver) StdoutLine: {'line': b'[ 31%] \x1b[32m\x1b[1mLinking CXX shared library libplatutils_lib.so\x1b[0m\n'}
+[12.665549] (-) TimerEvent: {}
+[12.766655] (-) TimerEvent: {}
+[12.767784] (hesai_ros_driver) StdoutLine: {'line': b'[ 31%] Built target platutils_lib\n'}
+[12.797235] (hesai_ros_driver) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/hesai_ros_driver/msg/detail/dds_fastrtps/loss_packet__type_support.cpp.o\x1b[0m\n'}
+[12.866871] (-) TimerEvent: {}
+[12.967608] (-) TimerEvent: {}
+[13.020193] (hesai_ros_driver) StdoutLine: {'line': b'[ 34%] \x1b[32m\x1b[1mLinking CXX shared library libhesai_ros_driver__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[13.067839] (-) TimerEvent: {}
+[13.109602] (hesai_ros_driver) StdoutLine: {'line': b'[ 35%] \x1b[32m\x1b[1mLinking CXX shared library libhesai_ros_driver__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[13.116578] (hesai_ros_driver) StdoutLine: {'line': b'[ 35%] Built target hesai_ros_driver__rosidl_typesupport_cpp\n'}
+[13.145349] (hesai_ros_driver) StdoutLine: {'line': b'[ 36%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[13.168047] (-) TimerEvent: {}
+[13.268800] (-) TimerEvent: {}
+[13.285222] (hesai_ros_driver) StdoutLine: {'line': b'[ 36%] Built target hesai_ros_driver__rosidl_typesupport_introspection_cpp\n'}
+[13.313044] (hesai_ros_driver) StdoutLine: {'line': b'[ 37%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[13.355946] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target udpParser_lib\x1b[0m\n'}
+[13.368981] (-) TimerEvent: {}
+[13.393778] (hesai_ros_driver) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/udpParser_lib.dir/UdpParser/udp_parser.cc.o\x1b[0m\n'}
+[13.469187] (-) TimerEvent: {}
+[13.569943] (-) TimerEvent: {}
+[13.670669] (-) TimerEvent: {}
+[13.755527] (hesai_ros_driver) StdoutLine: {'line': b'[ 39%] \x1b[32m\x1b[1mLinking CXX shared library libhesai_ros_driver__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[13.770878] (-) TimerEvent: {}
+[13.871602] (-) TimerEvent: {}
+[13.930780] (hesai_ros_driver) StdoutLine: {'line': b'[ 39%] Built target hesai_ros_driver__rosidl_typesupport_fastrtps_cpp\n'}
+[13.954449] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target ptcClient_lib\x1b[0m\n'}
+[13.971817] (-) TimerEvent: {}
+[13.995424] (hesai_ros_driver) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcClient_lib.dir/PtcClient/src/ptc_client.cc.o\x1b[0m\n'}
+[14.072000] (-) TimerEvent: {}
+[14.173013] (-) TimerEvent: {}
+[14.215402] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[14.251076] (hesai_ros_driver) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hesai_ros_driver/msg/detail/udp_packet__type_support.c.o\x1b[0m\n'}
+[14.260760] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[14.273202] (-) TimerEvent: {}
+[14.283318] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_c\x1b[0m\n'}
+[14.321341] (hesai_ros_driver) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/hesai_ros_driver/msg/udp_packet__type_support.cpp.o\x1b[0m\n'}
+[14.334797] (hesai_ros_driver) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hesai_ros_driver/msg/detail/udp_frame__type_support.c.o\x1b[0m\n'}
+[14.343548] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[14.373413] (-) TimerEvent: {}
+[14.403262] (hesai_ros_driver) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/hesai_ros_driver/msg/udp_frame__type_support.cpp.o\x1b[0m\n'}
+[14.430770] (hesai_ros_driver) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hesai_ros_driver/msg/detail/firetime__type_support.c.o\x1b[0m\n'}
+[14.440437] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[14.473629] (-) TimerEvent: {}
+[14.475845] (hesai_ros_driver) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/hesai_ros_driver/msg/firetime__type_support.cpp.o\x1b[0m\n'}
+[14.531611] (hesai_ros_driver) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hesai_ros_driver/msg/detail/ptp__type_support.c.o\x1b[0m\n'}
+[14.540599] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[14.543679] (hesai_ros_driver) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/hesai_ros_driver/msg/ptp__type_support.cpp.o\x1b[0m\n'}
+[14.573847] (-) TimerEvent: {}
+[14.615417] (hesai_ros_driver) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/hesai_ros_driver/msg/loss_packet__type_support.cpp.o\x1b[0m\n'}
+[14.623251] (hesai_ros_driver) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/hesai_ros_driver/msg/detail/loss_packet__type_support.c.o\x1b[0m\n'}
+[14.631482] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[14.674070] (-) TimerEvent: {}
+[14.694034] (hesai_ros_driver) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX shared library libhesai_ros_driver__rosidl_typesupport_c.so\x1b[0m\n'}
+[14.699860] (hesai_ros_driver) StdoutLine: {'line': b'[ 53%] \x1b[32m\x1b[1mLinking C shared library libhesai_ros_driver__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[14.766691] (hesai_ros_driver) StdoutLine: {'line': b'[ 53%] Built target hesai_ros_driver__rosidl_typesupport_introspection_c\n'}
+[14.774267] (-) TimerEvent: {}
+[14.785304] (hesai_ros_driver) StdoutLine: {'line': b'[ 53%] Built target hesai_ros_driver__rosidl_typesupport_c\n'}
+[14.786910] (hesai_ros_driver) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcClient_lib.dir/PtcClient/src/tcp_client.cc.o\x1b[0m\n'}
+[14.809370] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target source_lib\x1b[0m\n'}
+[14.849704] (hesai_ros_driver) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/source.cc.o\x1b[0m\n'}
+[14.874474] (-) TimerEvent: {}
+[14.975491] (-) TimerEvent: {}
+[15.076585] (-) TimerEvent: {}
+[15.102129] (hesai_ros_driver) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking CXX shared library libudpParser_lib.so\x1b[0m\n'}
+[15.176804] (-) TimerEvent: {}
+[15.271285] (hesai_ros_driver) StdoutLine: {'line': b'[ 56%] Built target udpParser_lib\n'}
+[15.276982] (-) TimerEvent: {}
+[15.294978] (hesai_ros_driver) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/socket_source.cc.o\x1b[0m\n'}
+[15.377193] (-) TimerEvent: {}
+[15.477933] (-) TimerEvent: {}
+[15.578713] (-) TimerEvent: {}
+[15.679495] (-) TimerEvent: {}
+[15.780278] (-) TimerEvent: {}
+[15.881043] (-) TimerEvent: {}
+[15.981786] (-) TimerEvent: {}
+[16.082587] (-) TimerEvent: {}
+[16.183639] (-) TimerEvent: {}
+[16.203070] (hesai_ros_driver) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcClient_lib.dir/PtcParser/src/general_ptc_parser.cc.o\x1b[0m\n'}
+[16.284186] (-) TimerEvent: {}
+[16.303615] (hesai_ros_driver) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/pcap_source.cc.o\x1b[0m\n'}
+[16.384407] (-) TimerEvent: {}
+[16.485445] (-) TimerEvent: {}
+[16.586518] (-) TimerEvent: {}
+[16.687637] (-) TimerEvent: {}
+[16.788710] (-) TimerEvent: {}
+[16.889760] (-) TimerEvent: {}
+[16.982594] (hesai_ros_driver) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/serial_source.cc.o\x1b[0m\n'}
+[16.989956] (-) TimerEvent: {}
+[17.090975] (-) TimerEvent: {}
+[17.192063] (-) TimerEvent: {}
+[17.293133] (-) TimerEvent: {}
+[17.394200] (-) TimerEvent: {}
+[17.495267] (-) TimerEvent: {}
+[17.596341] (-) TimerEvent: {}
+[17.697369] (-) TimerEvent: {}
+[17.798435] (-) TimerEvent: {}
+[17.899498] (-) TimerEvent: {}
+[18.000530] (-) TimerEvent: {}
+[18.062220] (hesai_ros_driver) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/pcap_saver.cc.o\x1b[0m\n'}
+[18.100722] (-) TimerEvent: {}
+[18.201738] (-) TimerEvent: {}
+[18.302776] (-) TimerEvent: {}
+[18.403824] (-) TimerEvent: {}
+[18.476916] (hesai_ros_driver) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/source_lib.dir/Source/src/tcp_source.cc.o\x1b[0m\n'}
+[18.504175] (-) TimerEvent: {}
+[18.605217] (-) TimerEvent: {}
+[18.706244] (-) TimerEvent: {}
+[18.807333] (-) TimerEvent: {}
+[18.908441] (-) TimerEvent: {}
+[18.972223] (hesai_ros_driver) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcClient_lib.dir/PtcParser/src/ptc_1_0_parser.cc.o\x1b[0m\n'}
+[19.008646] (-) TimerEvent: {}
+[19.109666] (-) TimerEvent: {}
+[19.210733] (-) TimerEvent: {}
+[19.265902] (hesai_ros_driver) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcClient_lib.dir/PtcParser/src/ptc_2_0_parser.cc.o\x1b[0m\n'}
+[19.310939] (-) TimerEvent: {}
+[19.412013] (-) TimerEvent: {}
+[19.513051] (-) TimerEvent: {}
+[19.614071] (-) TimerEvent: {}
+[19.715160] (-) TimerEvent: {}
+[19.816263] (-) TimerEvent: {}
+[19.917360] (-) TimerEvent: {}
+[20.018433] (-) TimerEvent: {}
+[20.119486] (-) TimerEvent: {}
+[20.220566] (-) TimerEvent: {}
+[20.321637] (-) TimerEvent: {}
+[20.422671] (-) TimerEvent: {}
+[20.459051] (hesai_ros_driver) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcClient_lib.dir/PtcParser/ptc_parser.cc.o\x1b[0m\n'}
+[20.522887] (-) TimerEvent: {}
+[20.601856] (hesai_ros_driver) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libsource_lib.so\x1b[0m\n'}
+[20.623087] (-) TimerEvent: {}
+[20.717274] (hesai_ros_driver) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/ptcClient_lib.dir/PtcClient/src/tcp_ssl_client.cc.o\x1b[0m\n'}
+[20.723284] (-) TimerEvent: {}
+[20.773080] (hesai_ros_driver) StdoutLine: {'line': b'[ 68%] Built target source_lib\n'}
+[20.801063] (hesai_ros_driver) StdoutLine: {'line': b'[ 69%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[20.823489] (-) TimerEvent: {}
+[20.872631] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target serialClient_lib\x1b[0m\n'}
+[20.906604] (hesai_ros_driver) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/serialClient_lib.dir/SerialClient/src/serial_client.cc.o\x1b[0m\n'}
+[20.923721] (-) TimerEvent: {}
+[21.024753] (-) TimerEvent: {}
+[21.125777] (-) TimerEvent: {}
+[21.226850] (-) TimerEvent: {}
+[21.327891] (-) TimerEvent: {}
+[21.428668] (-) TimerEvent: {}
+[21.529401] (-) TimerEvent: {}
+[21.630185] (-) TimerEvent: {}
+[21.730993] (-) TimerEvent: {}
+[21.807976] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[21.831184] (-) TimerEvent: {}
+[21.847934] (hesai_ros_driver) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hesai_ros_driver/msg/detail/udp_frame__type_support_c.cpp.o\x1b[0m\n'}
+[21.848571] (hesai_ros_driver) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hesai_ros_driver/msg/detail/udp_packet__type_support_c.cpp.o\x1b[0m\n'}
+[21.931394] (-) TimerEvent: {}
+[22.032521] (-) TimerEvent: {}
+[22.133646] (-) TimerEvent: {}
+[22.234738] (-) TimerEvent: {}
+[22.335860] (-) TimerEvent: {}
+[22.367681] (hesai_ros_driver) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libptcClient_lib.so\x1b[0m\n'}
+[22.436062] (-) TimerEvent: {}
+[22.537126] (-) TimerEvent: {}
+[22.610169] (hesai_ros_driver) StdoutLine: {'line': b'[ 73%] Built target ptcClient_lib\n'}
+[22.632550] (hesai_ros_driver) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hesai_ros_driver/msg/detail/firetime__type_support_c.cpp.o\x1b[0m\n'}
+[22.637310] (-) TimerEvent: {}
+[22.689167] (hesai_ros_driver) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hesai_ros_driver/msg/detail/ptp__type_support_c.cpp.o\x1b[0m\n'}
+[22.710496] (hesai_ros_driver) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/hesai_ros_driver/msg/detail/loss_packet__type_support_c.cpp.o\x1b[0m\n'}
+[22.737509] (-) TimerEvent: {}
+[22.838489] (-) TimerEvent: {}
+[22.939520] (-) TimerEvent: {}
+[23.040608] (-) TimerEvent: {}
+[23.141643] (-) TimerEvent: {}
+[23.242756] (-) TimerEvent: {}
+[23.343799] (-) TimerEvent: {}
+[23.444884] (-) TimerEvent: {}
+[23.524213] (hesai_ros_driver) StdoutLine: {'line': b'[ 77%] \x1b[32m\x1b[1mLinking CXX shared library libhesai_ros_driver__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[23.545060] (-) TimerEvent: {}
+[23.645731] (-) TimerEvent: {}
+[23.691109] (hesai_ros_driver) StdoutLine: {'line': b'[ 77%] Built target hesai_ros_driver__rosidl_typesupport_fastrtps_c\n'}
+[23.713112] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver\x1b[0m\n'}
+[23.736607] (hesai_ros_driver) StdoutLine: {'line': b'[ 77%] Built target hesai_ros_driver\n'}
+[23.745883] (-) TimerEvent: {}
+[23.759088] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__py\x1b[0m\n'}
+[23.782736] (hesai_ros_driver) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[23.846076] (-) TimerEvent: {}
+[23.946793] (-) TimerEvent: {}
+[24.047533] (-) TimerEvent: {}
+[24.148284] (-) TimerEvent: {}
+[24.248998] (-) TimerEvent: {}
+[24.349684] (-) TimerEvent: {}
+[24.450371] (-) TimerEvent: {}
+[24.491560] (hesai_ros_driver) StdoutLine: {'line': b'[ 79%] \x1b[32m\x1b[1mLinking CXX shared library libserialClient_lib.so\x1b[0m\n'}
+[24.550558] (-) TimerEvent: {}
+[24.616007] (hesai_ros_driver) StdoutLine: {'line': b'[ 79%] Built target serialClient_lib\n'}
+[24.637761] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target lidar_lib\x1b[0m\n'}
+[24.650638] (-) TimerEvent: {}
+[24.678784] (hesai_ros_driver) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/libhesai/CMakeFiles/lidar_lib.dir/Lidar/lidar.cc.o\x1b[0m\n'}
+[24.750884] (-) TimerEvent: {}
+[24.851635] (-) TimerEvent: {}
+[24.952458] (-) TimerEvent: {}
+[25.053167] (-) TimerEvent: {}
+[25.153950] (-) TimerEvent: {}
+[25.254779] (-) TimerEvent: {}
+[25.303870] (hesai_ros_driver) StdoutLine: {'line': b'[ 80%] Built target hesai_ros_driver__py\n'}
+[25.326465] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__python\x1b[0m\n'}
+[25.354895] (-) TimerEvent: {}
+[25.391153] (hesai_ros_driver) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__python.dir/rosidl_generator_py/hesai_ros_driver/msg/_firetime_s.c.o\x1b[0m\n'}
+[25.391726] (hesai_ros_driver) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__python.dir/rosidl_generator_py/hesai_ros_driver/msg/_udp_packet_s.c.o\x1b[0m\n'}
+[25.392110] (hesai_ros_driver) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__python.dir/rosidl_generator_py/hesai_ros_driver/msg/_udp_frame_s.c.o\x1b[0m\n'}
+[25.399444] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[25.400059] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[25.400901] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[25.455117] (-) TimerEvent: {}
+[25.555961] (-) TimerEvent: {}
+[25.625305] (hesai_ros_driver) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__python.dir/rosidl_generator_py/hesai_ros_driver/msg/_ptp_s.c.o\x1b[0m\n'}
+[25.634184] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[25.656143] (-) TimerEvent: {}
+[25.689592] (hesai_ros_driver) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__python.dir/rosidl_generator_py/hesai_ros_driver/msg/_loss_packet_s.c.o\x1b[0m\n'}
+[25.698051] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[25.756388] (-) TimerEvent: {}
+[25.857518] (-) TimerEvent: {}
+[25.903011] (hesai_ros_driver) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/hesai_ros_driver/libhesai_ros_driver__python.so\x1b[0m\n'}
+[25.957683] (-) TimerEvent: {}
+[25.986321] (hesai_ros_driver) StdoutLine: {'line': b'[ 87%] Built target hesai_ros_driver__python\n'}
+[26.008031] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[26.008566] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[26.008917] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[26.050961] (hesai_ros_driver) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/hesai_ros_driver/_hesai_ros_driver_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[26.051624] (hesai_ros_driver) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/hesai_ros_driver/_hesai_ros_driver_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[26.057840] (-) TimerEvent: {}
+[26.059546] (hesai_ros_driver) StdoutLine: {'line': b'[ 90%] \x1b[32mBuilding C object CMakeFiles/hesai_ros_driver__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/hesai_ros_driver/_hesai_ros_driver_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[26.060145] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[26.060901] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[26.070829] (hesai_ros_driver) StderrLine: {'line': b'\x1b[01m\x1b[Kcc1:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcommand line option \xe2\x80\x98\x1b[01m\x1b[K-std=c++14\x1b[m\x1b[K\xe2\x80\x99 is valid for C++/ObjC++ but not for C\n'}
+[26.158044] (-) TimerEvent: {}
+[26.259068] (-) TimerEvent: {}
+[26.349609] (hesai_ros_driver) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_c.cpython-311-aarch64-linux-gnu.so\x1b[0m\n'}
+[26.350345] (hesai_ros_driver) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_introspection_c.cpython-311-aarch64-linux-gnu.so\x1b[0m\n'}
+[26.359243] (-) TimerEvent: {}
+[26.425897] (hesai_ros_driver) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_fastrtps_c.cpython-311-aarch64-linux-gnu.so\x1b[0m\n'}
+[26.426457] (hesai_ros_driver) StdoutLine: {'line': b'[ 93%] Built target hesai_ros_driver__rosidl_typesupport_introspection_c__pyext\n'}
+[26.428027] (hesai_ros_driver) StdoutLine: {'line': b'[ 93%] Built target hesai_ros_driver__rosidl_typesupport_c__pyext\n'}
+[26.459438] (-) TimerEvent: {}
+[26.550997] (hesai_ros_driver) StdoutLine: {'line': b'[ 93%] Built target hesai_ros_driver__rosidl_typesupport_fastrtps_c__pyext\n'}
+[26.559530] (-) TimerEvent: {}
+[26.660120] (-) TimerEvent: {}
+[26.761043] (-) TimerEvent: {}
+[26.861777] (-) TimerEvent: {}
+[26.880737] (hesai_ros_driver) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking CXX shared library liblidar_lib.so\x1b[0m\n'}
+[26.961959] (-) TimerEvent: {}
+[27.020572] (hesai_ros_driver) StdoutLine: {'line': b'[ 94%] Built target lidar_lib\n'}
+[27.041350] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_sdk_lib\x1b[0m\n'}
+[27.062050] (-) TimerEvent: {}
+[27.082861] (hesai_ros_driver) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding CXX object src/driver/HesaiLidar_SDK_2.0/CMakeFiles/hesai_sdk_lib.dir/driver/hesai_lidar_sdk.cc.o\x1b[0m\n'}
+[27.162247] (-) TimerEvent: {}
+[27.262914] (-) TimerEvent: {}
+[27.363572] (-) TimerEvent: {}
+[27.464261] (-) TimerEvent: {}
+[27.564931] (-) TimerEvent: {}
+[27.665638] (-) TimerEvent: {}
+[27.766273] (-) TimerEvent: {}
+[27.866921] (-) TimerEvent: {}
+[27.967618] (-) TimerEvent: {}
+[28.068312] (-) TimerEvent: {}
+[28.168992] (-) TimerEvent: {}
+[28.269659] (-) TimerEvent: {}
+[28.370330] (-) TimerEvent: {}
+[28.471038] (-) TimerEvent: {}
+[28.571730] (-) TimerEvent: {}
+[28.672374] (-) TimerEvent: {}
+[28.773046] (-) TimerEvent: {}
+[28.873714] (-) TimerEvent: {}
+[28.974367] (-) TimerEvent: {}
+[29.075019] (-) TimerEvent: {}
+[29.123058] (hesai_ros_driver) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX shared library libhesai_sdk_lib.so\x1b[0m\n'}
+[29.175199] (-) TimerEvent: {}
+[29.263030] (hesai_ros_driver) StdoutLine: {'line': b'[ 96%] Built target hesai_sdk_lib\n'}
+[29.275328] (-) TimerEvent: {}
+[29.286358] (hesai_ros_driver) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target hesai_ros_driver_node\x1b[0m\n'}
+[29.375446] (-) TimerEvent: {}
+[29.476001] (-) TimerEvent: {}
+[29.506536] (hesai_ros_driver) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver_node.dir/src/manager/node_manager.cc.o\x1b[0m\n'}
+[29.507035] (hesai_ros_driver) StdoutLine: {'line': b'[ 98%] \x1b[32mBuilding CXX object CMakeFiles/hesai_ros_driver_node.dir/node/hesai_ros_driver_node.cc.o\x1b[0m\n'}
+[29.576181] (-) TimerEvent: {}
+[29.676883] (-) TimerEvent: {}
+[29.777604] (-) TimerEvent: {}
+[29.878282] (-) TimerEvent: {}
+[29.978896] (-) TimerEvent: {}
+[30.079646] (-) TimerEvent: {}
+[30.180315] (-) TimerEvent: {}
+[30.280982] (-) TimerEvent: {}
+[30.381643] (-) TimerEvent: {}
+[30.482333] (-) TimerEvent: {}
+[30.583003] (-) TimerEvent: {}
+[30.683667] (-) TimerEvent: {}
+[30.784354] (-) TimerEvent: {}
+[30.885033] (-) TimerEvent: {}
+[30.985687] (-) TimerEvent: {}
+[31.086369] (-) TimerEvent: {}
+[31.187100] (-) TimerEvent: {}
+[31.287811] (-) TimerEvent: {}
+[31.388463] (-) TimerEvent: {}
+[31.489138] (-) TimerEvent: {}
+[31.589801] (-) TimerEvent: {}
+[31.690485] (-) TimerEvent: {}
+[31.791168] (-) TimerEvent: {}
+[31.891873] (-) TimerEvent: {}
+[31.992559] (-) TimerEvent: {}
+[32.093256] (-) TimerEvent: {}
+[32.193977] (-) TimerEvent: {}
+[32.294703] (-) TimerEvent: {}
+[32.395427] (-) TimerEvent: {}
+[32.496157] (-) TimerEvent: {}
+[32.596894] (-) TimerEvent: {}
+[32.697605] (-) TimerEvent: {}
+[32.798344] (-) TimerEvent: {}
+[32.899089] (-) TimerEvent: {}
+[32.999840] (-) TimerEvent: {}
+[33.100543] (-) TimerEvent: {}
+[33.201227] (-) TimerEvent: {}
+[33.301958] (-) TimerEvent: {}
+[33.402684] (-) TimerEvent: {}
+[33.503417] (-) TimerEvent: {}
+[33.604181] (-) TimerEvent: {}
+[33.704928] (-) TimerEvent: {}
+[33.805658] (-) TimerEvent: {}
+[33.906440] (-) TimerEvent: {}
+[34.007193] (-) TimerEvent: {}
+[34.108193] (-) TimerEvent: {}
+[34.209474] (-) TimerEvent: {}
+[34.310258] (-) TimerEvent: {}
+[34.411035] (-) TimerEvent: {}
+[34.511832] (-) TimerEvent: {}
+[34.612624] (-) TimerEvent: {}
+[34.713373] (-) TimerEvent: {}
+[34.814157] (-) TimerEvent: {}
+[34.914949] (-) TimerEvent: {}
+[35.015738] (-) TimerEvent: {}
+[35.116574] (-) TimerEvent: {}
+[35.217369] (-) TimerEvent: {}
+[35.318116] (-) TimerEvent: {}
+[35.418888] (-) TimerEvent: {}
+[35.519642] (-) TimerEvent: {}
+[35.620468] (-) TimerEvent: {}
+[35.721303] (-) TimerEvent: {}
+[35.822085] (-) TimerEvent: {}
+[35.922868] (-) TimerEvent: {}
+[36.023606] (-) TimerEvent: {}
+[36.124411] (-) TimerEvent: {}
+[36.225214] (-) TimerEvent: {}
+[36.325958] (-) TimerEvent: {}
+[36.426794] (-) TimerEvent: {}
+[36.527601] (-) TimerEvent: {}
+[36.628386] (-) TimerEvent: {}
+[36.729180] (-) TimerEvent: {}
+[36.829965] (-) TimerEvent: {}
+[36.930727] (-) TimerEvent: {}
+[37.031474] (-) TimerEvent: {}
+[37.132268] (-) TimerEvent: {}
+[37.233003] (-) TimerEvent: {}
+[37.333792] (-) TimerEvent: {}
+[37.434640] (-) TimerEvent: {}
+[37.535510] (-) TimerEvent: {}
+[37.636342] (-) TimerEvent: {}
+[37.737139] (-) TimerEvent: {}
+[37.838001] (-) TimerEvent: {}
+[37.938781] (-) TimerEvent: {}
+[38.039596] (-) TimerEvent: {}
+[38.140426] (-) TimerEvent: {}
+[38.241254] (-) TimerEvent: {}
+[38.342032] (-) TimerEvent: {}
+[38.442864] (-) TimerEvent: {}
+[38.543675] (-) TimerEvent: {}
+[38.644498] (-) TimerEvent: {}
+[38.745400] (-) TimerEvent: {}
+[38.846200] (-) TimerEvent: {}
+[38.946979] (-) TimerEvent: {}
+[39.048255] (-) TimerEvent: {}
+[39.149013] (-) TimerEvent: {}
+[39.249797] (-) TimerEvent: {}
+[39.350608] (-) TimerEvent: {}
+[39.451400] (-) TimerEvent: {}
+[39.552133] (-) TimerEvent: {}
+[39.652918] (-) TimerEvent: {}
+[39.753896] (-) TimerEvent: {}
+[39.854653] (-) TimerEvent: {}
+[39.955480] (-) TimerEvent: {}
+[40.056312] (-) TimerEvent: {}
+[40.157066] (-) TimerEvent: {}
+[40.257883] (-) TimerEvent: {}
+[40.358728] (-) TimerEvent: {}
+[40.459844] (-) TimerEvent: {}
+[40.560615] (-) TimerEvent: {}
+[40.661453] (-) TimerEvent: {}
+[40.762307] (-) TimerEvent: {}
+[40.863162] (-) TimerEvent: {}
+[40.964021] (-) TimerEvent: {}
+[41.064835] (-) TimerEvent: {}
+[41.165768] (-) TimerEvent: {}
+[41.266501] (-) TimerEvent: {}
+[41.367217] (-) TimerEvent: {}
+[41.467969] (-) TimerEvent: {}
+[41.568656] (-) TimerEvent: {}
+[41.669443] (-) TimerEvent: {}
+[41.770164] (-) TimerEvent: {}
+[41.870878] (-) TimerEvent: {}
+[41.971612] (-) TimerEvent: {}
+[42.072373] (-) TimerEvent: {}
+[42.173125] (-) TimerEvent: {}
+[42.273872] (-) TimerEvent: {}
+[42.374864] (-) TimerEvent: {}
+[42.475883] (-) TimerEvent: {}
+[42.576615] (-) TimerEvent: {}
+[42.677340] (-) TimerEvent: {}
+[42.778076] (-) TimerEvent: {}
+[42.878796] (-) TimerEvent: {}
+[42.979805] (-) TimerEvent: {}
+[43.080514] (-) TimerEvent: {}
+[43.181265] (-) TimerEvent: {}
+[43.282019] (-) TimerEvent: {}
+[43.382757] (-) TimerEvent: {}
+[43.483503] (-) TimerEvent: {}
+[43.584251] (-) TimerEvent: {}
+[43.684956] (-) TimerEvent: {}
+[43.785661] (-) TimerEvent: {}
+[43.886382] (-) TimerEvent: {}
+[43.987114] (-) TimerEvent: {}
+[44.087884] (-) TimerEvent: {}
+[44.188604] (-) TimerEvent: {}
+[44.289291] (-) TimerEvent: {}
+[44.389997] (-) TimerEvent: {}
+[44.490734] (-) TimerEvent: {}
+[44.591469] (-) TimerEvent: {}
+[44.692480] (-) TimerEvent: {}
+[44.793236] (-) TimerEvent: {}
+[44.894226] (-) TimerEvent: {}
+[44.995246] (-) TimerEvent: {}
+[45.096272] (-) TimerEvent: {}
+[45.197275] (-) TimerEvent: {}
+[45.298010] (-) TimerEvent: {}
+[45.398745] (-) TimerEvent: {}
+[45.499501] (-) TimerEvent: {}
+[45.600241] (-) TimerEvent: {}
+[45.700969] (-) TimerEvent: {}
+[45.801740] (-) TimerEvent: {}
+[45.902452] (-) TimerEvent: {}
+[46.003148] (-) TimerEvent: {}
+[46.103855] (-) TimerEvent: {}
+[46.204546] (-) TimerEvent: {}
+[46.305232] (-) TimerEvent: {}
+[46.405943] (-) TimerEvent: {}
+[46.506657] (-) TimerEvent: {}
+[46.607368] (-) TimerEvent: {}
+[46.708103] (-) TimerEvent: {}
+[46.808840] (-) TimerEvent: {}
+[46.909838] (-) TimerEvent: {}
+[47.010805] (-) TimerEvent: {}
+[47.111822] (-) TimerEvent: {}
+[47.212561] (-) TimerEvent: {}
+[47.313292] (-) TimerEvent: {}
+[47.414068] (-) TimerEvent: {}
+[47.514818] (-) TimerEvent: {}
+[47.615559] (-) TimerEvent: {}
+[47.716306] (-) TimerEvent: {}
+[47.817024] (-) TimerEvent: {}
+[47.917743] (-) TimerEvent: {}
+[48.018463] (-) TimerEvent: {}
+[48.119231] (-) TimerEvent: {}
+[48.219992] (-) TimerEvent: {}
+[48.320765] (-) TimerEvent: {}
+[48.421556] (-) TimerEvent: {}
+[48.522318] (-) TimerEvent: {}
+[48.623076] (-) TimerEvent: {}
+[48.723893] (-) TimerEvent: {}
+[48.824641] (-) TimerEvent: {}
+[48.925405] (-) TimerEvent: {}
+[49.026109] (-) TimerEvent: {}
+[49.126895] (-) TimerEvent: {}
+[49.228011] (-) TimerEvent: {}
+[49.328784] (-) TimerEvent: {}
+[49.429520] (-) TimerEvent: {}
+[49.530291] (-) TimerEvent: {}
+[49.631024] (-) TimerEvent: {}
+[49.731820] (-) TimerEvent: {}
+[49.832545] (-) TimerEvent: {}
+[49.933325] (-) TimerEvent: {}
+[50.034070] (-) TimerEvent: {}
+[50.134853] (-) TimerEvent: {}
+[50.235672] (-) TimerEvent: {}
+[50.336525] (-) TimerEvent: {}
+[50.437288] (-) TimerEvent: {}
+[50.538022] (-) TimerEvent: {}
+[50.638755] (-) TimerEvent: {}
+[50.739556] (-) TimerEvent: {}
+[50.840355] (-) TimerEvent: {}
+[50.941140] (-) TimerEvent: {}
+[51.041923] (-) TimerEvent: {}
+[51.142676] (-) TimerEvent: {}
+[51.243450] (-) TimerEvent: {}
+[51.344275] (-) TimerEvent: {}
+[51.445012] (-) TimerEvent: {}
+[51.545783] (-) TimerEvent: {}
+[51.646542] (-) TimerEvent: {}
+[51.747328] (-) TimerEvent: {}
+[51.848118] (-) TimerEvent: {}
+[51.948869] (-) TimerEvent: {}
+[52.049693] (-) TimerEvent: {}
+[52.150455] (-) TimerEvent: {}
+[52.251274] (-) TimerEvent: {}
+[52.352083] (-) TimerEvent: {}
+[52.452816] (-) TimerEvent: {}
+[52.553606] (-) TimerEvent: {}
+[52.654633] (-) TimerEvent: {}
+[52.755364] (-) TimerEvent: {}
+[52.856167] (-) TimerEvent: {}
+[52.956948] (-) TimerEvent: {}
+[53.057674] (-) TimerEvent: {}
+[53.158711] (-) TimerEvent: {}
+[53.259518] (-) TimerEvent: {}
+[53.360346] (-) TimerEvent: {}
+[53.461304] (-) TimerEvent: {}
+[53.562098] (-) TimerEvent: {}
+[53.663115] (-) TimerEvent: {}
+[53.764093] (-) TimerEvent: {}
+[53.864869] (-) TimerEvent: {}
+[53.965636] (-) TimerEvent: {}
+[54.066431] (-) TimerEvent: {}
+[54.167208] (-) TimerEvent: {}
+[54.267975] (-) TimerEvent: {}
+[54.368788] (-) TimerEvent: {}
+[54.469588] (-) TimerEvent: {}
+[54.570337] (-) TimerEvent: {}
+[54.671190] (-) TimerEvent: {}
+[54.772035] (-) TimerEvent: {}
+[54.872855] (-) TimerEvent: {}
+[54.973617] (-) TimerEvent: {}
+[55.074586] (-) TimerEvent: {}
+[55.175329] (-) TimerEvent: {}
+[55.276110] (-) TimerEvent: {}
+[55.376863] (-) TimerEvent: {}
+[55.477533] (-) TimerEvent: {}
+[55.578198] (-) TimerEvent: {}
+[55.678902] (-) TimerEvent: {}
+[55.779598] (-) TimerEvent: {}
+[55.880296] (-) TimerEvent: {}
+[55.980965] (-) TimerEvent: {}
+[56.081609] (-) TimerEvent: {}
+[56.182258] (-) TimerEvent: {}
+[56.282982] (-) TimerEvent: {}
+[56.384046] (-) TimerEvent: {}
+[56.484779] (-) TimerEvent: {}
+[56.585566] (-) TimerEvent: {}
+[56.686347] (-) TimerEvent: {}
+[56.787134] (-) TimerEvent: {}
+[56.887870] (-) TimerEvent: {}
+[56.988644] (-) TimerEvent: {}
+[57.089390] (-) TimerEvent: {}
+[57.190174] (-) TimerEvent: {}
+[57.290958] (-) TimerEvent: {}
+[57.391751] (-) TimerEvent: {}
+[57.492507] (-) TimerEvent: {}
+[57.593250] (-) TimerEvent: {}
+[57.694052] (-) TimerEvent: {}
+[57.794780] (-) TimerEvent: {}
+[57.895569] (-) TimerEvent: {}
+[57.996353] (-) TimerEvent: {}
+[58.097112] (-) TimerEvent: {}
+[58.197903] (-) TimerEvent: {}
+[58.298648] (-) TimerEvent: {}
+[58.399445] (-) TimerEvent: {}
+[58.500262] (-) TimerEvent: {}
+[58.601004] (-) TimerEvent: {}
+[58.701729] (-) TimerEvent: {}
+[58.802442] (-) TimerEvent: {}
+[58.903168] (-) TimerEvent: {}
+[59.003885] (-) TimerEvent: {}
+[59.104578] (-) TimerEvent: {}
+[59.205275] (-) TimerEvent: {}
+[59.305965] (-) TimerEvent: {}
+[59.406653] (-) TimerEvent: {}
+[59.507338] (-) TimerEvent: {}
+[59.608067] (-) TimerEvent: {}
+[59.708779] (-) TimerEvent: {}
+[59.809505] (-) TimerEvent: {}
+[59.910236] (-) TimerEvent: {}
+[60.010994] (-) TimerEvent: {}
+[60.111742] (-) TimerEvent: {}
+[60.212447] (-) TimerEvent: {}
+[60.313179] (-) TimerEvent: {}
+[60.413890] (-) TimerEvent: {}
+[60.514604] (-) TimerEvent: {}
+[60.615331] (-) TimerEvent: {}
+[60.716072] (-) TimerEvent: {}
+[60.816762] (-) TimerEvent: {}
+[60.917485] (-) TimerEvent: {}
+[61.018199] (-) TimerEvent: {}
+[61.118924] (-) TimerEvent: {}
+[61.219651] (-) TimerEvent: {}
+[61.320364] (-) TimerEvent: {}
+[61.421076] (-) TimerEvent: {}
+[61.521760] (-) TimerEvent: {}
+[61.622432] (-) TimerEvent: {}
+[61.723113] (-) TimerEvent: {}
+[61.823815] (-) TimerEvent: {}
+[61.924482] (-) TimerEvent: {}
+[62.025127] (-) TimerEvent: {}
+[62.125780] (-) TimerEvent: {}
+[62.226430] (-) TimerEvent: {}
+[62.327070] (-) TimerEvent: {}
+[62.427727] (-) TimerEvent: {}
+[62.528381] (-) TimerEvent: {}
+[62.629024] (-) TimerEvent: {}
+[62.729683] (-) TimerEvent: {}
+[62.830343] (-) TimerEvent: {}
+[62.931024] (-) TimerEvent: {}
+[63.031741] (-) TimerEvent: {}
+[63.132440] (-) TimerEvent: {}
+[63.233128] (-) TimerEvent: {}
+[63.333828] (-) TimerEvent: {}
+[63.434516] (-) TimerEvent: {}
+[63.535218] (-) TimerEvent: {}
+[63.635958] (-) TimerEvent: {}
+[63.736647] (-) TimerEvent: {}
+[63.837337] (-) TimerEvent: {}
+[63.938056] (-) TimerEvent: {}
+[64.038759] (-) TimerEvent: {}
+[64.139441] (-) TimerEvent: {}
+[64.240103] (-) TimerEvent: {}
+[64.340793] (-) TimerEvent: {}
+[64.441484] (-) TimerEvent: {}
+[64.542155] (-) TimerEvent: {}
+[64.642853] (-) TimerEvent: {}
+[64.743547] (-) TimerEvent: {}
+[64.844264] (-) TimerEvent: {}
+[64.944989] (-) TimerEvent: {}
+[65.045683] (-) TimerEvent: {}
+[65.146331] (-) TimerEvent: {}
+[65.246970] (-) TimerEvent: {}
+[65.347676] (-) TimerEvent: {}
+[65.448390] (-) TimerEvent: {}
+[65.549077] (-) TimerEvent: {}
+[65.649774] (-) TimerEvent: {}
+[65.750493] (-) TimerEvent: {}
+[65.851239] (-) TimerEvent: {}
+[65.952001] (-) TimerEvent: {}
+[66.052757] (-) TimerEvent: {}
+[66.153457] (-) TimerEvent: {}
+[66.254167] (-) TimerEvent: {}
+[66.354849] (-) TimerEvent: {}
+[66.455573] (-) TimerEvent: {}
+[66.556411] (-) TimerEvent: {}
+[66.657122] (-) TimerEvent: {}
+[66.757885] (-) TimerEvent: {}
+[66.858634] (-) TimerEvent: {}
+[66.959363] (-) TimerEvent: {}
+[67.060095] (-) TimerEvent: {}
+[67.160796] (-) TimerEvent: {}
+[67.261466] (-) TimerEvent: {}
+[67.362161] (-) TimerEvent: {}
+[67.462847] (-) TimerEvent: {}
+[67.563569] (-) TimerEvent: {}
+[67.664294] (-) TimerEvent: {}
+[67.764992] (-) TimerEvent: {}
+[67.865691] (-) TimerEvent: {}
+[67.966417] (-) TimerEvent: {}
+[68.067107] (-) TimerEvent: {}
+[68.167807] (-) TimerEvent: {}
+[68.268503] (-) TimerEvent: {}
+[68.369176] (-) TimerEvent: {}
+[68.469884] (-) TimerEvent: {}
+[68.570592] (-) TimerEvent: {}
+[68.671313] (-) TimerEvent: {}
+[68.772021] (-) TimerEvent: {}
+[68.872710] (-) TimerEvent: {}
+[68.973396] (-) TimerEvent: {}
+[69.074068] (-) TimerEvent: {}
+[69.174726] (-) TimerEvent: {}
+[69.275425] (-) TimerEvent: {}
+[69.376115] (-) TimerEvent: {}
+[69.476810] (-) TimerEvent: {}
+[69.577544] (-) TimerEvent: {}
+[69.678246] (-) TimerEvent: {}
+[69.779081] (-) TimerEvent: {}
+[69.879845] (-) TimerEvent: {}
+[69.980558] (-) TimerEvent: {}
+[70.081344] (-) TimerEvent: {}
+[70.182151] (-) TimerEvent: {}
+[70.282825] (-) TimerEvent: {}
+[70.383541] (-) TimerEvent: {}
+[70.484307] (-) TimerEvent: {}
+[70.585065] (-) TimerEvent: {}
+[70.685776] (-) TimerEvent: {}
+[70.786521] (-) TimerEvent: {}
+[70.887272] (-) TimerEvent: {}
+[70.988017] (-) TimerEvent: {}
+[71.088721] (-) TimerEvent: {}
+[71.189414] (-) TimerEvent: {}
+[71.290107] (-) TimerEvent: {}
+[71.390790] (-) TimerEvent: {}
+[71.491484] (-) TimerEvent: {}
+[71.592192] (-) TimerEvent: {}
+[71.692909] (-) TimerEvent: {}
+[71.793584] (-) TimerEvent: {}
+[71.894282] (-) TimerEvent: {}
+[71.994968] (-) TimerEvent: {}
+[72.095648] (-) TimerEvent: {}
+[72.196396] (-) TimerEvent: {}
+[72.297090] (-) TimerEvent: {}
+[72.397793] (-) TimerEvent: {}
+[72.498545] (-) TimerEvent: {}
+[72.599256] (-) TimerEvent: {}
+[72.699995] (-) TimerEvent: {}
+[72.800692] (-) TimerEvent: {}
+[72.901403] (-) TimerEvent: {}
+[73.002122] (-) TimerEvent: {}
+[73.102847] (-) TimerEvent: {}
+[73.203570] (-) TimerEvent: {}
+[73.304295] (-) TimerEvent: {}
+[73.405017] (-) TimerEvent: {}
+[73.505729] (-) TimerEvent: {}
+[73.606399] (-) TimerEvent: {}
+[73.707109] (-) TimerEvent: {}
+[73.807810] (-) TimerEvent: {}
+[73.908484] (-) TimerEvent: {}
+[74.009146] (-) TimerEvent: {}
+[74.109838] (-) TimerEvent: {}
+[74.210563] (-) TimerEvent: {}
+[74.311297] (-) TimerEvent: {}
+[74.412026] (-) TimerEvent: {}
+[74.512730] (-) TimerEvent: {}
+[74.613469] (-) TimerEvent: {}
+[74.714209] (-) TimerEvent: {}
+[74.814950] (-) TimerEvent: {}
+[74.915661] (-) TimerEvent: {}
+[75.016405] (-) TimerEvent: {}
+[75.117145] (-) TimerEvent: {}
+[75.217885] (-) TimerEvent: {}
+[75.318579] (-) TimerEvent: {}
+[75.419272] (-) TimerEvent: {}
+[75.520003] (-) TimerEvent: {}
+[75.620686] (-) TimerEvent: {}
+[75.721394] (-) TimerEvent: {}
+[75.822125] (-) TimerEvent: {}
+[75.922853] (-) TimerEvent: {}
+[76.023547] (-) TimerEvent: {}
+[76.124267] (-) TimerEvent: {}
+[76.225005] (-) TimerEvent: {}
+[76.325694] (-) TimerEvent: {}
+[76.426375] (-) TimerEvent: {}
+[76.527057] (-) TimerEvent: {}
+[76.627774] (-) TimerEvent: {}
+[76.728474] (-) TimerEvent: {}
+[76.829156] (-) TimerEvent: {}
+[76.929833] (-) TimerEvent: {}
+[77.030518] (-) TimerEvent: {}
+[77.131231] (-) TimerEvent: {}
+[77.231945] (-) TimerEvent: {}
+[77.332632] (-) TimerEvent: {}
+[77.433329] (-) TimerEvent: {}
+[77.534067] (-) TimerEvent: {}
+[77.634781] (-) TimerEvent: {}
+[77.735492] (-) TimerEvent: {}
+[77.836247] (-) TimerEvent: {}
+[77.936957] (-) TimerEvent: {}
+[78.037635] (-) TimerEvent: {}
+[78.138341] (-) TimerEvent: {}
+[78.239037] (-) TimerEvent: {}
+[78.339788] (-) TimerEvent: {}
+[78.440499] (-) TimerEvent: {}
+[78.541245] (-) TimerEvent: {}
+[78.642057] (-) TimerEvent: {}
+[78.742832] (-) TimerEvent: {}
+[78.843667] (-) TimerEvent: {}
+[78.944390] (-) TimerEvent: {}
+[79.045084] (-) TimerEvent: {}
+[79.145806] (-) TimerEvent: {}
+[79.246515] (-) TimerEvent: {}
+[79.347208] (-) TimerEvent: {}
+[79.448251] (-) TimerEvent: {}
+[79.548975] (-) TimerEvent: {}
+[79.649684] (-) TimerEvent: {}
+[79.750444] (-) TimerEvent: {}
+[79.851191] (-) TimerEvent: {}
+[79.951961] (-) TimerEvent: {}
+[80.052658] (-) TimerEvent: {}
+[80.153352] (-) TimerEvent: {}
+[80.254062] (-) TimerEvent: {}
+[80.354745] (-) TimerEvent: {}
+[80.455421] (-) TimerEvent: {}
+[80.556158] (-) TimerEvent: {}
+[80.656861] (-) TimerEvent: {}
+[80.757552] (-) TimerEvent: {}
+[80.855730] (hesai_ros_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable hesai_ros_driver_node\x1b[0m\n'}
+[80.857603] (-) TimerEvent: {}
+[80.958084] (-) TimerEvent: {}
+[81.058781] (-) TimerEvent: {}
+[81.159474] (-) TimerEvent: {}
+[81.260212] (-) TimerEvent: {}
+[81.333603] (hesai_ros_driver) StdoutLine: {'line': b'[100%] Built target hesai_ros_driver_node\n'}
+[81.360110] (hesai_ros_driver) CommandEnded: {'returncode': 0}
+[81.361284] (-) TimerEvent: {}
+[81.462846] (-) TimerEvent: {}
+[81.552647] (hesai_ros_driver) JobProgress: {'identifier': 'hesai_ros_driver', 'progress': 'install'}
+[81.563016] (-) TimerEvent: {}
+[81.576863] (hesai_ros_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/unitree/xt16_ws/build/hesai_ros_driver'], 'cwd': '/home/unitree/xt16_ws/build/hesai_ros_driver', 'env': OrderedDict([('PYENV_VIRTUALENV_INIT', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'unitree'), ('SSH_CLIENT', '192.168.123.99 42326 22'), ('LC_TIME', 'C.UTF-8'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/local/cuda-11.4/lib64:/usr/local/lib:/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp/lib:/home/unitree/cyclonedds_ws/install/cyclonedds/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/unitree'), ('CYCLONEDDS_URI', '/home/unitree/cyclonedds_ws/cyclonedds.xml'), ('OLDPWD', '/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0'), ('SSH_TTY', '/dev/pts/0'), ('PYENV_SHELL', 'bash'), ('ROS_PYTHON_VERSION', '3'), ('LC_MONETARY', 'C.UTF-8'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/unitree/xt16_ws/install:/home/unitree/cyclonedds_ws/install:/home/unitree/unitree_test_ws/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'unitree'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('PKG_CONFIG_PATH', '/home/unitree/cyclonedds_ws/install/cyclonedds/lib/aarch64-linux-gnu/pkgconfig:/home/unitree/cyclonedds_ws/install/cyclonedds/lib/pkgconfig'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '2'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/unitree/.local/bin:/home/unitree/.pyenv/plugins/pyenv-virtualenv/shims:/home/unitree/.pyenv/shims:/home/unitree/.pyenv/bin:/usr/local/cuda-11.4/bin:/home/unitree/cyclonedds_ws/install/cyclonedds/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('LC_ADDRESS', 'C.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LC_TELEPHONE', 'C.UTF-8'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('CYCLONEDDS_HOME', '/home/unitree/cyclonedds/install'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '0'), ('AMENT_PREFIX_PATH', '/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'C.UTF-8'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'C.UTF-8'), ('LC_IDENTIFICATION', 'C.UTF-8'), ('PWD', '/home/unitree/xt16_ws/build/hesai_ros_driver'), ('SSH_CONNECTION', '192.168.123.99 42326 192.168.123.18 22'), ('XDG_DATA_DIRS', '/home/unitree/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/usr/local/lib:/usr/local/lib/python3.8/pyrealsense2:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'C.UTF-8'), ('LC_PAPER', 'C.UTF-8'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp:/home/unitree/cyclonedds_ws/install/cyclonedds:/opt/ros/foxy')]), 'shell': False}
+[81.599519] (hesai_ros_driver) StdoutLine: {'line': b'-- Install configuration: "Release"\n'}
+[81.600495] (hesai_ros_driver) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[81.601324] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/ament_index/resource_index/rosidl_interfaces/hesai_ros_driver\n'}
+[81.623157] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__functions.h\n'}
+[81.641335] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__struct.h\n'}
+[81.659421] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__type_support.h\n'}
+[81.663123] (-) TimerEvent: {}
+[81.677979] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__functions.h\n'}
+[81.696850] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__struct.h\n'}
+[81.715793] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__type_support.h\n'}
+[81.736754] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__functions.h\n'}
+[81.757774] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__struct.h\n'}
+[81.763201] (-) TimerEvent: {}
+[81.776675] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__type_support.h\n'}
+[81.797735] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__functions.h\n'}
+[81.815853] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__struct.h\n'}
+[81.836765] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__type_support.h\n'}
+[81.854787] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__functions.h\n'}
+[81.863311] (-) TimerEvent: {}
+[81.875555] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__struct.h\n'}
+[81.896962] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__type_support.h\n'}
+[81.915639] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/firetime.h\n'}
+[81.935385] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/loss_packet.h\n'}
+[81.955402] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/ptp.h\n'}
+[81.963417] (-) TimerEvent: {}
+[81.977049] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/rosidl_generator_c__visibility_control.h\n'}
+[81.995901] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/udp_frame.h\n'}
+[82.016717] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/udp_packet.h\n'}
+[82.035654] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/library_path.sh\n'}
+[82.054438] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/library_path.dsv\n'}
+[82.063518] (-) TimerEvent: {}
+[82.075106] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__rosidl_typesupport_fastrtps_c.h\n'}
+[82.093671] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__rosidl_typesupport_fastrtps_c.h\n'}
+[82.113289] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__rosidl_typesupport_fastrtps_c.h\n'}
+[82.132195] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__rosidl_typesupport_fastrtps_c.h\n'}
+[82.153496] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_fastrtps_c.h\n'}
+[82.163625] (-) TimerEvent: {}
+[82.171064] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[82.193550] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_fastrtps_c.so\n'}
+[82.214467] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[82.232743] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[82.253708] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[82.263734] (-) TimerEvent: {}
+[82.276647] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[82.294187] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[82.314893] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[82.333873] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_fastrtps_cpp.so\n'}
+[82.354585] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__rosidl_typesupport_introspection_c.h\n'}
+[82.363903] (-) TimerEvent: {}
+[82.373408] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__rosidl_typesupport_introspection_c.h\n'}
+[82.392265] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__rosidl_typesupport_introspection_c.h\n'}
+[82.413082] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__rosidl_typesupport_introspection_c.h\n'}
+[82.431704] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_introspection_c.h\n'}
+[82.450383] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[82.464023] (-) TimerEvent: {}
+[82.470216] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__builder.hpp\n'}
+[82.488666] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__struct.hpp\n'}
+[82.507190] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__traits.hpp\n'}
+[82.524976] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__type_support.hpp\n'}
+[82.543872] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__builder.hpp\n'}
+[82.562681] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__struct.hpp\n'}
+[82.564118] (-) TimerEvent: {}
+[82.583213] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__traits.hpp\n'}
+[82.601800] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__type_support.hpp\n'}
+[82.622610] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__builder.hpp\n'}
+[82.643478] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__struct.hpp\n'}
+[82.662151] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__traits.hpp\n'}
+[82.664188] (-) TimerEvent: {}
+[82.681686] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__type_support.hpp\n'}
+[82.700732] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__builder.hpp\n'}
+[82.719385] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__struct.hpp\n'}
+[82.739338] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__traits.hpp\n'}
+[82.758441] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__type_support.hpp\n'}
+[82.764294] (-) TimerEvent: {}
+[82.778796] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__builder.hpp\n'}
+[82.797941] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__struct.hpp\n'}
+[82.815841] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__traits.hpp\n'}
+[82.835108] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__type_support.hpp\n'}
+[82.852747] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/firetime.hpp\n'}
+[82.864402] (-) TimerEvent: {}
+[82.872216] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/loss_packet.hpp\n'}
+[82.891500] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/ptp.hpp\n'}
+[82.910613] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[82.929560] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/udp_frame.hpp\n'}
+[82.947108] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/udp_packet.hpp\n'}
+[82.964523] (-) TimerEvent: {}
+[82.966787] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/firetime__rosidl_typesupport_introspection_cpp.hpp\n'}
+[82.985474] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/loss_packet__rosidl_typesupport_introspection_cpp.hpp\n'}
+[83.006015] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/ptp__rosidl_typesupport_introspection_cpp.hpp\n'}
+[83.023372] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_frame__rosidl_typesupport_introspection_cpp.hpp\n'}
+[83.044364] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/include/hesai_ros_driver/msg/detail/udp_packet__rosidl_typesupport_introspection_cpp.hpp\n'}
+[83.063401] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/pythonpath.sh\n'}
+[83.064656] (-) TimerEvent: {}
+[83.082078] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/pythonpath.dsv\n'}
+[83.102967] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/__init__.py\n'}
+[83.122203] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/msg/__init__.py\n'}
+[83.139873] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/msg/_firetime.py\n'}
+[83.158665] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/msg/_loss_packet.py\n'}
+[83.164773] (-) TimerEvent: {}
+[83.178051] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/msg/_ptp.py\n'}
+[83.195648] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/msg/_udp_frame.py\n'}
+[83.216259] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/msg/_udp_packet.py\n'}
+[83.237456] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_fastrtps_c.cpython-311-aarch64-linux-gnu.so\n'}
+[83.257543] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_introspection_c.cpython-311-aarch64-linux-gnu.so\n'}
+[83.264880] (-) TimerEvent: {}
+[83.275990] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/hesai_ros_driver_s__rosidl_typesupport_c.cpython-311-aarch64-linux-gnu.so\n'}
+[83.295143] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__python.so\n'}
+[83.313400] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg/UdpPacket.idl\n'}
+[83.333023] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg/UdpFrame.idl\n'}
+[83.351164] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg/Firetime.idl\n'}
+[83.365004] (-) TimerEvent: {}
+[83.370901] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg/Ptp.idl\n'}
+[83.389506] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg/LossPacket.idl\n'}
+[83.409537] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg_ros2/UdpPacket.msg\n'}
+[83.428275] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg_ros2/UdpFrame.msg\n'}
+[83.447410] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg_ros2/Firetime.msg\n'}
+[83.465130] (-) TimerEvent: {}
+[83.469607] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg_ros2/Ptp.msg\n'}
+[83.489291] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/msg_ros2/LossPacket.msg\n'}
+[83.508379] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/hesai_ros_driver/hesai_ros_driver_node\n'}
+[83.529749] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_sdk_lib.so\n'}
+[83.548590] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/liblog_lib.so\n'}
+[83.565253] (-) TimerEvent: {}
+[83.567604] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/liblidar_lib.so\n'}
+[83.588509] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libptcClient_lib.so\n'}
+[83.607343] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libsource_lib.so\n'}
+[83.626294] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libplatutils_lib.so\n'}
+[83.644980] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libserialClient_lib.so\n'}
+[83.664630] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libudpParser_lib.so\n'}
+[83.665346] (-) TimerEvent: {}
+[83.686197] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/launch/dashing_start.py\n'}
+[83.704553] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/launch/start.launch\n'}
+[83.723947] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/launch/start.py\n'}
+[83.742924] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/rviz/rviz.rviz\n'}
+[83.762378] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/rviz/rviz2.rviz\n'}
+[83.765429] (-) TimerEvent: {}
+[83.781314] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/ament_index/resource_index/package_run_dependencies/hesai_ros_driver\n'}
+[83.800245] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/ament_index/resource_index/parent_prefix_path/hesai_ros_driver\n'}
+[83.821007] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/ament_prefix_path.sh\n'}
+[83.839274] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/ament_prefix_path.dsv\n'}
+[83.859968] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/path.sh\n'}
+[83.865524] (-) TimerEvent: {}
+[83.881259] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/environment/path.dsv\n'}
+[83.901547] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/local_setup.bash\n'}
+[83.920272] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/local_setup.sh\n'}
+[83.939377] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/local_setup.zsh\n'}
+[83.958302] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/local_setup.dsv\n'}
+[83.965627] (-) TimerEvent: {}
+[83.978843] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.dsv\n'}
+[84.000274] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/ament_index/resource_index/packages/hesai_ros_driver\n'}
+[84.019222] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/rosidl_cmake-extras.cmake\n'}
+[84.040581] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[84.059614] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[84.065730] (-) TimerEvent: {}
+[84.078673] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[84.097608] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[84.118153] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[84.135767] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[84.157137] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driverConfig.cmake\n'}
+[84.165838] (-) TimerEvent: {}
+[84.175189] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driverConfig-version.cmake\n'}
+[84.195957] (hesai_ros_driver) StdoutLine: {'line': b'-- Symlinking: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/package.xml\n'}
+[84.214578] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_generator_c.so\n'}
+[84.215259] (hesai_ros_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_generator_c.so" to ""\n'}
+[84.215485] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_introspection_c.so\n'}
+[84.216480] (hesai_ros_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_introspection_c.so" to ""\n'}
+[84.216954] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_c.so\n'}
+[84.218080] (hesai_ros_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_c.so" to ""\n'}
+[84.218541] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_introspection_cpp.so\n'}
+[84.220049] (hesai_ros_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[84.220483] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_cpp.so\n'}
+[84.221508] (hesai_ros_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/unitree/xt16_ws/install/hesai_ros_driver/lib/libhesai_ros_driver__rosidl_typesupport_cpp.so" to ""\n'}
+[84.266009] (-) TimerEvent: {}
+[84.366688] (-) TimerEvent: {}
+[84.406746] (hesai_ros_driver) StdoutLine: {'line': b"Compiling '/home/unitree/xt16_ws/install/hesai_ros_driver/lib/python3.11/site-packages/hesai_ros_driver/__init__.py'...\n"}
+[84.422256] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_generator_cExport.cmake\n'}
+[84.422873] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_generator_cExport-release.cmake\n'}
+[84.423504] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_introspection_cExport.cmake\n'}
+[84.424195] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_introspection_cExport-release.cmake\n'}
+[84.424995] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_cExport.cmake\n'}
+[84.425622] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_cExport-release.cmake\n'}
+[84.426405] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_generator_cppExport.cmake\n'}
+[84.427217] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[84.427885] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_introspection_cppExport-release.cmake\n'}
+[84.428637] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_cppExport.cmake\n'}
+[84.429275] (hesai_ros_driver) StdoutLine: {'line': b'-- Installing: /home/unitree/xt16_ws/install/hesai_ros_driver/share/hesai_ros_driver/cmake/hesai_ros_driver__rosidl_typesupport_cppExport-release.cmake\n'}
+[84.436727] (hesai_ros_driver) CommandEnded: {'returncode': 0}
+[84.466886] (-) TimerEvent: {}
+[84.567942] (-) TimerEvent: {}
+[84.668770] (-) TimerEvent: {}
+[84.769488] (-) TimerEvent: {}
+[84.870315] (-) TimerEvent: {}
+[84.970972] (-) TimerEvent: {}
+[85.071712] (-) TimerEvent: {}
+[85.172384] (-) TimerEvent: {}
+[85.273118] (-) TimerEvent: {}
+[85.374145] (-) TimerEvent: {}
+[85.389259] (hesai_ros_driver) JobEnded: {'identifier': 'hesai_ros_driver', 'rc': 0}
+[85.390975] (-) EventReactorShutdown: {}

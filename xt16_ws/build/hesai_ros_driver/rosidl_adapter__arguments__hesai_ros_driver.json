@@ -1,0 +1,10 @@
+{
+  "package_name": "hesai_ros_driver",
+  "non_idl_tuples": [
+    "/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0:msg/msg_ros2/UdpPacket.msg",
+    "/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0:msg/msg_ros2/UdpFrame.msg",
+    "/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0:msg/msg_ros2/Firetime.msg",
+    "/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0:msg/msg_ros2/Ptp.msg",
+    "/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0:msg/msg_ros2/LossPacket.msg"
+  ]
+}

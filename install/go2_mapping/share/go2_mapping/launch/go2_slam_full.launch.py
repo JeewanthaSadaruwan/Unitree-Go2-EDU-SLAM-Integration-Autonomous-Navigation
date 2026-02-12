@@ -13,7 +13,7 @@ Usage:
 """
 
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, SetEnvironmentVariable
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
@@ -40,7 +40,7 @@ def generate_launch_description():
     # 1. Odom to TF broadcaster (Python script directly)
     odom_to_tf_node = ExecuteProcess(
         cmd=['/usr/bin/python3', 
-             os.path.expanduser('~/odom/odom_to_tf.py')],
+             os.path.expanduser('~/odom/src/go2_mapping/go2_mapping/odom_to_tf.py')],
         output='screen',
         name='odom_to_tf'
     )
@@ -62,7 +62,7 @@ def generate_launch_description():
         output='screen',
         parameters=[pointcloud_params_file],
         remappings=[
-            ('cloud_in', '/utlidar/cloud_deskewed'),
+            ('cloud_in', '/lidar_points'),
             ('scan', '/scan'),
         ]
     )

@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0/src/driver/HesaiLidar_SDK_2.0/libhesai/Logger/include/logger.h
+string
+-
+memory
+-
+thread
+-
+mutex
+-
+condition_variable
+-
+list
+-
+functional
+-
+algorithm
+-
+iostream
+-
+
+/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0/src/driver/HesaiLidar_SDK_2.0/libhesai/Logger/src/logger.cc
+logger.h
+/home/unitree/xt16_ws/src/HesaiLidar_ROS_2.0/src/driver/HesaiLidar_SDK_2.0/libhesai/Logger/src/logger.h
+ctime
+-
+iostream
+-
+stdio.h
+-
+memory
+-
+stdarg.h
+-
+

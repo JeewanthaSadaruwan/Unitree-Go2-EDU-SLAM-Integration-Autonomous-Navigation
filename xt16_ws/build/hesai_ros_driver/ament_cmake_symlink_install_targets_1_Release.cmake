@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/unitree/xt16_ws/build/hesai_ros_driver/libhesai_ros_driver__rosidl_typesupport_fastrtps_cpp.so" "TARGETS" "hesai_ros_driver__rosidl_typesupport_fastrtps_cpp" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")
