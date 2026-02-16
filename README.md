@@ -18,18 +18,58 @@ cd ~/odom
 source install/setup.bash
 ```
 
-### 2. Run Complete SLAM Launch
+### 2. Launch Hesai Lidar (Terminal 1)
 ```bash
-ros2 launch go2_mapping go2_slam_full.launch.py
+source /opt/ros/foxy/setup.bash
+source ~/odom/xt16_ws/install/setup.bash
+ros2 launch hesai_ros_driver start.py
+```
+
+### 3. Launch SLAM Mapping (Terminal 2)
+```bash
+source /opt/ros/foxy/setup.bash
+source ~/odom/install/setup.bash
+ros2 launch go2_mapping go2_mapping.launch.py
 ```
 
 This starts all required nodes:
+- Robot State Publisher (URDF)
 - Odom to TF broadcaster
-- Static TF (base_link → base_footprint)
+- PointCloud relay
+- Static TF (base_link → hesai_lidar)
 - PointCloud to LaserScan converter
 - SLAM Toolbox (async mapping mode)
 
-### 3. Drive the Robot
+### 4. Visualize in RViz (On Local Computer)
+
+First, set the package path so RViz can find the robot meshes:
+```bash
+export ROS_PACKAGE_PATH=~/GO2_URDF:$ROS_PACKAGE_PATH
+```
+
+Then launch RViz:
+```bash
+rviz2 -d ~/Desktop/rviz/go2_slam_visualization.rviz
+```
+
+Or if the file is in a different location:
+```bash
+rviz2 -d /path/to/go2_slam_visualization.rviz
+```
+
+**Note:** If you see mesh loading errors, make sure the GO2_URDF folder is copied to your local computer's home directory.
+
+### 5. (Optional) Joint State Publisher for Robot Model Visualization
+If you want to see the robot's 3D model with joint movements in RViz:
+```bash
+export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+export CYCLONEDDS_URI='<CycloneDDS><Domain><General><NetworkInterfaceAddress>eth0</NetworkInterfaceAddress></General></Domain></CycloneDDS>'
+source /opt/ros/foxy/setup.bash
+source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
+/usr/bin/python3.8 ~/odom/lowstate_to_joint_states.py
+```
+
+### 6. Drive the Robot
 ```bash
 ros2 run teleop_twist_keyboard teleop_twist_keyboard --ros-args -r cmd_vel:=/cmd_vel
 ```
@@ -44,6 +84,61 @@ i/k = forward/backward
 j/l = turn left/right
 k = stop
 q/z = increase/decrease speed
+```
+
+## Navigation with Saved Map
+
+### 1. Launch Hesai Lidar (Terminal 1)
+```bash
+source /opt/ros/foxy/setup.bash
+source ~/odom/xt16_ws/install/setup.bash
+ros2 launch hesai_ros_driver start.py
+```
+
+### 2. Launch Navigation Stack (Terminal 2)
+```bash
+source /opt/ros/foxy/setup.bash
+source ~/odom/install/setup.bash
+ros2 launch go2_mapping go2_navigation.launch.py
+```
+
+This starts:
+- Map server (loads `floor10_1.yaml` by default)
+- AMCL localization
+- Nav2 navigation stack
+- Costmap generators
+- Path planners
+
+### 3. Visualize Navigation in RViz (On Local Computer)
+```bash
+export ROS_PACKAGE_PATH=~/GO2_URDF:$ROS_PACKAGE_PATH
+rviz2 -d ~/Desktop/rviz/go2_navigation_visualization.rviz
+```
+
+Or use the launch file:
+```bash
+ros2 launch ~/Desktop/rviz/go2_navigation_visualization.launch.py
+```
+
+**In RViz:**
+1. **Set Initial Pose**: Click "2D Pose Estimate" button, then click and drag on the map where the robot actually is
+2. **Send Navigation Goal**: Click "Nav2 Goal" button, then click where you want the robot to go
+3. The robot will autonomously navigate to the goal!
+
+**Displays shown:**
+- Map (loaded from file)
+- Robot model with live joint states
+- Global path (red line - overall route)
+- Local path (green line - immediate trajectory)
+- Global costmap (obstacles in planning space)
+- Local costmap (immediate obstacles)
+- Particle cloud (yellow points - AMCL localization estimates)
+- Laser scan
+
+### 4. (Optional) Use Different Map
+To use a different map (e.g., `floor15_2.yaml`):
+```bash
+ros2 launch go2_mapping go2_navigation.launch.py map_yaml:=/home/unitree/odom/maps/floor15_2.yaml
 ```
 
 ## Package Structure

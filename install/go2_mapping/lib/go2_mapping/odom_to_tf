@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-# EASY-INSTALL-ENTRY-SCRIPT: 'go2-mapping==1.0.0','console_scripts','odom_to_tf'
-__requires__ = 'go2-mapping==1.0.0'
+# EASY-INSTALL-ENTRY-SCRIPT: 'go2-mapping','console_scripts','odom_to_tf'
+__requires__ = 'go2-mapping'
 import re
 import sys
 from pkg_resources import load_entry_point
@@ -8,5 +8,5 @@ from pkg_resources import load_entry_point
 if __name__ == '__main__':
     sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
     sys.exit(
-        load_entry_point('go2-mapping==1.0.0', 'console_scripts', 'odom_to_tf')()
+        load_entry_point('go2-mapping', 'console_scripts', 'odom_to_tf')()
     )

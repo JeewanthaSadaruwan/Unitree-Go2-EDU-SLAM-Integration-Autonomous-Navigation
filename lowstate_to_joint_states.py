@@ -5,12 +5,13 @@ from sensor_msgs.msg import JointState
 from unitree_go.msg import LowState
 
 # IMPORTANT: verify motor order for your SDK.
-# Common Unitree order is: FR, FL, RR, RL (hip, thigh, calfkk
+# Common Unitree order is: FR, FL, RR, RL (hip, thigh, calf)
+# Joint names must match the URDF (FL=Front Left, FR=Front Right, RL=Rear Left, RR=Rear Right)
 JOINT_NAMES = [
-    "rf_hip_joint", "rf_upper_leg_joint", "rf_lower_leg_joint",
-    "lf_hip_joint", "lf_upper_leg_joint", "lf_lower_leg_joint",
-    "rh_hip_joint", "rh_upper_leg_joint", "rh_lower_leg_joint",
-    "lh_hip_joint", "lh_upper_leg_joint", "lh_lower_leg_joint",
+    "FR_hip_joint", "FR_thigh_joint", "FR_calf_joint",
+    "FL_hip_joint", "FL_thigh_joint", "FL_calf_joint",
+    "RR_hip_joint", "RR_thigh_joint", "RR_calf_joint",
+    "RL_hip_joint", "RL_thigh_joint", "RL_calf_joint",
 ]
 
 

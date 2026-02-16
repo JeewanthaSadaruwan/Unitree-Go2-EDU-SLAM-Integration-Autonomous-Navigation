@@ -1,45 +1,36 @@
-# ========== HESAI LIDAR POINTCLOUD TO LASERSCAN CONVERSION ==========
-# Configuration for Hesai 3D LiDAR on Unitree Go2 EDU
-# Converts 3D point cloud to 2D laser scan for SLAM compatibility
-
 /**:
   ros__parameters:
     # ========== FRAME & TIMING ==========
-    target_frame: base_link           # Convert to robot's base frame
-    transform_tolerance: 0.01         # 10ms tolerance for TF lookups
-    scan_time: 0.1                    # Scan duration (Hesai ~10-20Hz)
-    
+    # Use the LiDAR frame so height slicing is relative to the sensor plane
+    target_frame: hesai_lidar
+
+    # Big transform_tolerance causes smear when moving; keep tight
+    transform_tolerance: 0.05
+
+    # Approx scan period (10 Hz). If yours is 20 Hz, set 0.05
+    scan_time: 0.1
+
     # ========== HEIGHT FILTERING ==========
-    # Extract horizontal slice around robot's height
-    # Hesai XT32 has 32 vertical channels, we take middle slice
-    min_height: -0.1                  # 10cm below robot center
-    max_height: 0.1                   # 10cm above robot center
-    # This creates a 20cm vertical window for 2D SLAM
-    
+    # Tight slice around LiDAR plane reduces leg/body/self-hits
+    min_height: -0.05
+    max_height:  0.05
+
     # ========== ANGULAR RANGE ==========
-    angle_min: -3.14159               # -180° (full rear)
-    angle_max: 3.14159                # +180° (full rear, 360° total)
-    angle_increment: 0.0174533        # 1° resolution (pi/180 = 0.0174533)
-    # Results in 360 points per scan (360° / 1° = 360 points)
-    
+    angle_min: -3.14159
+    angle_max:  3.14159
+
+    # Higher angular fidelity than 1 deg (reduces jagged walls)
+    # 0.5 deg:
+    angle_increment: 0.00872665
+    # If CPU allows, you can go finer:
+    # angle_increment: 0.00436332   # 0.25 deg
+
     # ========== RANGE FILTERING ==========
-    range_min: 0.2                    # Ignore points < 20cm (too close)
-    range_max: 30.0                   # Use up to 30m (Hesai can do 70m+)
-    # Limited to 30m for SLAM computational efficiency
-    # Hesai accuracy: ±2cm at 20m, ±3cm at 50m
-    
+    range_min: 0.25
+
+    # Indoors, far points add noise and degrade scan matching
+    range_max: 12.0
+
     # ========== INFINITY HANDLING ==========
-    use_inf: true                     # Use infinity for no returns
-    inf_epsilon: 1.0                  # Threshold for infinity detection
-    
-# ========== HESAI LIDAR SPECIFICATIONS ==========
-# Hesai XT32 (common on Go2 EDU):
-# - Channels: 32 vertical beams
-# - Vertical FOV: -16° to +15° (31° total)
-# - Horizontal FOV: 360°
-# - Range: 0.2m - 70m+ (typ. 120m)
-# - Accuracy: ±2cm
-# - Angular resolution: 0.2° (horizontal)
-# - Points per second: ~320k
-# - Frame rate: 10-20 Hz
-# - Output: /utlidar/cloud_deskewed (PointCloud2)
+    use_inf: true
+    inf_epsilon: 1.0

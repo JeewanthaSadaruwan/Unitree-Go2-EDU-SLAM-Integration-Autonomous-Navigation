@@ -1,0 +1,346 @@
+# ============================================================================
+# Nav2 Configuration for Unitree Go2 Robot
+# ============================================================================
+# This file contains all navigation parameters including:
+# - AMCL (Localization)
+# - Costmaps (Global and Local)
+# - Planners (Global path planning)
+# - Controllers (Local trajectory tracking)
+# - Recovery behaviors
+# - Behavior trees
+# ============================================================================
+
+# ============================================================================
+# AMCL - Adaptive Monte Carlo Localization
+# ============================================================================
+# Estimates robot pose in the map using particle filter
+amcl:
+  ros__parameters:
+    use_sim_time: false
+    
+    # Frame IDs
+    base_frame_id: "base_link"
+    odom_frame_id: "odom"
+    global_frame_id: "map"
+    
+    # Sensor configuration
+    scan_topic: "scan_raw"
+    
+    # Particle filter parameters
+    min_particles: 200          # Minimum number of particles
+    max_particles: 2000         # Maximum number of particles
+    
+    # Odometry model noise parameters (increase if odometry is poor)
+    alpha1: 0.2                 # Rotation noise from rotation
+    alpha2: 0.2                 # Rotation noise from translation
+    alpha3: 0.2                 # Translation noise from translation
+    alpha4: 0.2                 # Translation noise from rotation
+    alpha5: 0.2                 # Translation noise (strafe - for holonomic)
+    
+    # Laser model parameters
+    z_hit: 0.5                  # Weight for correct measurements
+    z_short: 0.05               # Weight for short measurements
+    z_max: 0.05                 # Weight for max range measurements
+    z_rand: 0.5                 # Weight for random measurements
+    sigma_hit: 0.2              # Standard deviation for correct measurements
+    lambda_short: 0.1           # Exponential decay for short measurements
+    laser_model_type: "likelihood_field"
+    
+    # Initialization
+    set_initial_pose: false     # Set to true to use initial_pose parameters
+    tf_broadcast: true          # Broadcast map->odom transform
+
+# ============================================================================
+# MAP SERVER
+# ============================================================================
+# Loads and serves the occupancy grid map
+map_server:
+  ros__parameters:
+    use_sim_time: false
+    yaml_filename: "/home/unitree/odom/maps/floor10_1.yaml"
+
+# ============================================================================
+# CONTROLLER SERVER
+# ============================================================================
+# Executes local trajectories and tracks the global path
+controller_server:
+  ros__parameters:
+    use_sim_time: false
+    
+    # Control loop frequency
+    controller_frequency: 20.0
+    
+    # Minimum velocity thresholds
+    min_x_velocity_threshold: 0.001
+    min_y_velocity_threshold: 0.001
+    min_theta_velocity_threshold: 0.001
+    
+    # Progress and goal checker plugins
+    progress_checker_plugin: "progress_checker"
+    goal_checker_plugins: ["goal_checker"]
+    controller_plugins: ["FollowPath"]
+    
+    # Progress Checker - Detects if robot is stuck
+    progress_checker:
+      plugin: "nav2_controller::SimpleProgressChecker"
+      required_movement_radius: 0.5     # Min distance to move
+      movement_time_allowance: 10.0     # Time allowed before stuck
+    
+    # Goal Checker - Determines when goal is reached
+    goal_checker:
+      plugin: "nav2_controller::SimpleGoalChecker"
+      xy_goal_tolerance: 0.25           # Position tolerance (meters)
+      yaw_goal_tolerance: 0.25          # Orientation tolerance (radians)
+      stateful: true
+    
+    # DWB Local Planner - Dynamic Window Approach
+    FollowPath:
+      plugin: "dwb_core::DWBLocalPlanner"
+      debug_trajectory_details: true
+      
+      # Velocity limits (adjust for Go2 robot capabilities)
+      min_vel_x: 0.0              # Minimum forward velocity
+      max_vel_x: 0.25             # Maximum forward velocity (m/s)
+      min_vel_y: 0.0              # Min lateral (0 for non-holonomic)
+      max_vel_y: 0.0              # Max lateral (0 for non-holonomic)
+      max_vel_theta: 0.8          # Maximum rotational velocity (rad/s)
+      min_speed_xy: 0.0           # Minimum translational speed
+      max_speed_xy: 0.25          # Maximum translational speed
+      min_speed_theta: 0.0        # Minimum rotational speed
+      
+      # Acceleration limits
+      acc_lim_x: 0.8              # Forward acceleration limit
+      acc_lim_y: 0.0              # Lateral acceleration (0 for diff drive)
+      acc_lim_theta: 1.5          # Rotational acceleration limit
+      decel_lim_x: -0.8           # Forward deceleration limit
+      decel_lim_y: 0.0
+      decel_lim_theta: -1.5
+      
+      # Trajectory sampling
+      vx_samples: 20              # Number of forward velocity samples
+      vy_samples: 1               # Number of lateral samples (1 for diff)
+      vtheta_samples: 20          # Number of rotational samples
+      sim_time: 1.5               # How far to simulate trajectories
+      
+      # Sampling resolution
+      linear_granularity: 0.05    # Distance between points on trajectory
+      angular_granularity: 0.025  # Angular resolution
+      
+      # Other parameters
+      transform_tolerance: 0.2
+      xy_goal_tolerance: 0.25
+      trans_stopped_velocity: 0.05
+      short_circuit_trajectory_evaluation: true
+      
+      # Trajectory critics (scoring functions)
+      critics:
+        - RotateToGoal         # Prefer rotating to face goal
+        - Oscillation          # Penalize oscillating movements
+        - BaseObstacle         # Avoid obstacles
+        - GoalAlign            # Align with goal orientation
+        - PathAlign            # Stay aligned with global path
+        - PathDist             # Stay close to global path
+        - GoalDist             # Get close to goal
+      
+      # Critic weights (higher = more important)
+      BaseObstacle.scale: 0.02
+      PathAlign.scale: 32.0
+      GoalAlign.scale: 24.0
+      PathDist.scale: 32.0
+      GoalDist.scale: 24.0
+      RotateToGoal.scale: 32.0
+      RotateToGoal.slowing_factor: 5.0
+      RotateToGoal.lookahead_time: -1.0
+
+# ============================================================================
+# PLANNER SERVER
+# ============================================================================
+# Computes global paths from start to goal
+planner_server:
+  ros__parameters:
+    use_sim_time: false
+    expected_planner_frequency: 5.0
+    planner_plugins: ["GridBased"]
+    
+    GridBased:
+      plugin: "nav2_navfn_planner/NavfnPlanner"
+      tolerance: 0.5            # Goal tolerance for planner
+      use_astar: false          # Use Dijkstra (false) or A* (true)
+      allow_unknown: true       # Allow planning through unknown space
+
+# ============================================================================
+# RECOVERY/BEHAVIORS SERVER
+# ============================================================================
+# Handles recovery behaviors when robot gets stuck
+recoveries_server:
+  ros__parameters:
+    use_sim_time: false
+    costmap_topic: local_costmap/costmap_raw
+    footprint_topic: local_costmap/published_footprint
+    cycle_frequency: 5.0
+    recovery_plugins: ["spin", "backup", "wait"]
+    
+    spin:
+      plugin: "nav2_recoveries/Spin"
+    backup:
+      plugin: "nav2_recoveries/BackUp"
+    wait:
+      plugin: "nav2_recoveries/Wait"
+
+# ============================================================================
+# BEHAVIOR TREE NAVIGATOR
+# ============================================================================
+# Orchestrates navigation behaviors using behavior trees
+bt_navigator:
+  ros__parameters:
+    use_sim_time: false
+    global_frame: "map"
+    robot_base_frame: "base_link"
+    odom_topic: "odom"
+    
+    # Path to behavior tree XML file
+    default_bt_xml_filename: "/opt/ros/humble/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml"
+    
+    # Behavior tree plugin libraries
+    plugin_lib_names:
+      - nav2_compute_path_to_pose_action_bt_node
+      - nav2_follow_path_action_bt_node
+      - nav2_back_up_action_bt_node
+      - nav2_spin_action_bt_node
+      - nav2_wait_action_bt_node
+      - nav2_clear_costmap_service_bt_node
+      - nav2_is_stuck_condition_bt_node
+      - nav2_goal_reached_condition_bt_node
+      - nav2_goal_updated_condition_bt_node
+      - nav2_initial_pose_received_condition_bt_node
+      - nav2_reinitialize_global_localization_service_bt_node
+      - nav2_rate_controller_bt_node
+      - nav2_distance_controller_bt_node
+      - nav2_speed_controller_bt_node
+      - nav2_truncate_path_action_bt_node
+      - nav2_recovery_node_bt_node
+      - nav2_pipeline_sequence_bt_node
+      - nav2_round_robin_node_bt_node
+      - nav2_transform_available_condition_bt_node
+      - nav2_time_expired_condition_bt_node
+      - nav2_distance_traveled_condition_bt_node
+
+# ============================================================================
+# WAYPOINT FOLLOWER
+# ============================================================================
+# Follows a sequence of waypoints
+waypoint_follower:
+  ros__parameters:
+    use_sim_time: false
+    loop_rate: 20
+    stop_on_failure: false      # Continue to next waypoint on failure
+
+# ============================================================================
+# GLOBAL COSTMAP
+# ============================================================================
+# Used for global path planning - covers entire known map
+global_costmap:
+  global_costmap:
+    ros__parameters:
+      use_sim_time: false
+      
+      # Frame configuration
+      global_frame: map
+      robot_base_frame: base_link
+      
+      # Update rates
+      update_frequency: 2.0       # How often to update costmap
+      publish_frequency: 1.0      # How often to publish costmap
+      
+      # Resolution and behavior
+      resolution: 0.05            # Cell size in meters (5cm)
+      track_unknown_space: true   # Track unknown cells
+      rolling_window: false       # Fixed map (not rolling with robot)
+      
+      # Costmap layers
+      plugins: ["static_layer", "inflation_layer"]
+      
+      # Static layer - Uses map from map_server
+      static_layer:
+        plugin: "nav2_costmap_2d::StaticLayer"
+        map_subscribe_transient_local: true
+      
+      # Inflation layer - Inflates obstacles for safety
+      inflation_layer:
+        plugin: "nav2_costmap_2d::InflationLayer"
+        inflation_radius: 0.55    # Distance to inflate (meters)
+        cost_scaling_factor: 3.0  # How quickly cost decays
+
+# ============================================================================
+# LOCAL COSTMAP
+# ============================================================================
+# Used for local planning - moves with robot, includes sensor data
+local_costmap:
+  local_costmap:
+    ros__parameters:
+      use_sim_time: false
+      
+      # Frame configuration
+      global_frame: odom          # Uses odom for local planning
+      robot_base_frame: base_link
+      
+      # Update rates
+      update_frequency: 10.0      # Higher frequency for reactive behavior
+      publish_frequency: 5.0
+      
+      # Rolling window configuration
+      rolling_window: true        # Moves with robot
+      width: 3                    # Width in meters
+      height: 3                   # Height in meters
+      resolution: 0.05            # Cell size (5cm)
+      
+      # Costmap layers
+      plugins: ["obstacle_layer", "inflation_layer"]
+      
+      # Obstacle layer - Real-time sensor data
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        observation_sources: scan
+        
+        scan:
+          topic: scan_raw         # Your laser scan topic
+          max_obstacle_height: 2.0
+          clearing: true          # Clear obstacles when not seen
+          marking: true           # Mark obstacles when seen
+          data_type: "LaserScan"
+      
+      # Inflation layer
+      inflation_layer:
+        plugin: "nav2_costmap_2d::InflationLayer"
+        inflation_radius: 0.55    # Safety margin around obstacles
+        cost_scaling_factor: 3.0
+
+# ============================================================================
+# TUNING TIPS:
+# ============================================================================
+# 
+# For slower, safer navigation:
+#   - Decrease max_vel_x and max_vel_theta
+#   - Increase inflation_radius
+#   - Increase cost_scaling_factor
+# 
+# For faster navigation:
+#   - Increase max_vel_x and max_vel_theta
+#   - Decrease inflation_radius
+#   - Increase controller_frequency
+# 
+# If robot oscillates:
+#   - Increase Oscillation.scale in critics
+#   - Decrease vtheta_samples
+#   - Increase angular_granularity
+# 
+# If robot gets stuck:
+#   - Decrease xy_goal_tolerance
+#   - Increase movement_time_allowance
+#   - Check inflation_radius (might be too large)
+# 
+# If localization is poor:
+#   - Increase max_particles in AMCL
+#   - Tune alpha parameters based on odometry quality
+#   - Adjust laser model parameters
+# ============================================================================

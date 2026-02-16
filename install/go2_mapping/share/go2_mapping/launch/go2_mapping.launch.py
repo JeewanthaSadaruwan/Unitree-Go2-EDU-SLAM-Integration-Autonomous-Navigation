@@ -14,11 +14,12 @@ Usage:
 """
 
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess, SetEnvironmentVariable, TimerAction, RegisterEventHandler
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, SetEnvironmentVariable, TimerAction, RegisterEventHandler, IncludeLaunchDescription
 from launch.event_handlers import OnProcessStart
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
+from launch.launch_description_sources import PythonLaunchDescriptionSource
 import os
 
 
@@ -120,15 +121,15 @@ def generate_launch_description():
             actions=[pc2_relay_node]
         ),
         TimerAction(
-            period=1.5,
+            period=1.0,
             actions=[static_tf_node]
         ),
         TimerAction(
-            period=2.0,
+            period=3.0,
             actions=[pointcloud_to_laserscan_node]
         ),
         TimerAction(
-            period=3.0,
+            period=4.0,
             actions=[slam_toolbox_node]
         ),
     ])
