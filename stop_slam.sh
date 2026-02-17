@@ -19,6 +19,11 @@ fi
 echo ""
 echo "Killing SLAM-related processes..."
 
+# Stop user-level odom TF service if it is running
+if systemctl --user is-active --quiet go2-odom-to-tf.service 2>/dev/null; then
+    systemctl --user stop go2-odom-to-tf.service && echo "✓ Stopped go2-odom-to-tf.service" || echo "  (failed to stop go2-odom-to-tf.service)"
+fi
+
 # Kill SLAM Toolbox
 pkill -f "slam_toolbox" && echo "✓ Killed slam_toolbox" || echo "  (slam_toolbox not running)"
 
@@ -31,8 +36,8 @@ pkill -f "odom_to_tf.py" && echo "✓ Killed odom_to_tf" || echo "  (odom_to_tf 
 # Kill pc2_relay
 pkill -f "pc2_relay_be.py" && echo "✓ Killed pc2_relay" || echo "  (pc2_relay not running)"
 
-# Kill static TF publisher (both versions)
-pkill -f "static_transform_publisher.*base_link.*base_footprint" && echo "✓ Killed static_transform_publisher (base_footprint)" || echo "  (static_transform_publisher base_footprint not running)"
+# Kill static TF publisher aliases
+pkill -f "static_transform_publisher.*base_link.*base" && echo "✓ Killed static_transform_publisher (base)" || echo "  (static_transform_publisher base not running)"
 pkill -f "static_transform_publisher.*base_link.*hesai_lidar" && echo "✓ Killed static_transform_publisher (hesai_lidar)" || echo "  (static_transform_publisher hesai_lidar not running)"
 
 # Kill pointcloud_to_laserscan

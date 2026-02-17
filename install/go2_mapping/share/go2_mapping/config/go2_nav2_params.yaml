@@ -57,7 +57,7 @@ amcl:
 map_server:
   ros__parameters:
     use_sim_time: false
-    yaml_filename: "/home/unitree/odom/maps/floor10_1.yaml"
+    yaml_filename: "/home/unitree/odom/maps/floor10.yaml"
 
 # ============================================================================
 # CONTROLLER SERVER
@@ -199,7 +199,7 @@ bt_navigator:
     odom_topic: "odom"
     
     # Path to behavior tree XML file
-    default_bt_xml_filename: "/opt/ros/humble/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml"
+    default_bt_xml_filename: "/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml"
     
     # Behavior tree plugin libraries
     plugin_lib_names:

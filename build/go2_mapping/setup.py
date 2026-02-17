@@ -1,1 +1,0 @@
-/home/unitree/odom/src/go2_mapping/setup.py

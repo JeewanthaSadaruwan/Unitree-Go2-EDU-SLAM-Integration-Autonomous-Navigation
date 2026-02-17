@@ -24,7 +24,7 @@ def generate_launch_description():
     # Declare launch arguments
     map_yaml_arg = DeclareLaunchArgument(
         'map_yaml',
-        default_value='/home/unitree/odom/maps/floor10_1.yaml',
+        default_value='/home/unitree/odom/maps/floor10.yaml',
         description='Full path to map yaml file'
     )
     
@@ -103,6 +103,15 @@ def generate_launch_description():
         parameters=[{'use_sim_time': use_sim_time}]
     )
     
+    # Static TF alias: base_link -> base (connect odom/nav tree to URDF root)
+    static_tf_base_link_base = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='static_tf_base_link_to_base',
+        arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'base'],
+        output='screen'
+    )
+
     # Static TF: base_link -> hesai_lidar
     static_tf_hesai = Node(
         package='tf2_ros',
@@ -240,6 +249,7 @@ def generate_launch_description():
         # Base nodes (TF & Sensors)
         robot_state_publisher_node,
         odom_to_tf_node,
+        static_tf_base_link_base,
         static_tf_hesai,
         pointcloud_to_laserscan_node,
         

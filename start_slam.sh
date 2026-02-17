@@ -38,12 +38,17 @@ python3 ~/pc2_relay_be.py &
 echo "✓ PC2 Relay started"
 sleep 1
 
-# 4. Static TF: base_link -> hesai_lidar
-ros2 run tf2_ros static_transform_publisher 0.15 0 0.12 0 0 0 base_link hesai_lidar 2>/dev/null &
-echo "✓ Static TF started"
+# 4. Static TF alias: base_link -> base (connects odom tree to URDF root frame)
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 base_link base 2>/dev/null &
+echo "✓ Static TF (base_link -> base) started"
 sleep 1
 
-# 5. PointCloud to LaserScan
+# 5. Static TF: base_link -> hesai_lidar
+ros2 run tf2_ros static_transform_publisher 0.15 0 0.12 0 0 0 base_link hesai_lidar 2>/dev/null &
+echo "✓ Static TF (base_link -> hesai_lidar) started"
+sleep 1
+
+# 6. PointCloud to LaserScan
 ros2 run pointcloud_to_laserscan pointcloud_to_laserscan_node --ros-args \
     --params-file ~/odom/install/go2_mapping/share/go2_mapping/config/pointcloud_to_laserscan.yaml \
     -r cloud_in:=/lidar_points \
@@ -51,7 +56,7 @@ ros2 run pointcloud_to_laserscan pointcloud_to_laserscan_node --ros-args \
 echo "✓ PointCloud to LaserScan started"
 sleep 2
 
-# 6. SLAM Toolbox
+# 7. SLAM Toolbox
 ros2 run slam_toolbox async_slam_toolbox_node --ros-args \
     --params-file ~/odom/install/go2_mapping/share/go2_mapping/config/slam_params.yaml \
     -r scan:=/scan_raw 2>/dev/null &

@@ -14,19 +14,35 @@ echo -e "${GREEN}  Go2 Robot Navigation Stack${NC}"
 echo -e "${GREEN}======================================${NC}"
 
 # Check if map file is provided
-MAP_FILE="${1:-/home/unitree/odom/maps/floor10_1.yaml}"
+MAP_FILE="${1:-/home/unitree/odom/maps/floor10.yaml}"
 
 if [ ! -f "$MAP_FILE" ]; then
     echo -e "${RED}Error: Map file not found: $MAP_FILE${NC}"
     echo -e "${YELLOW}Usage: $0 [map_file.yaml]${NC}"
-    echo -e "${YELLOW}Example: $0 /home/unitree/odom/maps/floor10_1.yaml${NC}"
+    echo -e "${YELLOW}Example: $0 /home/unitree/odom/maps/floor10.yaml${NC}"
     exit 1
 fi
 
 echo -e "${GREEN}Using map: $MAP_FILE${NC}"
 
+# Running SLAM Toolbox and AMCL/Nav2 together causes map->odom TF conflicts.
+if pgrep -f "slam_toolbox" >/dev/null; then
+    echo -e "${RED}Error: slam_toolbox is running.${NC}"
+    echo -e "${YELLOW}Stop SLAM first (./stop_slam.sh), then start navigation.${NC}"
+    exit 1
+fi
+
+# Prevent duplicate odom->base_link TF publishers if user service is active.
+if systemctl --user is-active --quiet go2-odom-to-tf.service 2>/dev/null; then
+    echo -e "${YELLOW}go2-odom-to-tf.service is active; stopping it to avoid duplicate TF.${NC}"
+    systemctl --user stop go2-odom-to-tf.service || {
+        echo -e "${RED}Failed to stop go2-odom-to-tf.service${NC}"
+        exit 1
+    }
+fi
+
 # Source ROS2 workspace
-source /opt/ros/humble/setup.bash
+source /opt/ros/foxy/setup.bash
 source /home/unitree/odom/install/setup.bash
 
 echo -e "${GREEN}Launching navigation stack...${NC}"

@@ -1,0 +1,29 @@
+running develop
+Removing /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2-mapping.egg-link (link to .)
+running egg_info
+writing ../../build/go2_mapping/go2_mapping.egg-info/PKG-INFO
+writing dependency_links to ../../build/go2_mapping/go2_mapping.egg-info/dependency_links.txt
+writing entry points to ../../build/go2_mapping/go2_mapping.egg-info/entry_points.txt
+writing requirements to ../../build/go2_mapping/go2_mapping.egg-info/requires.txt
+writing top-level names to ../../build/go2_mapping/go2_mapping.egg-info/top_level.txt
+reading manifest file '../../build/go2_mapping/go2_mapping.egg-info/SOURCES.txt'
+writing manifest file '../../build/go2_mapping/go2_mapping.egg-info/SOURCES.txt'
+running build
+running build_py
+running build_scripts
+running install
+running install_lib
+creating /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping
+copying /home/unitree/odom/build/go2_mapping/build/lib/go2_mapping/__init__.py -> /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping
+copying /home/unitree/odom/build/go2_mapping/build/lib/go2_mapping/odom_to_tf.py -> /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping
+byte-compiling /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/odom_to_tf.py to odom_to_tf.cpython-38.pyc
+running install_data
+copying launch/go2_navigation.launch.py -> /home/unitree/odom/install/go2_mapping/share/go2_mapping/launch
+copying launch/go2_mapping.launch.py -> /home/unitree/odom/install/go2_mapping/share/go2_mapping/launch
+running install_egg_info
+Copying ../../build/go2_mapping/go2_mapping.egg-info to /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping-1.0.0-py3.8.egg-info
+running install_scripts
+changing mode of /home/unitree/odom/install/go2_mapping/lib/go2_mapping/save_map.py to 775
+Installing odom_to_tf script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+writing list of installed files to '/home/unitree/odom/build/go2_mapping/install.log'
