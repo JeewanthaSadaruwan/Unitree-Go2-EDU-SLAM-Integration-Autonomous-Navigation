@@ -1,0 +1,20 @@
+[2.100s] Invoking command in '/home/unitree/odom/build/go2_mapping': PYTHONPATH=/home/unitree/odom/build/go2_mapping/prefix_override:/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/unitree/odom/build/go2_mapping/build --no-deps install_data
+[2.607s] running develop
+[2.951s] running egg_info
+[2.951s] writing go2_mapping.egg-info/PKG-INFO
+[2.952s] writing dependency_links to go2_mapping.egg-info/dependency_links.txt
+[2.952s] writing entry points to go2_mapping.egg-info/entry_points.txt
+[2.953s] writing requirements to go2_mapping.egg-info/requires.txt
+[2.953s] writing top-level names to go2_mapping.egg-info/top_level.txt
+[3.020s] reading manifest file 'go2_mapping.egg-info/SOURCES.txt'
+[3.022s] writing manifest file 'go2_mapping.egg-info/SOURCES.txt'
+[3.098s] running build_ext
+[3.101s] Creating /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2-mapping.egg-link (link to .)
+[3.103s] Installing goal_pose_relay script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+[3.104s] Installing odom_to_tf script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+[3.107s] Installing save_map.py script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+[3.108s] 
+[3.108s] Installed /home/unitree/odom/build/go2_mapping
+[3.108s] running install_data
+[3.108s] copying launch/go2_navigation.launch.py -> /home/unitree/odom/install/go2_mapping/share/go2_mapping/launch
+[3.192s] Invoked command in '/home/unitree/odom/build/go2_mapping' returned '0': PYTHONPATH=/home/unitree/odom/build/go2_mapping/prefix_override:/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/unitree/odom/build/go2_mapping/build --no-deps install_data

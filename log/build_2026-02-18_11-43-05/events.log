@@ -1,0 +1,63 @@
+[0.000000] (-) TimerEvent: {}
+[0.000457] (-) JobUnselected: {'identifier': 'go2_description'}
+[0.000811] (-) JobUnselected: {'identifier': 'hesai_ros_driver'}
+[0.001332] (go2_mapping) JobQueued: {'identifier': 'go2_mapping', 'dependencies': OrderedDict()}
+[0.001668] (go2_mapping) JobStarted: {'identifier': 'go2_mapping'}
+[0.099535] (-) TimerEvent: {}
+[0.200298] (-) TimerEvent: {}
+[0.302192] (-) TimerEvent: {}
+[0.403274] (-) TimerEvent: {}
+[0.504395] (-) TimerEvent: {}
+[0.605879] (-) TimerEvent: {}
+[0.706846] (-) TimerEvent: {}
+[0.807624] (-) TimerEvent: {}
+[0.908219] (-) TimerEvent: {}
+[1.008803] (-) TimerEvent: {}
+[1.109463] (-) TimerEvent: {}
+[1.210549] (-) TimerEvent: {}
+[1.312041] (-) TimerEvent: {}
+[1.412764] (-) TimerEvent: {}
+[1.513594] (-) TimerEvent: {}
+[1.615190] (-) TimerEvent: {}
+[1.716212] (-) TimerEvent: {}
+[1.816900] (-) TimerEvent: {}
+[1.917525] (-) TimerEvent: {}
+[2.018166] (-) TimerEvent: {}
+[2.118849] (-) TimerEvent: {}
+[2.219500] (-) TimerEvent: {}
+[2.320176] (-) TimerEvent: {}
+[2.420840] (-) TimerEvent: {}
+[2.503933] (go2_mapping) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/go2_mapping', 'build', '--build-base', '/home/unitree/odom/build/go2_mapping/build', 'install', '--record', '/home/unitree/odom/build/go2_mapping/install.log', '--single-version-externally-managed'], 'cwd': '/home/unitree/odom/src/go2_mapping', 'env': {'PYENV_VIRTUALENV_INIT': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'unitree', 'SSH_CLIENT': '192.168.123.99 45882 22', 'LC_TIME': 'si_LK', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/unitree/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/local/cuda-11.4/lib64:/usr/local/lib:/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp/lib:/home/unitree/cyclonedds_ws/install/cyclonedds/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'BROWSER': '/home/unitree/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/unitree', 'CYCLONEDDS_URI': '/home/unitree/cyclonedds_ws/cyclonedds.xml', 'OLDPWD': '/home/unitree/odom', 'TERM_PROGRAM_VERSION': '1.108.2', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-59f6fb5e-9568-4ce6-ac48-be59d89d6597.sock', 'PYENV_SHELL': 'bash', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/unitree/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/extensions/git/dist/askpass-main.js', 'LC_MONETARY': 'si_LK', 'VSCODE_GIT_ASKPASS_NODE': '/home/unitree/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/unitree/odom/install:/home/unitree/cyclonedds_ws/install:/home/unitree/unitree_test_ws/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'unitree', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PKG_CONFIG_PATH': '/home/unitree/cyclonedds_ws/install/cyclonedds/lib/aarch64-linux-gnu/pkgconfig:/home/unitree/cyclonedds_ws/install/cyclonedds/lib/pkgconfig', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'XDG_SESSION_ID': '5', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/unitree/.pyenv/plugins/pyenv-virtualenv/shims:/home/unitree/.pyenv/shims:/home/unitree/.pyenv/bin:/usr/local/cuda-11.4/bin:/home/unitree/cyclonedds_ws/install/cyclonedds/bin:/opt/ros/foxy/bin:/home/unitree/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/unitree/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/unitree/.vscode-server/cli/servers/Stable-c9d77990917f3102ada88be140d28b038d1dd7c7/server/bin/remote-cli:/home/unitree/.local/bin:/home/unitree/.pyenv/plugins/pyenv-virtualenv/shims:/home/unitree/.pyenv/bin:/usr/local/cuda-11.4/bin:/home/unitree/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'LC_ADDRESS': 'si_LK', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'LANG': 'en_US.UTF-8', 'LC_TELEPHONE': 'si_LK', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'CYCLONEDDS_HOME': '/home/unitree/cyclonedds/install', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-f66462ecb4.sock', 'TERM_PROGRAM': 'vscode', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/home/unitree/odom/install/go2_mapping:/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp:/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'si_LK', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'si_LK', 'LC_IDENTIFICATION': 'si_LK', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/unitree/odom/build/go2_mapping', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.123.99 45882 192.168.123.18 22', 'XDG_DATA_DIRS': '/home/unitree/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/unitree/odom/build/go2_mapping/prefix_override:/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages:/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages:/usr/local/lib:/usr/local/lib/python3.8/pyrealsense2:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib:/usr/local/lib/python3.8/pyrealsense2:', 'LC_NUMERIC': 'si_LK', 'LC_PAPER': 'si_LK', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/unitree/cyclonedds_ws/install/rmw_cyclonedds_cpp:/home/unitree/cyclonedds_ws/install/cyclonedds'}, 'shell': False}
+[2.520985] (-) TimerEvent: {}
+[2.621671] (-) TimerEvent: {}
+[2.722291] (-) TimerEvent: {}
+[2.822882] (-) TimerEvent: {}
+[2.923490] (-) TimerEvent: {}
+[2.946910] (go2_mapping) StdoutLine: {'line': b'running egg_info\n'}
+[2.948285] (go2_mapping) StdoutLine: {'line': b'writing ../../build/go2_mapping/go2_mapping.egg-info/PKG-INFO\n'}
+[2.949180] (go2_mapping) StdoutLine: {'line': b'writing dependency_links to ../../build/go2_mapping/go2_mapping.egg-info/dependency_links.txt\n'}
+[2.949546] (go2_mapping) StdoutLine: {'line': b'writing entry points to ../../build/go2_mapping/go2_mapping.egg-info/entry_points.txt\n'}
+[2.949859] (go2_mapping) StdoutLine: {'line': b'writing requirements to ../../build/go2_mapping/go2_mapping.egg-info/requires.txt\n'}
+[2.950063] (go2_mapping) StdoutLine: {'line': b'writing top-level names to ../../build/go2_mapping/go2_mapping.egg-info/top_level.txt\n'}
+[3.020220] (go2_mapping) StdoutLine: {'line': b"reading manifest file '../../build/go2_mapping/go2_mapping.egg-info/SOURCES.txt'\n"}
+[3.021953] (go2_mapping) StdoutLine: {'line': b"writing manifest file '../../build/go2_mapping/go2_mapping.egg-info/SOURCES.txt'\n"}
+[3.022306] (go2_mapping) StdoutLine: {'line': b'running build\n'}
+[3.022513] (go2_mapping) StdoutLine: {'line': b'running build_py\n'}
+[3.022979] (go2_mapping) StdoutLine: {'line': b'running build_scripts\n'}
+[3.023238] (go2_mapping) StdoutLine: {'line': b'running install\n'}
+[3.023472] (-) TimerEvent: {}
+[3.024929] (go2_mapping) StdoutLine: {'line': b'running install_lib\n'}
+[3.027844] (go2_mapping) StdoutLine: {'line': b'running install_data\n'}
+[3.029185] (go2_mapping) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.032910] (go2_mapping) StdoutLine: {'line': b"removing '/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping-1.0.0-py3.8.egg-info' (and everything under it)\n"}
+[3.033662] (go2_mapping) StdoutLine: {'line': b'Copying ../../build/go2_mapping/go2_mapping.egg-info to /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping-1.0.0-py3.8.egg-info\n'}
+[3.035981] (go2_mapping) StdoutLine: {'line': b'running install_scripts\n'}
+[3.071301] (go2_mapping) StdoutLine: {'line': b'changing mode of /home/unitree/odom/install/go2_mapping/lib/go2_mapping/save_map.py to 775\n'}
+[3.074814] (go2_mapping) StdoutLine: {'line': b'Installing odom_to_tf script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping\n'}
+[3.075917] (go2_mapping) StdoutLine: {'line': b"writing list of installed files to '/home/unitree/odom/build/go2_mapping/install.log'\n"}
+[3.123647] (-) TimerEvent: {}
+[3.142044] (go2_mapping) CommandEnded: {'returncode': 0}
+[3.223915] (-) TimerEvent: {}
+[3.325714] (-) TimerEvent: {}
+[3.416007] (go2_mapping) JobEnded: {'identifier': 'go2_mapping', 'rc': 0}
+[3.417727] (-) EventReactorShutdown: {}

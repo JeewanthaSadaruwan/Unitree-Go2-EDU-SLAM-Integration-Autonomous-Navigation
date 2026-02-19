@@ -30,6 +30,7 @@ setup(
     entry_points={
         'console_scripts': [
             'odom_to_tf = go2_mapping.odom_to_tf:main',
+            'goal_pose_relay = go2_mapping.goal_pose_relay:main',
         ],
     },
     scripts=[

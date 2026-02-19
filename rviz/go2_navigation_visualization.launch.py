@@ -1,36 +1,35 @@
 #!/usr/bin/env python3
 """
-RViz Launch File for Go2 Navigation Visualization
+RViz launch file for Go2 navigation visualization.
 
-This launches RViz on your LOCAL COMPUTER with all displays configured for navigation:
-- RobotModel (Go2 3D mesh)
-- TF (all frames)
-- Map (loaded from file)
-- LaserScan (/scan_raw)
-- Global Path (from global planner)
-- Local Path (from local planner)
-- Global Costmap
-- Local Costmap
-- Particle Cloud (AMCL localization)
-- Goal/Initial Pose tools
+Usage (absolute path launch):
+  ros2 launch /home/unitree/odom/rviz/go2_navigation_visualization.launch.py
 
-Usage on your laptop:
-    ros2 launch go2_navigation_visualization.launch.py
-    
-Or simply:
-    rviz2 -d ~/Desktop/rviz/go2_navigation_visualization.rviz
+Usage (custom config):
+  ros2 launch /home/unitree/odom/rviz/go2_navigation_visualization.launch.py \
+    rviz_config:=/path/to/custom.rviz
 """
 
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
 from launch import LaunchDescription
 from launch_ros.actions import Node
 import os
 
 
 def generate_launch_description():
-    
-    # Path to RViz config file (in same directory as this launch file)
-    rviz_config = os.path.join(os.path.dirname(__file__), 'go2_navigation_visualization.rviz')
-    
+    default_rviz_config = os.path.join(
+        os.path.dirname(__file__), 'go2_navigation_visualization.rviz'
+    )
+
+    rviz_config_arg = DeclareLaunchArgument(
+        'rviz_config',
+        default_value=default_rviz_config,
+        description='Absolute path to RViz config file'
+    )
+
+    rviz_config = LaunchConfiguration('rviz_config')
+
     # RViz Node
     rviz_node = Node(
         package='rviz2',
@@ -40,6 +39,4 @@ def generate_launch_description():
         output='screen'
     )
     
-    return LaunchDescription([
-        rviz_node,
-    ])
+    return LaunchDescription([rviz_config_arg, rviz_node])

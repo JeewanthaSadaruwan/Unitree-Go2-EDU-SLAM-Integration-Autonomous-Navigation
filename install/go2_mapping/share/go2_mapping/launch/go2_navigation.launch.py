@@ -1,16 +1,10 @@
 #!/usr/bin/env python3
 
-import os
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, EmitEvent, RegisterEventHandler
-from launch.conditions import IfCondition
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
-from launch.events import matches_action
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node, LifecycleNode
-from launch_ros.event_handlers import OnStateTransition
-from launch_ros.events.lifecycle import ChangeState
-from lifecycle_msgs.msg import Transition
 from ament_index_python.packages import get_package_share_directory
 
 
@@ -70,6 +64,12 @@ def generate_launch_description():
         description='Scan topic name'
     )
 
+    cloud_topic_arg = DeclareLaunchArgument(
+        'cloud_topic',
+        default_value='/lidar_points',
+        description='Input PointCloud2 topic for pointcloud_to_laserscan'
+    )
+
     # Get launch configurations
     map_yaml = LaunchConfiguration('map_yaml')
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -79,6 +79,7 @@ def generate_launch_description():
     odom_frame_id = LaunchConfiguration('odom_frame_id')
     global_frame_id = LaunchConfiguration('global_frame_id')
     scan_topic = LaunchConfiguration('scan_topic')
+    cloud_topic = LaunchConfiguration('cloud_topic')
 
     # ========== BASE NODES (TF & SENSORS) ==========
     
@@ -128,10 +129,18 @@ def generate_launch_description():
         name='pointcloud_to_laserscan',
         output='screen',
         remappings=[
-            ('cloud_in', '/utlidar/cloud_deskewed'),
+            ('cloud_in', cloud_topic),
             ('scan', '/scan_raw')
         ],
         parameters=['/home/unitree/odom/src/go2_mapping/config/pointcloud_to_laserscan.yaml']
+    )
+    # Relay PoseStamped /goal_pose messages into NavigateToPose action
+    goal_pose_relay_node = Node(
+        package='go2_mapping',
+        executable='goal_pose_relay',
+        name='goal_pose_relay',
+        output='screen',
+        parameters=[{'use_sim_time': use_sim_time}]
     )
 
     # Map Server Lifecycle Node
@@ -140,10 +149,13 @@ def generate_launch_description():
         executable='map_server',
         name='map_server',
         output='screen',
-        parameters=[{
-            'yaml_filename': map_yaml,
-            'use_sim_time': use_sim_time
-        }]
+        parameters=[
+            params_file,
+            {
+                'yaml_filename': map_yaml,
+                'use_sim_time': use_sim_time
+            }
+        ]
     )
 
     # AMCL Lifecycle Node
@@ -152,70 +164,30 @@ def generate_launch_description():
         executable='amcl',
         name='amcl',
         output='screen',
+        parameters=[
+            params_file,
+            {
+                'use_sim_time': use_sim_time,
+                'base_frame_id': base_frame_id,
+                'odom_frame_id': odom_frame_id,
+                'global_frame_id': global_frame_id,
+                'scan_topic': scan_topic,
+                'tf_broadcast': True
+            }
+        ]
+    )
+
+    # Lifecycle manager for localization nodes
+    localization_lifecycle_manager = Node(
+        package='nav2_lifecycle_manager',
+        executable='lifecycle_manager',
+        name='lifecycle_manager_localization',
+        output='screen',
         parameters=[{
             'use_sim_time': use_sim_time,
-            'base_frame_id': base_frame_id,
-            'odom_frame_id': odom_frame_id,
-            'global_frame_id': global_frame_id,
-            'scan_topic': scan_topic
+            'autostart': autostart,
+            'node_names': ['map_server', 'amcl']
         }]
-    )
-
-    # Map Server Lifecycle Management
-    map_server_configure = EmitEvent(
-        event=ChangeState(
-            lifecycle_node_matcher=matches_action(map_server_node),
-            transition_id=Transition.TRANSITION_CONFIGURE,
-        )
-    )
-
-    map_server_activate = RegisterEventHandler(
-        OnStateTransition(
-            target_lifecycle_node=map_server_node,
-            start_state='configuring',
-            goal_state='inactive',
-            entities=[
-                EmitEvent(
-                    event=ChangeState(
-                        lifecycle_node_matcher=matches_action(map_server_node),
-                        transition_id=Transition.TRANSITION_ACTIVATE,
-                    )
-                ),
-            ],
-        )
-    )
-
-    # AMCL Lifecycle Management
-    amcl_configure = RegisterEventHandler(
-        OnStateTransition(
-            target_lifecycle_node=map_server_node,
-            start_state='activating',
-            goal_state='active',
-            entities=[
-                EmitEvent(
-                    event=ChangeState(
-                        lifecycle_node_matcher=matches_action(amcl_node),
-                        transition_id=Transition.TRANSITION_CONFIGURE,
-                    )
-                ),
-            ],
-        )
-    )
-
-    amcl_activate = RegisterEventHandler(
-        OnStateTransition(
-            target_lifecycle_node=amcl_node,
-            start_state='configuring',
-            goal_state='inactive',
-            entities=[
-                EmitEvent(
-                    event=ChangeState(
-                        lifecycle_node_matcher=matches_action(amcl_node),
-                        transition_id=Transition.TRANSITION_ACTIVATE,
-                    )
-                ),
-            ],
-        )
     )
 
     # Nav2 Bringup Launch
@@ -245,6 +217,7 @@ def generate_launch_description():
         odom_frame_arg,
         global_frame_arg,
         scan_topic_arg,
+        cloud_topic_arg,
         
         # Base nodes (TF & Sensors)
         robot_state_publisher_node,
@@ -252,16 +225,12 @@ def generate_launch_description():
         static_tf_base_link_base,
         static_tf_hesai,
         pointcloud_to_laserscan_node,
+        goal_pose_relay_node,
         
         # Navigation nodes
         map_server_node,
         amcl_node,
-        
-        # Lifecycle management
-        map_server_configure,
-        map_server_activate,
-        amcl_configure,
-        amcl_activate,
+        localization_lifecycle_manager,
         
         # Nav2
         nav2_bringup_launch,
