@@ -20,9 +20,11 @@ if systemctl --user is-active --quiet go2-cmdvel-bridge.service 2>/dev/null; the
     exit 0
 fi
 
-# Source ROS2 workspaces
+# Source ROS2 and overlays in order (base -> dependencies -> this workspace)
+source /opt/ros/foxy/setup.bash
 source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
 source ~/go2_bringup_ws/install/setup.bash
+source ~/odom/install/setup.bash
 
 echo -e "${GREEN}Launching cmd_vel bridge...${NC}"
 

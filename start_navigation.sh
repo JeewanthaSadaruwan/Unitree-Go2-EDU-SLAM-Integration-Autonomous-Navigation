@@ -28,7 +28,7 @@ echo -e "${GREEN}Using map: $MAP_FILE${NC}"
 # Running SLAM Toolbox and AMCL/Nav2 together causes map->odom TF conflicts.
 if pgrep -f "slam_toolbox" >/dev/null; then
     echo -e "${RED}Error: slam_toolbox is running.${NC}"
-    echo -e "${YELLOW}Stop SLAM first (./stop_slam.sh), then start navigation.${NC}"
+    echo -e "${YELLOW}Stop SLAM first (./stop_all.sh), then start navigation.${NC}"
     exit 1
 fi
 

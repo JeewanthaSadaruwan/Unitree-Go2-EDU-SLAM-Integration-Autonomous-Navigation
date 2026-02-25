@@ -5,7 +5,6 @@ Go2 Mapping Bringup Launch File
 This launch file starts all necessary nodes for Go2 robot SLAM:
 - Robot State Publisher (URDF visualization)
 - Odom to TF broadcaster
-- Static TF alias: base_link -> base (connect odom to URDF root)
 - Static TF: base_link -> hesai_lidar
 - PointCloud to LaserScan conversion
 - SLAM Toolbox
@@ -75,16 +74,7 @@ def generate_launch_description():
         name='pc2_relay'
     )
 
-    # 4. Static TF alias: base_link -> base
-    static_tf_base_link_to_base_node = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='base_link_to_base',
-        arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'base'],
-        output='screen'
-    )
-
-    # 5. Static TF: base_link -> hesai_lidar
+    # 4. Static TF: base_link -> hesai_lidar
     # Typical Hesai XT32 mounting: 15cm forward, centered, 12cm above base_link
     static_tf_node = Node(
         package='tf2_ros',
@@ -94,7 +84,7 @@ def generate_launch_description():
         output='screen'
     )
 
-    # 6. PointCloud to LaserScan converter (Hesai lidar)
+    # 5. PointCloud to LaserScan converter (Hesai lidar)
     pointcloud_to_laserscan_node = Node(
         package='pointcloud_to_laserscan',
         executable='pointcloud_to_laserscan_node',
@@ -107,7 +97,7 @@ def generate_launch_description():
         ]
     )
 
-    # 7. SLAM Toolbox
+    # 6. SLAM Toolbox
     slam_toolbox_node = Node(
         package='slam_toolbox',
         executable='async_slam_toolbox_node',
@@ -129,10 +119,6 @@ def generate_launch_description():
         TimerAction(
             period=1.0,
             actions=[pc2_relay_node]
-        ),
-        TimerAction(
-            period=1.0,
-            actions=[static_tf_base_link_to_base_node]
         ),
         TimerAction(
             period=1.0,

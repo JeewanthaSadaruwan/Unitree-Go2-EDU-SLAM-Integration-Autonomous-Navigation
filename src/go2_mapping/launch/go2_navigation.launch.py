@@ -2,6 +2,7 @@
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node, LifecycleNode
@@ -60,7 +61,7 @@ def generate_launch_description():
     
     scan_topic_arg = DeclareLaunchArgument(
         'scan_topic',
-        default_value='scan_raw',
+        default_value='/scan',
         description='Scan topic name'
     )
 
@@ -68,6 +69,12 @@ def generate_launch_description():
         'cloud_topic',
         default_value='/lidar_points',
         description='Input PointCloud2 topic for pointcloud_to_laserscan'
+    )
+
+    enable_goal_pose_relay_arg = DeclareLaunchArgument(
+        'enable_goal_pose_relay',
+        default_value='false',
+        description='Enable legacy /goal_pose -> NavigateToPose relay (disabled by default)'
     )
 
     # Get launch configurations
@@ -80,6 +87,7 @@ def generate_launch_description():
     global_frame_id = LaunchConfiguration('global_frame_id')
     scan_topic = LaunchConfiguration('scan_topic')
     cloud_topic = LaunchConfiguration('cloud_topic')
+    enable_goal_pose_relay = LaunchConfiguration('enable_goal_pose_relay')
 
     # ========== BASE NODES (TF & SENSORS) ==========
     
@@ -104,20 +112,11 @@ def generate_launch_description():
         parameters=[{'use_sim_time': use_sim_time}]
     )
     
-    # Static TF alias: base_link -> base (connect odom/nav tree to URDF root)
-    static_tf_base_link_base = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='static_tf_base_link_to_base',
-        arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'base'],
-        output='screen'
-    )
-
     # Static TF: base_link -> hesai_lidar
     static_tf_hesai = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
-        name='static_tf_base_to_hesai',
+        name='static_tf_base_link_to_hesai',
         arguments=['0.15', '0', '0.12', '0', '0', '0', 'base_link', 'hesai_lidar'],
         output='screen'
     )
@@ -130,7 +129,7 @@ def generate_launch_description():
         output='screen',
         remappings=[
             ('cloud_in', cloud_topic),
-            ('scan', '/scan_raw')
+            ('scan', '/scan')
         ],
         parameters=['/home/unitree/odom/src/go2_mapping/config/pointcloud_to_laserscan.yaml']
     )
@@ -140,6 +139,7 @@ def generate_launch_description():
         executable='goal_pose_relay',
         name='goal_pose_relay',
         output='screen',
+        condition=IfCondition(enable_goal_pose_relay),
         parameters=[{'use_sim_time': use_sim_time}]
     )
 
@@ -218,11 +218,11 @@ def generate_launch_description():
         global_frame_arg,
         scan_topic_arg,
         cloud_topic_arg,
+        enable_goal_pose_relay_arg,
         
         # Base nodes (TF & Sensors)
         robot_state_publisher_node,
         odom_to_tf_node,
-        static_tf_base_link_base,
         static_tf_hesai,
         pointcloud_to_laserscan_node,
         goal_pose_relay_node,

@@ -1,0 +1,25 @@
+[2.184s] Invoking command in '/home/unitree/odom/src/go2_mapping': PYTHONPATH=/home/unitree/odom/build/go2_mapping/prefix_override:/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/go2_mapping build --build-base /home/unitree/odom/build/go2_mapping/build install --record /home/unitree/odom/build/go2_mapping/install.log --single-version-externally-managed
+[2.633s] running egg_info
+[2.634s] writing ../../build/go2_mapping/go2_mapping.egg-info/PKG-INFO
+[2.634s] writing dependency_links to ../../build/go2_mapping/go2_mapping.egg-info/dependency_links.txt
+[2.635s] writing entry points to ../../build/go2_mapping/go2_mapping.egg-info/entry_points.txt
+[2.635s] writing requirements to ../../build/go2_mapping/go2_mapping.egg-info/requires.txt
+[2.635s] writing top-level names to ../../build/go2_mapping/go2_mapping.egg-info/top_level.txt
+[2.701s] reading manifest file '../../build/go2_mapping/go2_mapping.egg-info/SOURCES.txt'
+[2.703s] writing manifest file '../../build/go2_mapping/go2_mapping.egg-info/SOURCES.txt'
+[2.703s] running build
+[2.704s] running build_py
+[2.704s] running build_scripts
+[2.704s] running install
+[2.705s] running install_lib
+[2.708s] running install_data
+[2.710s] copying config/go2_nav2_params.yaml -> /home/unitree/odom/install/go2_mapping/share/go2_mapping/config
+[2.711s] running install_egg_info
+[2.714s] removing '/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping-1.0.0-py3.8.egg-info' (and everything under it)
+[2.715s] Copying ../../build/go2_mapping/go2_mapping.egg-info to /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping-1.0.0-py3.8.egg-info
+[2.717s] running install_scripts
+[2.753s] changing mode of /home/unitree/odom/install/go2_mapping/lib/go2_mapping/save_map.py to 775
+[2.757s] Installing goal_pose_relay script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+[2.758s] Installing odom_to_tf script to /home/unitree/odom/install/go2_mapping/lib/go2_mapping
+[2.759s] writing list of installed files to '/home/unitree/odom/build/go2_mapping/install.log'
+[2.830s] Invoked command in '/home/unitree/odom/src/go2_mapping' returned '0': PYTHONPATH=/home/unitree/odom/build/go2_mapping/prefix_override:/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/go2_mapping build --build-base /home/unitree/odom/build/go2_mapping/build install --record /home/unitree/odom/build/go2_mapping/install.log --single-version-externally-managed

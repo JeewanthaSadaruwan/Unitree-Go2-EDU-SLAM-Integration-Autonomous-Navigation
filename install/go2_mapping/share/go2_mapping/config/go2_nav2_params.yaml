@@ -24,7 +24,7 @@ amcl:
     global_frame_id: "map"
     
     # Sensor configuration
-    scan_topic: "scan_raw"
+    scan_topic: "/scan"
     
     # Particle filter parameters
     min_particles: 200          # Minimum number of particles
@@ -177,8 +177,10 @@ planner_server:
 recoveries_server:
   ros__parameters:
     use_sim_time: false
-    costmap_topic: local_costmap/costmap_raw
-    footprint_topic: local_costmap/published_footprint
+    # Foxy default is /local_costmap/costmap_raw. If your runtime only publishes
+    # /local_costmap/costmap, switch this (or run ./check_recoveries_costmap_topic.sh).
+    costmap_topic: /local_costmap/costmap_raw
+    footprint_topic: /local_costmap/published_footprint
     cycle_frequency: 5.0
     recovery_plugins: ["spin", "backup", "wait"]
     
@@ -264,12 +266,26 @@ global_costmap:
       rolling_window: false       # Fixed map (not rolling with robot)
       
       # Costmap layers
-      plugins: ["static_layer", "inflation_layer"]
+      plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
       
       # Static layer - Uses map from map_server
       static_layer:
         plugin: "nav2_costmap_2d::StaticLayer"
         map_subscribe_transient_local: true
+
+      # Obstacle layer - Lets global planner account for live obstacles
+      obstacle_layer:
+        plugin: "nav2_costmap_2d::ObstacleLayer"
+        enabled: true
+        observation_sources: scan
+        scan:
+          topic: /scan
+          data_type: "LaserScan"
+          marking: true
+          clearing: true
+          obstacle_max_range: 3.0
+          raytrace_max_range: 4.0
+          max_obstacle_height: 2.0
       
       # Inflation layer - Inflates obstacles for safety
       inflation_layer:
@@ -299,6 +315,7 @@ local_costmap:
       
       # Rolling window configuration
       rolling_window: true        # Moves with robot
+      # Foxy expects integer type for width/height params.
       width: 3                    # Width in meters
       height: 3                   # Height in meters
       resolution: 0.05            # Cell size (5cm)
@@ -309,10 +326,13 @@ local_costmap:
       # Obstacle layer - Real-time sensor data
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
+        enabled: true
         observation_sources: scan
         
         scan:
-          topic: scan_raw         # Your laser scan topic
+          topic: /scan            # Laser scan topic used by Nav2
+          obstacle_max_range: 2.5
+          raytrace_max_range: 3.0
           max_obstacle_height: 2.0
           clearing: true          # Clear obstacles when not seen
           marking: true           # Mark obstacles when seen
