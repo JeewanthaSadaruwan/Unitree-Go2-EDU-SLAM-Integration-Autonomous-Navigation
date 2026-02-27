@@ -84,6 +84,15 @@ def generate_launch_description():
         output='screen'
     )
 
+    # 4b. Static TF: base_link -> base (URDF root link alignment)
+    static_tf_base_node = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='base_link_to_base',
+        arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'base'],
+        output='screen'
+    )
+
     # 5. PointCloud to LaserScan converter (Hesai lidar)
     pointcloud_to_laserscan_node = Node(
         package='pointcloud_to_laserscan',
@@ -123,6 +132,10 @@ def generate_launch_description():
         TimerAction(
             period=1.0,
             actions=[static_tf_node]
+        ),
+        TimerAction(
+            period=1.0,
+            actions=[static_tf_base_node]
         ),
         TimerAction(
             period=3.0,

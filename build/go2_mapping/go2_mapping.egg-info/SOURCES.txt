@@ -16,6 +16,7 @@ config/slam_params_go2.yaml
 go2_mapping/__init__.py
 go2_mapping/goal_pose_relay.py
 go2_mapping/odom_to_tf.py
+go2_mapping/rviz_click_logger.py
 launch/go2_bridge.launch.py
 launch/go2_mapping.launch.py
 launch/go2_navigation.launch.py

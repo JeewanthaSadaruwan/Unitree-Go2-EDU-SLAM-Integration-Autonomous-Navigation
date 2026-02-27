@@ -1,6 +1,8 @@
+/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/rviz_click_logger.py
 /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/goal_pose_relay.py
 /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/__init__.py
 /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/odom_to_tf.py
+/home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/__pycache__/rviz_click_logger.cpython-38.pyc
 /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/__pycache__/goal_pose_relay.cpython-38.pyc
 /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/__pycache__/__init__.cpython-38.pyc
 /home/unitree/odom/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/__pycache__/odom_to_tf.cpython-38.pyc
@@ -24,3 +26,4 @@
 /home/unitree/odom/install/go2_mapping/lib/go2_mapping/save_map.py
 /home/unitree/odom/install/go2_mapping/lib/go2_mapping/goal_pose_relay
 /home/unitree/odom/install/go2_mapping/lib/go2_mapping/odom_to_tf
+/home/unitree/odom/install/go2_mapping/lib/go2_mapping/rviz_click_logger

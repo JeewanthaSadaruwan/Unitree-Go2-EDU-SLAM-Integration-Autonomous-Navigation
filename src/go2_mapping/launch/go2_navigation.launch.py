@@ -120,6 +120,15 @@ def generate_launch_description():
         arguments=['0.15', '0', '0.12', '0', '0', '0', 'base_link', 'hesai_lidar'],
         output='screen'
     )
+
+    # Static TF: base_link -> base (URDF root link alignment)
+    static_tf_base = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='static_tf_base_link_to_base',
+        arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'base'],
+        output='screen'
+    )
     
     # PointCloud to LaserScan converter
     pointcloud_to_laserscan_node = Node(
@@ -223,6 +232,7 @@ def generate_launch_description():
         # Base nodes (TF & Sensors)
         robot_state_publisher_node,
         odom_to_tf_node,
+        static_tf_base,
         static_tf_hesai,
         pointcloud_to_laserscan_node,
         goal_pose_relay_node,

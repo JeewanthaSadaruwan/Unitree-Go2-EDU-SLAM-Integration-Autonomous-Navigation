@@ -43,6 +43,11 @@ ros2 run tf2_ros static_transform_publisher 0.15 0 0.12 0 0 0 base_link hesai_li
 echo "✓ Static TF (base_link -> hesai_lidar) started"
 sleep 1
 
+# 4b. Static TF: base_link -> base (URDF root alignment)
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 base_link base 2>/dev/null &
+echo "✓ Static TF (base_link -> base) started"
+sleep 1
+
 # 5. PointCloud to LaserScan
 ros2 run pointcloud_to_laserscan pointcloud_to_laserscan_node --ros-args \
     --params-file ~/odom/install/go2_mapping/share/go2_mapping/config/pointcloud_to_laserscan.yaml \

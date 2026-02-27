@@ -1,10 +1,8 @@
-Metadata-Version: 1.2
-Name: go2-mapping
+Metadata-Version: 2.1
+Name: go2_mapping
 Version: 1.0.0
 Summary: Go2 Robot SLAM and Mapping Utilities
-Home-page: UNKNOWN
 Maintainer: unitree
 Maintainer-email: unitree@todo.todo
 License: MIT
-Description: UNKNOWN
-Platform: UNKNOWN
+Requires-Dist: setuptools

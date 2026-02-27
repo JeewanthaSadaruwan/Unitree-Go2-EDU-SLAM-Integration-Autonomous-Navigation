@@ -31,7 +31,8 @@ source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
 ## Personal Computer
 ```bash
 source /opt/ros/foxy/setup.bash
-rviz2
+rviz2 -d /home/wso2-robotics/Desktop/rviz/go2_slam_visualization.rviz
+
 ```
 
 # Map Saving
@@ -111,6 +112,21 @@ source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
 source /opt/ros/foxy/setup.bash
 rviz2 -d /opt/ros/foxy/share/nav2_bringup/rviz/nav2_default_view.rviz
 ```
+
+rviz2 -d /home/wso2-robotics/Desktop/rviz/go2_slam_visualization.rviz
+
+## Read XYZ and Yaw from RViz Clicks
+```bash
+cd ~/odom
+source /opt/ros/foxy/setup.bash
+source ~/odom/install/setup.bash
+ros2 run go2_mapping rviz_click_logger
+```
+
+- RViz tool `Publish Point` publishes `/clicked_point` (`x, y, z`).
+- RViz tool `2D Nav Goal` publishes `/goal_pose` (`x, y, z, yaw`).
+- The logger prints yaw in both radians and degrees.
+
 
 ## Nav2 Runtime Sanity Checks
 ```bash
