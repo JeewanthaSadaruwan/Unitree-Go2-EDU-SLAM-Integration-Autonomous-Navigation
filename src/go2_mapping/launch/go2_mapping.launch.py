@@ -24,9 +24,10 @@ import os
 
 
 def generate_launch_description():
-    
+    workspace_root = os.path.expanduser('~/SLAM')
+
     # Path to robot URDF
-    urdf_file = os.path.expanduser('~/odom/GO2_URDF/urdf/go2_description.urdf')
+    urdf_file = os.path.join(workspace_root, 'GO2_URDF', 'urdf', 'go2_description.urdf')
     
     # Read URDF file
     with open(urdf_file, 'r') as f:
@@ -62,7 +63,7 @@ def generate_launch_description():
     # 2. Odom to TF broadcaster (Python script directly)
     odom_to_tf_node = ExecuteProcess(
         cmd=['/usr/bin/python3', 
-             os.path.expanduser('~/odom/src/go2_mapping/go2_mapping/odom_to_tf.py')],
+             os.path.join(workspace_root, 'src', 'go2_mapping', 'go2_mapping', 'odom_to_tf.py')],
         output='screen',
         name='odom_to_tf'
     )

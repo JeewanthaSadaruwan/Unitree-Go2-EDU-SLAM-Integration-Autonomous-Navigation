@@ -7,11 +7,14 @@ from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node, LifecycleNode
 from ament_index_python.packages import get_package_share_directory
+import os
 
 
 def generate_launch_description():
+    workspace_root = os.path.expanduser('~/SLAM')
+
     # Path to URDF file
-    urdf_file = '/home/unitree/odom/GO2_URDF/urdf/go2_description.urdf'
+    urdf_file = os.path.join(workspace_root, 'GO2_URDF', 'urdf', 'go2_description.urdf')
     
     # Read URDF file
     with open(urdf_file, 'r') as f:
@@ -19,7 +22,7 @@ def generate_launch_description():
     # Declare launch arguments
     map_yaml_arg = DeclareLaunchArgument(
         'map_yaml',
-        default_value='/home/unitree/odom/maps/floor10.yaml',
+        default_value=os.path.join(workspace_root, 'maps', 'floor10.yaml'),
         description='Full path to map yaml file'
     )
     
@@ -31,7 +34,7 @@ def generate_launch_description():
     
     params_file_arg = DeclareLaunchArgument(
         'params_file',
-        default_value='/home/unitree/odom/src/go2_mapping/config/go2_nav2_params.yaml',
+        default_value=os.path.join(workspace_root, 'src', 'go2_mapping', 'config', 'go2_nav2_params.yaml'),
         description='Full path to Nav2 params file'
     )
     
@@ -140,7 +143,7 @@ def generate_launch_description():
             ('cloud_in', cloud_topic),
             ('scan', '/scan')
         ],
-        parameters=['/home/unitree/odom/src/go2_mapping/config/pointcloud_to_laserscan.yaml']
+        parameters=[os.path.join(workspace_root, 'src', 'go2_mapping', 'config', 'pointcloud_to_laserscan.yaml')]
     )
     # Relay PoseStamped /goal_pose messages into NavigateToPose action
     goal_pose_relay_node = Node(

@@ -45,7 +45,7 @@ def main(args=None):
         import os
         from datetime import datetime
         timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        map_name = f'/home/unitree/odom/maps/map_{timestamp}'
+        map_name = os.path.expanduser(f'~/SLAM/maps/map_{timestamp}')
     
     # Ensure maps directory exists
     import os

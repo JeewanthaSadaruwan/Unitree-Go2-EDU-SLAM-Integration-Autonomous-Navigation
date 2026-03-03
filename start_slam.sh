@@ -8,9 +8,12 @@ echo "=== Starting Go2 SLAM System ==="
 # Disable pyenv temporarily
 export PYENV_VERSION=system
 
+# Resolve workspace root from this script location
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Source ROS2
 source /opt/ros/foxy/setup.bash
-source ~/odom/install/setup.bash
+source "$ROOT_DIR/install/setup.bash"
 
 # Kill any existing processes
 pkill -9 -f "slam_toolbox|odom_to_tf|static_transform|pointcloud_to_laserscan|robot_state_publisher|pc2_relay"
@@ -24,12 +27,12 @@ ros2 run robot_state_publisher robot_state_publisher \
     -p use_sim_time:=false \
     __params:=<(echo "robot_state_publisher:
   ros__parameters:
-    robot_description: '$(cat ~/odom/GO2_URDF/urdf/go2_description.urdf | sed "s/'/\\\\'/g")'") 2>/dev/null &
+    robot_description: '$(cat "$ROOT_DIR/GO2_URDF/urdf/go2_description.urdf" | sed "s/'/\\\\'/g")'") 2>/dev/null &
 echo "✓ Robot State Publisher started"
 sleep 1
 
 # 2. Odom to TF
-python3 ~/odom/src/go2_mapping/go2_mapping/odom_to_tf.py &
+python3 "$ROOT_DIR/src/go2_mapping/go2_mapping/odom_to_tf.py" &
 echo "✓ Odom to TF started"
 sleep 1
 
@@ -50,7 +53,7 @@ sleep 1
 
 # 5. PointCloud to LaserScan
 ros2 run pointcloud_to_laserscan pointcloud_to_laserscan_node --ros-args \
-    --params-file ~/odom/install/go2_mapping/share/go2_mapping/config/pointcloud_to_laserscan.yaml \
+    --params-file "$ROOT_DIR/src/go2_mapping/config/pointcloud_to_laserscan.yaml" \
     -r cloud_in:=/lidar_points \
     -r scan:=/scan_raw 2>/dev/null &
 echo "✓ PointCloud to LaserScan started"
@@ -58,7 +61,7 @@ sleep 2
 
 # 6. SLAM Toolbox
 ros2 run slam_toolbox async_slam_toolbox_node --ros-args \
-    --params-file ~/odom/install/go2_mapping/share/go2_mapping/config/slam_params.yaml \
+    --params-file "$ROOT_DIR/src/go2_mapping/config/slam_params.yaml" \
     -r scan:=/scan_raw 2>/dev/null &
 echo "✓ SLAM Toolbox started"
 

@@ -12,6 +12,9 @@ echo -e "${GREEN}======================================${NC}"
 echo -e "${GREEN}  Go2 Robot Navigation Bridge${NC}"
 echo -e "${GREEN}======================================${NC}"
 
+# Resolve workspace root from this script location
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Avoid launching a duplicate bridge when managed by user systemd.
 if systemctl --user is-active --quiet go2-cmdvel-bridge.service 2>/dev/null; then
     echo -e "${YELLOW}go2-cmdvel-bridge.service is already running.${NC}"
@@ -24,7 +27,7 @@ fi
 source /opt/ros/foxy/setup.bash
 source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
 source ~/go2_bringup_ws/install/setup.bash
-source ~/odom/install/setup.bash
+source "$ROOT_DIR/install/setup.bash"
 
 echo -e "${GREEN}Launching cmd_vel bridge...${NC}"
 

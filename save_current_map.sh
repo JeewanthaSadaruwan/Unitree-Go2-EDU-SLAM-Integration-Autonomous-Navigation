@@ -13,8 +13,11 @@ echo -e "${GREEN}======================================${NC}"
 echo -e "${GREEN}  Go2 Robot Map Saver${NC}"
 echo -e "${GREEN}======================================${NC}"
 
+# Resolve workspace root from this script location
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Create maps directory if it doesn't exist
-mkdir -p ~/odom/maps
+mkdir -p "$ROOT_DIR/maps"
 
 # Get map name from argument or use default
 if [ -z "$1" ]; then
@@ -26,11 +29,11 @@ else
     echo -e "${GREEN}Using map name: $MAP_NAME${NC}"
 fi
 
-MAP_PATH="/home/unitree/odom/maps/${MAP_NAME}"
+MAP_PATH="$ROOT_DIR/maps/${MAP_NAME}"
 
 # Source ROS2 workspace
 source /opt/ros/humble/setup.bash
-source /home/unitree/odom/install/setup.bash
+source "$ROOT_DIR/install/setup.bash"
 
 echo -e "${GREEN}Saving map to: ${MAP_PATH}${NC}"
 
