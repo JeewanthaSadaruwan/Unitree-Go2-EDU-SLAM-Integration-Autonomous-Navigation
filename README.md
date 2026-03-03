@@ -2,20 +2,20 @@
 
 ## Robot
 ```bash
-cd ~/odom
+cd ~/SLAM
 source /opt/ros/foxy/setup.bash
-source ~/odom/install/setup.bash
+source ~/SLAM/install/setup.bash
 ./stop_all.sh
 ```
 
 ```bash
 source /opt/ros/foxy/setup.bash
-source ~/odom/xt16_ws/install/setup.bash
+source ~/SLAM/xt16_ws/install/setup.bash
 ros2 launch hesai_ros_driver start.py
 ```
 
 ```bash
-cd ~/odom
+cd ~/SLAM
 ./start_slam.sh
 ```
 
@@ -25,7 +25,7 @@ export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 export CYCLONEDDS_URI='<CycloneDDS><Domain><General><Interfaces><NetworkInterface name="eth0"/></Interfaces></General></Domain></CycloneDDS>'
 source /opt/ros/foxy/setup.bash
 source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
-/usr/bin/python3.8 ~/odom/noneed/lowstate_to_joint_states.py
+/usr/bin/python3.8 ~/SLAM/noneed/lowstate_to_joint_states.py
 ```
 
 ## Personal Computer
@@ -39,34 +39,34 @@ rviz2 -d /home/wso2-robotics/Desktop/rviz/go2_slam_visualization.rviz
 
 ## Robot
 ```bash
-cd ~/odom
+cd ~/SLAM
 ./save_current_map.sh floor15_2
 ```
 
 ```bash
-cd ~/odom
+cd ~/SLAM
 ./save_current_map.sh
 ```
 
 ```bash
 source /opt/ros/foxy/setup.bash
-source ~/odom/install/setup.bash
-ros2 run go2_mapping save_map.py /home/unitree/odom/maps/floor15_2
+source ~/SLAM/install/setup.bash
+ros2 run go2_mapping save_map.py /home/unitree/SLAM/maps/floor15_2
 ```
 
 # Navigation
 
 ## Robot
 ```bash
-cd ~/odom
+cd ~/SLAM
 source /opt/ros/foxy/setup.bash
-source ~/odom/install/setup.bash
+source ~/SLAM/install/setup.bash
 ./stop_all.sh
 ```
 
 ```bash
 source /opt/ros/foxy/setup.bash
-source ~/odom/xt16_ws/install/setup.bash
+source ~/SLAM/xt16_ws/install/setup.bash
 ros2 launch hesai_ros_driver start.py
 ```
 
@@ -75,7 +75,7 @@ systemctl --user status go2-cmdvel-bridge.service
 ```
 
 ```bash
-cd ~/odom
+cd ~/SLAM
 # If service is active (running), do NOT run ./start_bridge.sh
 # If service is inactive, run bridge manually:
 ./start_bridge.sh
@@ -84,18 +84,18 @@ cd ~/odom
 ```bash
 # Optional: stop service first, then run bridge manually
 systemctl --user stop go2-cmdvel-bridge.service
-cd ~/odom
+cd ~/SLAM
 source /opt/ros/foxy/setup.bash
 source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
 source ~/go2_bringup_ws/install/setup.bash
-source ~/odom/install/setup.bash
+source ~/SLAM/install/setup.bash
 ros2 launch go2_mapping go2_bridge.launch.py
 
 ```
 
 ```bash
-cd ~/odom
-./start_navigation.sh /home/unitree/odom/maps/floor10.yaml
+cd ~/SLAM
+./start_navigation.sh /home/unitree/SLAM/maps/floor10.yaml
 ```
 
 ```bash
@@ -104,7 +104,7 @@ export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 export CYCLONEDDS_URI='<CycloneDDS><Domain><General><Interfaces><NetworkInterface name="eth0"/></Interfaces></General></Domain></CycloneDDS>'
 source /opt/ros/foxy/setup.bash
 source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
-/usr/bin/python3.8 ~/odom/noneed/lowstate_to_joint_states.py
+/usr/bin/python3.8 ~/SLAM/noneed/lowstate_to_joint_states.py
 ```
 
 ## Personal Computer
@@ -117,9 +117,9 @@ rviz2 -d /home/wso2-robotics/Desktop/rviz/go2_slam_visualization.rviz
 
 ## Read XYZ and Yaw from RViz Clicks
 ```bash
-cd ~/odom
+cd ~/SLAM
 source /opt/ros/foxy/setup.bash
-source ~/odom/install/setup.bash
+source ~/SLAM/install/setup.bash
 ros2 run go2_mapping rviz_click_logger
 ```
 
@@ -130,7 +130,7 @@ ros2 run go2_mapping rviz_click_logger
 
 ## Nav2 Runtime Sanity Checks
 ```bash
-cd ~/odom
+cd ~/SLAM
 source /opt/ros/foxy/setup.bash
 
 # Detect which recoveries costmap topic is currently published
