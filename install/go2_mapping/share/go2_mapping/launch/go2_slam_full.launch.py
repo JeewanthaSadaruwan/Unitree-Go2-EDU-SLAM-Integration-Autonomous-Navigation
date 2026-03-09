@@ -40,7 +40,7 @@ def generate_launch_description():
     # 1. Odom to TF broadcaster (Python script directly)
     odom_to_tf_node = ExecuteProcess(
         cmd=['/usr/bin/python3', 
-             os.path.expanduser('~/odom/src/go2_mapping/go2_mapping/odom_to_tf.py')],
+             os.path.expanduser('~/SLAM/src/go2_mapping/go2_mapping/odom_to_tf.py')],
         output='screen',
         name='odom_to_tf'
     )

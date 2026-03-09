@@ -1,13 +1,81 @@
-/**:
+slam_toolbox:
   ros__parameters:
+    # ========== ROBOT & FRAMES ==========
     use_sim_time: false
-    mode: mapping
-    map_frame: map
-    odom_frame: odom
     base_frame: base_link
+    odom_frame: odom
+    map_frame: map
+    
+    # ========== SCAN SETTINGS ==========
     scan_topic: /scan
+    scan_queue_size: 10
+    
+    # ========== MODE ==========
+    mode: mapping  # mapping or localization
+    
+    # ========== SOLVER ==========
+    solver_plugin: solver_plugins::CeresSolver
+    ceres_linear_solver: SPARSE_NORMAL_CHOLESKY
+    ceres_preconditioner: SCHUR_JACOBI
+    ceres_trust_strategy: LEVENBERG_MARQUARDT
+    ceres_dogleg_type: TRADITIONAL_DOGLEG
+    ceres_loss_function: None
+    
+    # ========== SCAN MATCHING ==========
     use_scan_matching: true
-    transform_timeout: 1.0
-    map_update_interval: 1.0
-    resolution: 0.05
-    max_laser_range: 30.0
+    use_scan_barycenter: true
+    minimum_travel_distance: 0.2        # Move 20cm before processing
+    minimum_travel_heading: 0.2         # Rotate 0.2 rad (~11 deg) before processing
+    scan_buffer_size: 20
+    scan_buffer_maximum_scan_distance: 15.0
+    link_match_minimum_response_fine: 0.1
+    link_scan_maximum_distance: 1.5
+    loop_search_maximum_distance: 3.0
+    do_loop_closing: true
+    loop_match_minimum_chain_size: 10
+    loop_match_maximum_variance_coarse: 3.0
+    loop_match_minimum_response_coarse: 0.35
+    loop_match_minimum_response_fine: 0.45
+    
+    # ========== CORRELATION ==========
+    correlation_search_space_dimension: 0.5
+    correlation_search_space_resolution: 0.01
+    correlation_search_space_smear_deviation: 0.1
+    
+    # ========== LOOP CLOSURE ==========
+    loop_search_space_dimension: 8.0
+    loop_search_space_resolution: 0.05
+    loop_search_space_smear_deviation: 0.03
+    
+    # ========== SCAN MATCHER ==========
+    distance_variance_penalty: 0.5
+    angle_variance_penalty: 1.0
+    fine_search_angle_offset: 0.00349
+    coarse_search_angle_offset: 0.349
+    coarse_angle_resolution: 0.0349
+    minimum_angle_penalty: 0.9
+    minimum_distance_penalty: 0.5
+    use_response_expansion: true
+    
+    # ========== MAP SETTINGS ==========
+    resolution: 0.05                    # 5cm per grid cell (good for indoor)
+    max_laser_range: 30.0              # Unitree LiDAR max range
+    minimum_time_interval: 0.5
+    transform_publish_period: 0.02     # 50Hz TF publishing
+    map_update_interval: 1.0           # Update map every 1 second
+    enable_interactive_mode: true
+    
+    # ========== TIMING & TRANSFORMS ==========
+    transform_timeout: 0.2
+    tf_buffer_duration: 30.0
+    stack_size_to_use: 40000000        # 40MB stack (important for stability)
+    
+    # ========== OPTIMIZER SETTINGS ==========
+    optimization_iterations: 5
+    max_iterations_to_solve: 100
+    
+    # ========== THROTTLE (reduce CPU load) ==========
+    throttle_scans: 1                  # Process every scan (Go2 LiDAR ~10Hz)
+    
+    # ========== DEBUG ==========
+    debug_logging: false

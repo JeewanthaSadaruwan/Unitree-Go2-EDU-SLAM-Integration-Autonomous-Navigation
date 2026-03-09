@@ -1,1 +1,1 @@
-/home/unitree/odom/src/go2_mapping/scripts/save_map.py
+/home/unitree/SLAM/src/go2_mapping/scripts/save_map.py

@@ -1,1 +1,1 @@
-/home/unitree/odom/src/go2_mapping/launch/go2_navigation.launch.py
+/home/unitree/SLAM/src/go2_mapping/launch/go2_navigation.launch.py

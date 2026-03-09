@@ -32,5 +32,7 @@
     range_max: 12.0
 
     # ========== INFINITY HANDLING ==========
+    # Keep true for cleaner LaserScan semantics. If a websocket relay cannot
+    # handle INF values, sanitize None/null on the relay side while republishing.
     use_inf: true
     inf_epsilon: 1.0

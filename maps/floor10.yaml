@@ -1,4 +1,4 @@
-image: /home/unitree/odom/maps/floor10.pgm
+image: /home/unitree/SLAM/maps/floor10.pgm
 mode: trinary
 resolution: 0.05
 origin: [-3.7, -6.4, 0]

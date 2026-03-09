@@ -1,3 +1,3 @@
 import sys
 sys.real_prefix = sys.prefix
-sys.prefix = sys.exec_prefix = '/home/unitree/odom/install/go2_mapping'
+sys.prefix = sys.exec_prefix = '/home/unitree/SLAM/install/go2_mapping'

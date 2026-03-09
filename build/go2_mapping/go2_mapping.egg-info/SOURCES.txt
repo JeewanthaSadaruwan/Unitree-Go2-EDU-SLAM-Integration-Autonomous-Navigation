@@ -1,4 +1,3 @@
-README.md
 package.xml
 setup.cfg
 setup.py
@@ -17,6 +16,13 @@ go2_mapping/__init__.py
 go2_mapping/goal_pose_relay.py
 go2_mapping/odom_to_tf.py
 go2_mapping/rviz_click_logger.py
+go2_mapping.egg-info/PKG-INFO
+go2_mapping.egg-info/SOURCES.txt
+go2_mapping.egg-info/dependency_links.txt
+go2_mapping.egg-info/entry_points.txt
+go2_mapping.egg-info/requires.txt
+go2_mapping.egg-info/top_level.txt
+go2_mapping.egg-info/zip-safe
 launch/go2_bridge.launch.py
 launch/go2_mapping.launch.py
 launch/go2_navigation.launch.py
