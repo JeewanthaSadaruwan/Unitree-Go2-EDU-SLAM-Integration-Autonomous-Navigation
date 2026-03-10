@@ -32,8 +32,8 @@ export CYCLONEDDS_URI="<CycloneDDS><Domain><General><Interfaces><NetworkInterfac
 echo "Using CycloneDDS interface: $DDS_IFACE"
 
 # Source optional overlays if present
-[[ -f ~/unitree_ros2/install/setup.bash ]] && source ~/unitree_ros2/install/setup.bash
 [[ -f ~/go2_bringup_ws/install/setup.bash ]] && source ~/go2_bringup_ws/install/setup.bash
+[[ -f "$ROOT_DIR/xt16_ws/install/setup.bash" ]] && source "$ROOT_DIR/xt16_ws/install/setup.bash"
 
 HAS_GO2_DESC=0
 if [[ -f ~/go2_desc_ws/install/setup.bash ]]; then
@@ -41,11 +41,50 @@ if [[ -f ~/go2_desc_ws/install/setup.bash ]]; then
     HAS_GO2_DESC=1
 fi
 
+has_topic_publisher() {
+    local topic="$1"
+    local count
+    count="$(ros2 topic info "$topic" 2>/dev/null | awk '/Publisher count:/ {print $3; exit}')"
+    [[ -n "$count" && "$count" =~ ^[0-9]+$ && "$count" -gt 0 ]]
+}
+
 # Kill any existing processes
 pkill -9 -f "slam_toolbox|odom_to_tf|static_transform|pointcloud_to_laserscan|robot_state_publisher|pc2_relay|lowstate_to_joint_states.py"
 sleep 1
 
 echo "Starting nodes..."
+
+# 0. Hesai XT16 driver
+if ros2 pkg prefix hesai_ros_driver >/dev/null 2>&1; then
+    if pgrep -f "hesai_ros_driver_node" >/dev/null 2>&1; then
+        echo "✓ Hesai driver already running"
+    else
+        ros2 launch hesai_ros_driver start.py >/tmp/start_slam_hesai.log 2>&1 &
+        echo "✓ Hesai driver started"
+        sleep 2
+    fi
+else
+    echo "⚠ hesai_ros_driver package not found (xt16_ws may not be built/sourced)"
+fi
+
+# Detect active odometry topic for odom_to_tf
+ODOM_TOPIC="/utlidar/robot_odom"
+for _ in {1..8}; do
+    if has_topic_publisher "/utlidar/robot_odom"; then
+        ODOM_TOPIC="/utlidar/robot_odom"
+        break
+    fi
+    if has_topic_publisher "/lio_sam_ros2/mapping/odometry"; then
+        ODOM_TOPIC="/lio_sam_ros2/mapping/odometry"
+        break
+    fi
+    sleep 1
+done
+if [[ "$ODOM_TOPIC" != "/utlidar/robot_odom" ]]; then
+    echo "✓ Using odometry topic: $ODOM_TOPIC"
+elif ! has_topic_publisher "/utlidar/robot_odom"; then
+    echo "⚠ No publisher for /utlidar/robot_odom (odom_to_tf will wait)"
+fi
 
 # 1. Robot State Publisher
 if [[ "$HAS_GO2_DESC" -eq 1 ]] && command -v xacro >/dev/null 2>&1; then
@@ -74,7 +113,8 @@ fi
 sleep 1
 
 # 3. Odom to TF
-/usr/bin/python3 "$ROOT_DIR/src/go2_mapping/go2_mapping/odom_to_tf.py" &
+/usr/bin/python3 "$ROOT_DIR/src/go2_mapping/go2_mapping/odom_to_tf.py" \
+    --ros-args -r /utlidar/robot_odom:="$ODOM_TOPIC" &
 echo "✓ Odom to TF started"
 sleep 1
 
