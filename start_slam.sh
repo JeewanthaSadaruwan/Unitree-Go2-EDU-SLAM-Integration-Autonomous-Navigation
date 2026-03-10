@@ -105,7 +105,19 @@ sleep 1
 
 # 2. LowState -> JointStates (required for full leg TF tree in RViz)
 if ros2 interface show unitree_go/msg/LowState >/dev/null 2>&1; then
-    /usr/bin/python3 "$ROOT_DIR/noneed/lowstate_to_joint_states.py" &
+    LOWSTATE_DDS_IFACE="eth0"
+    if ! ip -o link show "$LOWSTATE_DDS_IFACE" >/dev/null 2>&1; then
+        LOWSTATE_DDS_IFACE="$DDS_IFACE"
+    fi
+    LOWSTATE_PY="/usr/bin/python3.8"
+    if [[ ! -x "$LOWSTATE_PY" ]]; then
+        LOWSTATE_PY="/usr/bin/python3"
+    fi
+    bash -lc "export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp; \
+export CYCLONEDDS_URI='<CycloneDDS><Domain><General><Interfaces><NetworkInterface name=\"$LOWSTATE_DDS_IFACE\"/></Interfaces></General></Domain></CycloneDDS>'; \
+source /opt/ros/foxy/setup.bash; \
+source ~/unitree_ros2/cyclonedds_ws/install/setup.bash; \
+exec $LOWSTATE_PY '$ROOT_DIR/noneed/lowstate_to_joint_states.py'" >/tmp/start_slam_lowstate.log 2>&1 &
     echo "✓ LowState -> JointStates started"
 else
     echo "⚠ unitree_go/msg/LowState not found; skipping lowstate_to_joint_states"
