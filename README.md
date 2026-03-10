@@ -9,30 +9,40 @@ source ~/SLAM/install/setup.bash
 ```
 
 ```bash
-source /opt/ros/foxy/setup.bash
-source ~/SLAM/xt16_ws/install/setup.bash
-ros2 launch hesai_ros_driver start.py
-```
-
-```bash
 cd ~/SLAM
 ./start_slam.sh
 ```
 
 ```bash
-# Joint states (run in another terminal)
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-export CYCLONEDDS_URI='<CycloneDDS><Domain><General><Interfaces><NetworkInterface name="eth0"/></Interfaces></General></Domain></CycloneDDS>'
-source /opt/ros/foxy/setup.bash
-source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
-/usr/bin/python3.8 ~/SLAM/noneed/lowstate_to_joint_states.py
+# Optional: run rosbridge in a separate terminal (for laptop relay)
+cd ~/SLAM
+./start_rosbridge.sh
 ```
-
 ## Personal Computer
+
+Laptop relay should connect to robot's IP:
 ```bash
 source /opt/ros/foxy/setup.bash
-rviz2 -d /home/wso2-robotics/Desktop/rviz/go2_slam_visualization.rviz
+export PYENV_VERSION=system
+unset PYTHONHOME
+unset CYCLONEDDS_URI FASTRTPS_DEFAULT_PROFILES_FILE
+export ROS_DOMAIN_ID=0
+export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+export ROS_LOCALHOST_ONLY=0
+echo "A: $ROS_DOMAIN_ID $RMW_IMPLEMENTATION $ROS_LOCALHOST_ONLY"
+/usr/bin/python3 /home/sahas/Documents/github/RAI_examples/go2_rosbridge_rviz_relay.py \
+  --rosbridge-url ws://10.224.44.104:9090 \
+  --prefix '' \
+  --subscribe-throttle-ms 100 \
+  --topics /tf,/tf_static,/map,/scan_raw,/utlidar/robot_odom \
+  --topic-types /tf=tf2_msgs/TFMessage,/tf_static=tf2_msgs/TFMessage,/map=nav_msgs/OccupancyGrid,/scan_raw=sensor_msgs/LaserScan,/utlidar/robot_odom=nav_msgs/Odometry
+```
+Then rviz2 need to be started ( save "rviz/go2_slam_visualization.rviz" and launch )
+```bash
+source /opt/ros/foxy/setup.bash
+rviz2 -d <path_to_the_saved_file>/rviz/go2_slam_visualization.rviz
 
+#eg: rviz2 -d /home/wso2-robotics/Desktop/rviz/go2_slam_visualization.rviz
 ```
 
 # Map Saving

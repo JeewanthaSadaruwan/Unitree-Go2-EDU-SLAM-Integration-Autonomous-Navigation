@@ -1,0 +1,5 @@
+/rosbridge_websocket:
+  ros__parameters:
+    address: "0.0.0.0"
+    port: 9090
+    topics_glob: "['/tf','/tf_static','/map','/map_updates','/scan_raw','/scan','/utlidar/robot_odom','/lidar_points','/plan','/local_plan','/global_costmap/costmap','/global_costmap/costmap_updates','/global_costmap/costmap_raw','/local_costmap/costmap','/local_costmap/costmap_updates','/local_costmap/costmap_raw','/particlecloud','/robot_description']"
