@@ -114,7 +114,7 @@ export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 export CYCLONEDDS_URI='<CycloneDDS><Domain><General><Interfaces><NetworkInterface name="eth0"/></Interfaces></General></Domain></CycloneDDS>'
 source /opt/ros/foxy/setup.bash
 source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
-/usr/bin/python3.8 ~/SLAM/noneed/lowstate_to_joint_states.py
+/usr/bin/python3.8 ~/SLAM/noneed/lowstate_to_joint_states_nav.py
 ```
 
 ## Personal Computer
