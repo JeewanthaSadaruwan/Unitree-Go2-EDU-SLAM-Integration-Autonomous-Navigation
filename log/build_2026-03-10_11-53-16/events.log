@@ -1,0 +1,139 @@
+[0.000000] (-) TimerEvent: {}
+[0.000589] (-) JobUnselected: {'identifier': 'go2_description'}
+[0.000799] (-) JobUnselected: {'identifier': 'hesai_ros_driver'}
+[0.001224] (go2_mapping) JobQueued: {'identifier': 'go2_mapping', 'dependencies': OrderedDict()}
+[0.001584] (go2_mapping) JobStarted: {'identifier': 'go2_mapping'}
+[0.099289] (-) TimerEvent: {}
+[0.199760] (-) TimerEvent: {}
+[0.300163] (-) TimerEvent: {}
+[0.400503] (-) TimerEvent: {}
+[0.500858] (-) TimerEvent: {}
+[0.601312] (-) TimerEvent: {}
+[0.702000] (-) TimerEvent: {}
+[0.802391] (-) TimerEvent: {}
+[0.902721] (-) TimerEvent: {}
+[1.003052] (-) TimerEvent: {}
+[1.103384] (-) TimerEvent: {}
+[1.203707] (-) TimerEvent: {}
+[1.304038] (-) TimerEvent: {}
+[1.404363] (-) TimerEvent: {}
+[1.504697] (-) TimerEvent: {}
+[1.605066] (-) TimerEvent: {}
+[1.705408] (-) TimerEvent: {}
+[1.805782] (-) TimerEvent: {}
+[1.906172] (-) TimerEvent: {}
+[1.928056] (go2_mapping) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--uninstall', '--editable', '--build-directory', '/home/unitree/SLAM/build/go2_mapping/build'], 'cwd': '/home/unitree/SLAM/build/go2_mapping', 'env': {'PYENV_VIRTUALENV_INIT': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/unitree', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_CI': '1', 'USER': 'unitree', 'SSH_CLIENT': '10.224.44.90 53844 22', 'LC_TIME': 'C.UTF-8', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/unitree/.vscode-server/cli/servers/Stable-94e8ae2b28cb5cc932b86e1070569c4463565c37/server/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'tty', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'BROWSER': '/home/unitree/.vscode-server/cli/servers/Stable-94e8ae2b28cb5cc932b86e1070569c4463565c37/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/unitree', 'OLDPWD': '/home/unitree/SLAM', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-483f2cbf-0a3f-4fd7-a18e-b8b62f986b79.sock', 'PYENV_SHELL': 'bash', 'JETSON_L4T': '35.3.1', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Orin NX Developer Kit', 'PAGER': 'cat', 'LC_MONETARY': 'C.UTF-8', 'LC_CTYPE': 'C.UTF-8', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': '', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'unitree', 'JETSON_MODULE': 'NVIDIA Jetson Orin NX (16GB ram)', 'JETSON_SERIAL_NUMBER': '', 'VSCODE_HANDLES_SIGPIPE': 'true', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'RUST_LOG': 'warn', 'TERM': 'dumb', 'XDG_SESSION_ID': '6', 'VSCODE_CLI_REQUIRE_TOKEN': '868a7ca3-77ec-4d5f-98a8-c664d5b686d4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/home/unitree/.local/bin:/home/unitree/.local/bin:/home/unitree/.codex/tmp/arg0/codex-arg0NlcJPq:/home/unitree/.vscode-server/cli/servers/Stable-94e8ae2b28cb5cc932b86e1070569c4463565c37/server/bin/remote-cli:/home/unitree/.local/bin:/home/unitree/.pyenv/plugins/pyenv-virtualenv/shims:/home/unitree/.pyenv/shims:/home/unitree/.pyenv/bin:/usr/local/cuda-11.4/bin:/home/unitree/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/unitree/.vscode-server/extensions/openai.chatgpt-26.304.20706/bin/linux-aarch64', 'VSCODE_AGENT_FOLDER': '/home/unitree/.vscode-server', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'C.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'CYCLONEDDS_HOME': '/home/unitree/cyclonedds/install', 'GH_PAGER': 'cat', 'LS_COLORS': '', 'JETSON_SOC': 'tegra23x', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'ELECTRON_RUN_AS_NODE': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CODEX_THREAD_ID': '019cd1b1-5cf7-7450-94cd-e67bbce5102b', 'LC_MEASUREMENT': 'C.UTF-8', 'LC_IDENTIFICATION': 'C.UTF-8', 'GIT_PAGER': 'cat', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/unitree/SLAM/build/go2_mapping', 'LC_ALL': 'C.UTF-8', 'SSH_CONNECTION': '10.224.44.90 53844 10.224.44.104 22', 'XDG_DATA_DIRS': '/home/unitree/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/unitree/SLAM/build/go2_mapping/prefix_override:/home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib:/usr/local/lib/python3.8/pyrealsense2:', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '5.1.1', 'JETSON_P_NUMBER': 'p3767-0000'}, 'shell': False}
+[2.006358] (-) TimerEvent: {}
+[2.106705] (-) TimerEvent: {}
+[2.207042] (-) TimerEvent: {}
+[2.307370] (-) TimerEvent: {}
+[2.407671] (-) TimerEvent: {}
+[2.499202] (go2_mapping) StdoutLine: {'line': b'running develop\n'}
+[2.507800] (-) TimerEvent: {}
+[2.608116] (-) TimerEvent: {}
+[2.708445] (-) TimerEvent: {}
+[2.808763] (-) TimerEvent: {}
+[2.896155] (go2_mapping) StdoutLine: {'line': b'Removing /home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2-mapping.egg-link (link to .)\n'}
+[2.897009] (go2_mapping) StderrLine: {'line': b"/home/unitree/.local/lib/python3.8/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'\n"}
+[2.897250] (go2_mapping) StderrLine: {'line': b'  warnings.warn(msg)\n'}
+[2.897373] (go2_mapping) StderrLine: {'line': b'/home/unitree/.local/lib/python3.8/site-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.\n'}
+[2.897499] (go2_mapping) StderrLine: {'line': b'!!\n'}
+[2.897605] (go2_mapping) StderrLine: {'line': b'\n'}
+[2.897706] (go2_mapping) StderrLine: {'line': b'        ********************************************************************************\n'}
+[2.897807] (go2_mapping) StderrLine: {'line': b'        Please avoid running ``setup.py`` and ``easy_install``.\n'}
+[2.897907] (go2_mapping) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[2.898002] (go2_mapping) StderrLine: {'line': b'        standards-based tools.\n'}
+[2.898096] (go2_mapping) StderrLine: {'line': b'\n'}
+[2.898190] (go2_mapping) StderrLine: {'line': b'        See https://github.com/pypa/setuptools/issues/917 for details.\n'}
+[2.898284] (go2_mapping) StderrLine: {'line': b'        ********************************************************************************\n'}
+[2.898376] (go2_mapping) StderrLine: {'line': b'\n'}
+[2.898468] (go2_mapping) StderrLine: {'line': b'!!\n'}
+[2.898559] (go2_mapping) StderrLine: {'line': b'  easy_install.initialize_options(self)\n'}
+[2.898653] (go2_mapping) StderrLine: {'line': b'/home/unitree/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[2.898747] (go2_mapping) StderrLine: {'line': b'!!\n'}
+[2.898840] (go2_mapping) StderrLine: {'line': b'\n'}
+[2.898933] (go2_mapping) StderrLine: {'line': b'        ********************************************************************************\n'}
+[2.899029] (go2_mapping) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[2.899141] (go2_mapping) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[2.899244] (go2_mapping) StderrLine: {'line': b'        standards-based tools.\n'}
+[2.899341] (go2_mapping) StderrLine: {'line': b'\n'}
+[2.899435] (go2_mapping) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[2.899528] (go2_mapping) StderrLine: {'line': b'        ********************************************************************************\n'}
+[2.899621] (go2_mapping) StderrLine: {'line': b'\n'}
+[2.899743] (go2_mapping) StderrLine: {'line': b'!!\n'}
+[2.899836] (go2_mapping) StderrLine: {'line': b'  self.initialize_options()\n'}
+[2.899932] (go2_mapping) StderrLine: {'line': b'Note: you must uninstall or replace scripts manually!\n'}
+[2.908902] (-) TimerEvent: {}
+[2.983928] (go2_mapping) CommandEnded: {'returncode': 0}
+[2.986494] (go2_mapping) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/go2_mapping', 'build', '--build-base', '/home/unitree/SLAM/build/go2_mapping/build', 'install', '--record', '/home/unitree/SLAM/build/go2_mapping/install.log', '--single-version-externally-managed'], 'cwd': '/home/unitree/SLAM/src/go2_mapping', 'env': {'PYENV_VIRTUALENV_INIT': '1', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'VSCODE_CWD': '/home/unitree', 'VSCODE_ESM_ENTRYPOINT': 'vs/workbench/api/node/extensionHostProcess', 'CODEX_CI': '1', 'USER': 'unitree', 'SSH_CLIENT': '10.224.44.90 53844 22', 'LC_TIME': 'C.UTF-8', 'CODEX_INTERNAL_ORIGINATOR_OVERRIDE': 'codex_vscode', 'VSCODE_NLS_CONFIG': '{"userLocale":"en","osLocale":"en","resolvedLanguage":"en","defaultMessagesFile":"/home/unitree/.vscode-server/cli/servers/Stable-94e8ae2b28cb5cc932b86e1070569c4463565c37/server/out/nls.messages.json","locale":"en","availableLanguages":{}}', 'VSCODE_HANDLES_UNCAUGHT_ERRORS': 'true', 'XDG_SESSION_TYPE': 'tty', 'DEBUG': 'release', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:', 'BROWSER': '/home/unitree/.vscode-server/cli/servers/Stable-94e8ae2b28cb5cc932b86e1070569c4463565c37/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/unitree', 'OLDPWD': '/home/unitree/SLAM', 'VSCODE_RECONNECTION_GRACE_TIME': '10800000', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-483f2cbf-0a3f-4fd7-a18e-b8b62f986b79.sock', 'PYENV_SHELL': 'bash', 'JETSON_L4T': '35.3.1', 'ROS_PYTHON_VERSION': '3', 'JETSON_MODEL': 'NVIDIA Orin NX Developer Kit', 'PAGER': 'cat', 'LC_MONETARY': 'C.UTF-8', 'LC_CTYPE': 'C.UTF-8', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'NO_COLOR': '1', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': '', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'unitree', 'JETSON_MODULE': 'NVIDIA Jetson Orin NX (16GB ram)', 'JETSON_SERIAL_NUMBER': '', 'VSCODE_HANDLES_SIGPIPE': 'true', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'JETSON_CODENAME': 'P3768', 'XDG_SESSION_CLASS': 'user', 'RUST_LOG': 'warn', 'TERM': 'dumb', 'XDG_SESSION_ID': '6', 'VSCODE_CLI_REQUIRE_TOKEN': '868a7ca3-77ec-4d5f-98a8-c664d5b686d4', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/foxy/bin:/home/unitree/.local/bin:/home/unitree/.local/bin:/home/unitree/.codex/tmp/arg0/codex-arg0NlcJPq:/home/unitree/.vscode-server/cli/servers/Stable-94e8ae2b28cb5cc932b86e1070569c4463565c37/server/bin/remote-cli:/home/unitree/.local/bin:/home/unitree/.pyenv/plugins/pyenv-virtualenv/shims:/home/unitree/.pyenv/shims:/home/unitree/.pyenv/bin:/usr/local/cuda-11.4/bin:/home/unitree/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/unitree/.vscode-server/extensions/openai.chatgpt-26.304.20706/bin/linux-aarch64', 'VSCODE_AGENT_FOLDER': '/home/unitree/.vscode-server', 'LC_ADDRESS': 'C.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'CODEX_SANDBOX_NETWORK_DISABLED': '1', 'LANG': 'C.UTF-8', 'LC_TELEPHONE': 'C.UTF-8', 'CYCLONEDDS_HOME': '/home/unitree/cyclonedds/install', 'GH_PAGER': 'cat', 'LS_COLORS': '', 'JETSON_SOC': 'tegra23x', 'ROS_DOMAIN_ID': '0', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'C.UTF-8', 'ELECTRON_RUN_AS_NODE': '1', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'CODEX_THREAD_ID': '019cd1b1-5cf7-7450-94cd-e67bbce5102b', 'LC_MEASUREMENT': 'C.UTF-8', 'LC_IDENTIFICATION': 'C.UTF-8', 'GIT_PAGER': 'cat', 'JETSON_CUDA_ARCH_BIN': '8.7', 'PWD': '/home/unitree/SLAM/build/go2_mapping', 'LC_ALL': 'C.UTF-8', 'SSH_CONNECTION': '10.224.44.90 53844 10.224.44.104 22', 'XDG_DATA_DIRS': '/home/unitree/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/unitree/SLAM/build/go2_mapping/prefix_override:/home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/usr/local/lib:/usr/local/lib/python3.8/pyrealsense2:', 'LC_NUMERIC': 'C.UTF-8', 'LC_PAPER': 'C.UTF-8', 'COLCON': '1', 'JETSON_JETPACK': '5.1.1', 'JETSON_P_NUMBER': 'p3767-0000'}, 'shell': False}
+[3.009090] (-) TimerEvent: {}
+[3.109487] (-) TimerEvent: {}
+[3.209831] (-) TimerEvent: {}
+[3.310164] (-) TimerEvent: {}
+[3.410518] (-) TimerEvent: {}
+[3.483495] (go2_mapping) StdoutLine: {'line': b'running egg_info\n'}
+[3.510655] (-) TimerEvent: {}
+[3.523275] (go2_mapping) StdoutLine: {'line': b'writing ../../build/go2_mapping/go2_mapping.egg-info/PKG-INFO\n'}
+[3.526289] (go2_mapping) StdoutLine: {'line': b'writing dependency_links to ../../build/go2_mapping/go2_mapping.egg-info/dependency_links.txt\n'}
+[3.527270] (go2_mapping) StdoutLine: {'line': b'writing entry points to ../../build/go2_mapping/go2_mapping.egg-info/entry_points.txt\n'}
+[3.527684] (go2_mapping) StdoutLine: {'line': b'writing requirements to ../../build/go2_mapping/go2_mapping.egg-info/requires.txt\n'}
+[3.528031] (go2_mapping) StdoutLine: {'line': b'writing top-level names to ../../build/go2_mapping/go2_mapping.egg-info/top_level.txt\n'}
+[3.610784] (-) TimerEvent: {}
+[3.711105] (-) TimerEvent: {}
+[3.811426] (-) TimerEvent: {}
+[3.856308] (go2_mapping) StdoutLine: {'line': b"reading manifest file '../../build/go2_mapping/go2_mapping.egg-info/SOURCES.txt'\n"}
+[3.859820] (go2_mapping) StdoutLine: {'line': b"writing manifest file '../../build/go2_mapping/go2_mapping.egg-info/SOURCES.txt'\n"}
+[3.860322] (go2_mapping) StdoutLine: {'line': b'running build\n'}
+[3.860523] (go2_mapping) StdoutLine: {'line': b'running build_py\n'}
+[3.860985] (go2_mapping) StdoutLine: {'line': b'copying go2_mapping/rviz_click_logger.py -> /home/unitree/SLAM/build/go2_mapping/build/lib/go2_mapping\n'}
+[3.861696] (go2_mapping) StdoutLine: {'line': b'copying go2_mapping/goal_pose_relay.py -> /home/unitree/SLAM/build/go2_mapping/build/lib/go2_mapping\n'}
+[3.862627] (go2_mapping) StdoutLine: {'line': b'copying go2_mapping/odom_to_tf.py -> /home/unitree/SLAM/build/go2_mapping/build/lib/go2_mapping\n'}
+[3.863413] (go2_mapping) StdoutLine: {'line': b'running build_scripts\n'}
+[3.864058] (go2_mapping) StdoutLine: {'line': b'copying and adjusting scripts/save_map.py -> /home/unitree/SLAM/build/go2_mapping/build/scripts-3.8\n'}
+[3.864407] (go2_mapping) StdoutLine: {'line': b'running install\n'}
+[3.874041] (go2_mapping) StdoutLine: {'line': b'running install_lib\n'}
+[3.911545] (-) TimerEvent: {}
+[3.913221] (go2_mapping) StdoutLine: {'line': b'byte-compiling /home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/rviz_click_logger.py to rviz_click_logger.cpython-38.pyc\n'}
+[3.915212] (go2_mapping) StdoutLine: {'line': b'byte-compiling /home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/goal_pose_relay.py to goal_pose_relay.cpython-38.pyc\n'}
+[3.918337] (go2_mapping) StdoutLine: {'line': b'byte-compiling /home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/odom_to_tf.py to odom_to_tf.cpython-38.pyc\n'}
+[3.921270] (go2_mapping) StdoutLine: {'line': b'running install_data\n'}
+[3.954425] (go2_mapping) StdoutLine: {'line': b'copying resource/go2_mapping -> /home/unitree/SLAM/install/go2_mapping/share/ament_index/resource_index/packages\n'}
+[3.955051] (go2_mapping) StdoutLine: {'line': b'copying package.xml -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping\n'}
+[3.955443] (go2_mapping) StdoutLine: {'line': b'copying launch/go2_navigation.launch.py -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/launch\n'}
+[3.955780] (go2_mapping) StdoutLine: {'line': b'copying launch/go2_mapping.launch.py -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/launch\n'}
+[3.956421] (go2_mapping) StdoutLine: {'line': b'copying launch/go2_bridge.launch.py -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/launch\n'}
+[3.957233] (go2_mapping) StdoutLine: {'line': b'copying config/go2_nav2_params.yaml -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/config\n'}
+[3.957539] (go2_mapping) StdoutLine: {'line': b'copying config/pointcloud_to_laserscan.yaml -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/config\n'}
+[3.957810] (go2_mapping) StdoutLine: {'line': b'copying config/slam_params.yaml -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/config\n'}
+[3.958259] (go2_mapping) StdoutLine: {'line': b'copying config/slam_params_go2.yaml -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/config\n'}
+[3.958593] (go2_mapping) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.991195] (go2_mapping) StdoutLine: {'line': b"removing '/home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2_mapping-1.0.0-py3.8.egg-info' (and everything under it)\n"}
+[3.991837] (go2_mapping) StdoutLine: {'line': b'Copying ../../build/go2_mapping/go2_mapping.egg-info to /home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2_mapping-1.0.0-py3.8.egg-info\n'}
+[3.993682] (go2_mapping) StdoutLine: {'line': b'running install_scripts\n'}
+[4.011671] (-) TimerEvent: {}
+[4.025837] (go2_mapping) StdoutLine: {'line': b'copying /home/unitree/SLAM/build/go2_mapping/build/scripts-3.8/save_map.py -> /home/unitree/SLAM/install/go2_mapping/lib/go2_mapping\n'}
+[4.026636] (go2_mapping) StdoutLine: {'line': b'changing mode of /home/unitree/SLAM/install/go2_mapping/lib/go2_mapping/save_map.py to 775\n'}
+[4.040891] (go2_mapping) StdoutLine: {'line': b'Installing goal_pose_relay script to /home/unitree/SLAM/install/go2_mapping/lib/go2_mapping\n'}
+[4.041496] (go2_mapping) StdoutLine: {'line': b'Installing odom_to_tf script to /home/unitree/SLAM/install/go2_mapping/lib/go2_mapping\n'}
+[4.041749] (go2_mapping) StdoutLine: {'line': b'Installing rviz_click_logger script to /home/unitree/SLAM/install/go2_mapping/lib/go2_mapping\n'}
+[4.042428] (go2_mapping) StdoutLine: {'line': b"writing list of installed files to '/home/unitree/SLAM/build/go2_mapping/install.log'\n"}
+[4.042933] (go2_mapping) StderrLine: {'line': b"/home/unitree/.local/lib/python3.8/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'\n"}
+[4.043120] (go2_mapping) StderrLine: {'line': b'  warnings.warn(msg)\n'}
+[4.043243] (go2_mapping) StderrLine: {'line': b'/home/unitree/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.\n'}
+[4.043355] (go2_mapping) StderrLine: {'line': b'!!\n'}
+[4.043459] (go2_mapping) StderrLine: {'line': b'\n'}
+[4.043560] (go2_mapping) StderrLine: {'line': b'        ********************************************************************************\n'}
+[4.043662] (go2_mapping) StderrLine: {'line': b'        Please avoid running ``setup.py`` directly.\n'}
+[4.043763] (go2_mapping) StderrLine: {'line': b'        Instead, use pypa/build, pypa/installer or other\n'}
+[4.043864] (go2_mapping) StderrLine: {'line': b'        standards-based tools.\n'}
+[4.043961] (go2_mapping) StderrLine: {'line': b'\n'}
+[4.044058] (go2_mapping) StderrLine: {'line': b'        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.\n'}
+[4.044153] (go2_mapping) StderrLine: {'line': b'        ********************************************************************************\n'}
+[4.044247] (go2_mapping) StderrLine: {'line': b'\n'}
+[4.044338] (go2_mapping) StderrLine: {'line': b'!!\n'}
+[4.044430] (go2_mapping) StderrLine: {'line': b'  self.initialize_options()\n'}
+[4.112049] (-) TimerEvent: {}
+[4.113229] (go2_mapping) CommandEnded: {'returncode': 0}
+[4.211283] (go2_mapping) JobEnded: {'identifier': 'go2_mapping', 'rc': 0}
+[4.212527] (-) TimerEvent: {}
+[4.212610] (-) EventReactorShutdown: {}

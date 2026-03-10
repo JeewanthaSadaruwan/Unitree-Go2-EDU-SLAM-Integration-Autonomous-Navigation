@@ -1,1 +1,0 @@
-/home/unitree/SLAM/src/go2_mapping/setup.py

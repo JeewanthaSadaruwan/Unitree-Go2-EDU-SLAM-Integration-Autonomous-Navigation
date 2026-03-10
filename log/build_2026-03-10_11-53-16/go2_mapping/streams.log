@@ -1,0 +1,90 @@
+[1.930s] Invoking command in '/home/unitree/SLAM/build/go2_mapping': PYTHONPATH=/home/unitree/SLAM/build/go2_mapping/prefix_override:/home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/unitree/SLAM/build/go2_mapping/build
+[2.498s] running develop
+[2.895s] Removing /home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2-mapping.egg-link (link to .)
+[2.895s] /home/unitree/.local/lib/python3.8/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[2.896s]   warnings.warn(msg)
+[2.896s] /home/unitree/.local/lib/python3.8/site-packages/setuptools/command/develop.py:41: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[2.896s] !!
+[2.896s] 
+[2.896s]         ********************************************************************************
+[2.896s]         Please avoid running ``setup.py`` and ``easy_install``.
+[2.896s]         Instead, use pypa/build, pypa/installer or other
+[2.896s]         standards-based tools.
+[2.896s] 
+[2.897s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[2.897s]         ********************************************************************************
+[2.897s] 
+[2.897s] !!
+[2.897s]   easy_install.initialize_options(self)
+[2.897s] /home/unitree/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[2.897s] !!
+[2.897s] 
+[2.897s]         ********************************************************************************
+[2.897s]         Please avoid running ``setup.py`` directly.
+[2.898s]         Instead, use pypa/build, pypa/installer or other
+[2.898s]         standards-based tools.
+[2.898s] 
+[2.898s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[2.898s]         ********************************************************************************
+[2.898s] 
+[2.898s] !!
+[2.898s]   self.initialize_options()
+[2.898s] Note: you must uninstall or replace scripts manually!
+[2.983s] Invoked command in '/home/unitree/SLAM/build/go2_mapping' returned '0': PYTHONPATH=/home/unitree/SLAM/build/go2_mapping/prefix_override:/home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/unitree/SLAM/build/go2_mapping/build
+[2.985s] Invoking command in '/home/unitree/SLAM/src/go2_mapping': PYTHONPATH=/home/unitree/SLAM/build/go2_mapping/prefix_override:/home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/go2_mapping build --build-base /home/unitree/SLAM/build/go2_mapping/build install --record /home/unitree/SLAM/build/go2_mapping/install.log --single-version-externally-managed
+[3.482s] running egg_info
+[3.522s] writing ../../build/go2_mapping/go2_mapping.egg-info/PKG-INFO
+[3.525s] writing dependency_links to ../../build/go2_mapping/go2_mapping.egg-info/dependency_links.txt
+[3.526s] writing entry points to ../../build/go2_mapping/go2_mapping.egg-info/entry_points.txt
+[3.526s] writing requirements to ../../build/go2_mapping/go2_mapping.egg-info/requires.txt
+[3.526s] writing top-level names to ../../build/go2_mapping/go2_mapping.egg-info/top_level.txt
+[3.855s] reading manifest file '../../build/go2_mapping/go2_mapping.egg-info/SOURCES.txt'
+[3.858s] writing manifest file '../../build/go2_mapping/go2_mapping.egg-info/SOURCES.txt'
+[3.859s] running build
+[3.859s] running build_py
+[3.859s] copying go2_mapping/rviz_click_logger.py -> /home/unitree/SLAM/build/go2_mapping/build/lib/go2_mapping
+[3.860s] copying go2_mapping/goal_pose_relay.py -> /home/unitree/SLAM/build/go2_mapping/build/lib/go2_mapping
+[3.861s] copying go2_mapping/odom_to_tf.py -> /home/unitree/SLAM/build/go2_mapping/build/lib/go2_mapping
+[3.862s] running build_scripts
+[3.862s] copying and adjusting scripts/save_map.py -> /home/unitree/SLAM/build/go2_mapping/build/scripts-3.8
+[3.863s] running install
+[3.873s] running install_lib
+[3.912s] byte-compiling /home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/rviz_click_logger.py to rviz_click_logger.cpython-38.pyc
+[3.914s] byte-compiling /home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/goal_pose_relay.py to goal_pose_relay.cpython-38.pyc
+[3.917s] byte-compiling /home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2_mapping/odom_to_tf.py to odom_to_tf.cpython-38.pyc
+[3.920s] running install_data
+[3.953s] copying resource/go2_mapping -> /home/unitree/SLAM/install/go2_mapping/share/ament_index/resource_index/packages
+[3.954s] copying package.xml -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping
+[3.954s] copying launch/go2_navigation.launch.py -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/launch
+[3.954s] copying launch/go2_mapping.launch.py -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/launch
+[3.955s] copying launch/go2_bridge.launch.py -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/launch
+[3.956s] copying config/go2_nav2_params.yaml -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/config
+[3.956s] copying config/pointcloud_to_laserscan.yaml -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/config
+[3.956s] copying config/slam_params.yaml -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/config
+[3.957s] copying config/slam_params_go2.yaml -> /home/unitree/SLAM/install/go2_mapping/share/go2_mapping/config
+[3.957s] running install_egg_info
+[3.990s] removing '/home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2_mapping-1.0.0-py3.8.egg-info' (and everything under it)
+[3.990s] Copying ../../build/go2_mapping/go2_mapping.egg-info to /home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages/go2_mapping-1.0.0-py3.8.egg-info
+[3.992s] running install_scripts
+[4.024s] copying /home/unitree/SLAM/build/go2_mapping/build/scripts-3.8/save_map.py -> /home/unitree/SLAM/install/go2_mapping/lib/go2_mapping
+[4.025s] changing mode of /home/unitree/SLAM/install/go2_mapping/lib/go2_mapping/save_map.py to 775
+[4.040s] Installing goal_pose_relay script to /home/unitree/SLAM/install/go2_mapping/lib/go2_mapping
+[4.040s] Installing odom_to_tf script to /home/unitree/SLAM/install/go2_mapping/lib/go2_mapping
+[4.040s] Installing rviz_click_logger script to /home/unitree/SLAM/install/go2_mapping/lib/go2_mapping
+[4.041s] writing list of installed files to '/home/unitree/SLAM/build/go2_mapping/install.log'
+[4.041s] /home/unitree/.local/lib/python3.8/site-packages/setuptools/_distutils/dist.py:261: UserWarning: Unknown distribution option: 'tests_require'
+[4.041s]   warnings.warn(msg)
+[4.042s] /home/unitree/.local/lib/python3.8/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[4.042s] !!
+[4.042s] 
+[4.042s]         ********************************************************************************
+[4.042s]         Please avoid running ``setup.py`` directly.
+[4.042s]         Instead, use pypa/build, pypa/installer or other
+[4.042s]         standards-based tools.
+[4.042s] 
+[4.042s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[4.043s]         ********************************************************************************
+[4.043s] 
+[4.043s] !!
+[4.043s]   self.initialize_options()
+[4.112s] Invoked command in '/home/unitree/SLAM/src/go2_mapping' returned '0': PYTHONPATH=/home/unitree/SLAM/build/go2_mapping/prefix_override:/home/unitree/SLAM/install/go2_mapping/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/go2_mapping build --build-base /home/unitree/SLAM/build/go2_mapping/build install --record /home/unitree/SLAM/build/go2_mapping/install.log --single-version-externally-managed

@@ -3,22 +3,35 @@
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.conditions import IfCondition
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, Command
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node, LifecycleNode
 from ament_index_python.packages import get_package_share_directory
 import os
+import shutil
 
 
 def generate_launch_description():
     workspace_root = os.path.expanduser('~/SLAM')
 
-    # Path to URDF file
-    urdf_file = os.path.join(workspace_root, 'GO2_URDF', 'urdf', 'go2_description.urdf')
-    
-    # Read URDF file
-    with open(urdf_file, 'r') as f:
-        robot_description = f.read()
+    # Prefer the same robot model used by SLAM startup (robot_VLP.xacro).
+    # Fallback to local GO2_URDF if go2_description/xacro is unavailable.
+    use_robot_vlp = False
+    robot_vlp_xacro = None
+    try:
+        go2_desc_share = get_package_share_directory('go2_description')
+        robot_vlp_xacro = os.path.join(go2_desc_share, 'xacro', 'robot_VLP.xacro')
+        if os.path.exists(robot_vlp_xacro) and shutil.which('xacro'):
+            use_robot_vlp = True
+    except Exception:
+        use_robot_vlp = False
+
+    if use_robot_vlp:
+        robot_description = Command(['xacro', ' ', robot_vlp_xacro])
+    else:
+        urdf_file = os.path.join(workspace_root, 'GO2_URDF', 'urdf', 'go2_description.urdf')
+        with open(urdf_file, 'r') as f:
+            robot_description = f.read()
     # Declare launch arguments
     map_yaml_arg = DeclareLaunchArgument(
         'map_yaml',
@@ -115,17 +128,27 @@ def generate_launch_description():
         parameters=[{'use_sim_time': use_sim_time}]
     )
     
-    # Static TF: base_link -> hesai_lidar
-    static_tf_hesai = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='static_tf_base_link_to_hesai',
-        arguments=['0.15', '0', '0.12', '0', '0', '0', 'base_link', 'hesai_lidar'],
-        output='screen'
-    )
+    if use_robot_vlp:
+        # robot_VLP includes base_link -> velodyne
+        static_tf_primary = Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='static_tf_velodyne_to_hesai',
+            arguments=['0', '0', '0', '0', '0', '0', 'velodyne', 'hesai_lidar'],
+            output='screen'
+        )
+    else:
+        static_tf_primary = Node(
+            package='tf2_ros',
+            executable='static_transform_publisher',
+            name='static_tf_base_link_to_hesai',
+            arguments=['0.15', '0', '0.12', '0', '0', '0', 'base_link', 'hesai_lidar'],
+            output='screen'
+        )
 
-    # Static TF: base_link -> base (URDF root link alignment)
-    static_tf_base = Node(
+    # Keep legacy frame compatibility: many URDFs/rviz setups use 'base' as root.
+    # This is harmless even when the active model does not require it.
+    static_tf_base_link_to_base = Node(
         package='tf2_ros',
         executable='static_transform_publisher',
         name='static_tf_base_link_to_base',
@@ -219,7 +242,7 @@ def generate_launch_description():
         }.items()
     )
 
-    return LaunchDescription([
+    launch_actions = [
         # Declare arguments
         map_yaml_arg,
         use_sim_time_arg,
@@ -231,20 +254,25 @@ def generate_launch_description():
         scan_topic_arg,
         cloud_topic_arg,
         enable_goal_pose_relay_arg,
-        
+
         # Base nodes (TF & Sensors)
         robot_state_publisher_node,
         odom_to_tf_node,
-        static_tf_base,
-        static_tf_hesai,
+        static_tf_primary,
+        static_tf_base_link_to_base,
+    ]
+
+    launch_actions.extend([
         pointcloud_to_laserscan_node,
         goal_pose_relay_node,
-        
+
         # Navigation nodes
         map_server_node,
         amcl_node,
         localization_lifecycle_manager,
-        
+
         # Nav2
         nav2_bringup_launch,
     ])
+
+    return LaunchDescription(launch_actions)

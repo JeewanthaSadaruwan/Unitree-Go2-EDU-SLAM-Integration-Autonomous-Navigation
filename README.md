@@ -21,6 +21,7 @@ cd ~/SLAM
 ## Personal Computer
 
 Laptop relay should connect to robot's IP:
+[note : use the file go2_rosbridge_rvirelay.py]
 ```bash
 source /opt/ros/foxy/setup.bash
 export PYENV_VERSION=system
@@ -75,55 +76,47 @@ source ~/SLAM/install/setup.bash
 ```
 
 ```bash
-source /opt/ros/foxy/setup.bash
-source ~/SLAM/xt16_ws/install/setup.bash
-ros2 launch hesai_ros_driver start.py
-```
-
-```bash
-systemctl --user status go2-cmdvel-bridge.service
-```
-
-```bash
-cd ~/SLAM
-# If service is active (running), do NOT run ./start_bridge.sh
-# If service is inactive, run bridge manually:
-./start_bridge.sh
-```
-
-```bash
-# Optional: stop service first, then run bridge manually
-systemctl --user stop go2-cmdvel-bridge.service
-cd ~/SLAM
-source /opt/ros/foxy/setup.bash
-source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
-source ~/go2_bringup_ws/install/setup.bash
-source ~/SLAM/install/setup.bash
-ros2 launch go2_mapping go2_bridge.launch.py
-
-```
-
-```bash
 cd ~/SLAM
 ./start_navigation.sh /home/unitree/SLAM/maps/floor10.yaml
 ```
 
+`start_navigation.sh` now auto-starts:
+- Hesai driver (if `hesai_ros_driver` is available)
+- `lowstate_to_joint_states.py` for full leg TF tree
+- cmd_vel bridge (unless `go2-cmdvel-bridge.service` is already active)
+- Nav2 launch stack
+
+So you do not need to run `./start_bridge.sh` separately for normal navigation startup.
+
+If you need laptop relay / voice navigation via rosbridge, run this in another terminal:
 ```bash
-# Joint states (run in another terminal)
-export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
-export CYCLONEDDS_URI='<CycloneDDS><Domain><General><Interfaces><NetworkInterface name="eth0"/></Interfaces></General></Domain></CycloneDDS>'
-source /opt/ros/foxy/setup.bash
-source ~/unitree_ros2/cyclonedds_ws/install/setup.bash
-/usr/bin/python3.8 ~/SLAM/noneed/lowstate_to_joint_states_nav.py
+cd ~/SLAM
+./start_rosbridge.sh
+```
+
+Optional check:
+```bash
+systemctl --user status go2-cmdvel-bridge.service
 ```
 
 ## Personal Computer
+
+Terminal A --> Run rosbridge with nav2 configuration
+```bash
+source /opt/ros/foxy/setup.bash
+python3 /home/sahas/Documents/github/RAI_examples/go2_rosbridge_rviz_relay.py \
+  --rosbridge-url ws://10.224.44.104:9090 \
+  --prefix '' \
+  --nav-minimal \
+  --enable-nav2-action-proxy
+```
+Terminal B --> run rviz2 in nav2 default configuration
+
 ```bash
 source /opt/ros/foxy/setup.bash
 rviz2 -d /opt/ros/foxy/share/nav2_bringup/rviz/nav2_default_view.rviz
 ```
 
-rviz2 -d /home/wso2-robotics/Desktop/rviz/go2_slam_visualization.rviz
 
 ## Read XYZ and Yaw from RViz Clicks
 ```bash
