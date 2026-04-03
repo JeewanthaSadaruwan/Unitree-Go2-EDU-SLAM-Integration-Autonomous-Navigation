@@ -51,7 +51,7 @@ rviz2 -d <path_to_the_saved_file>/rviz/go2_slam_visualization.rviz
 ## Robot
 ```bash
 cd ~/SLAM
-./save_current_map.sh floor15_2
+./save_current_map.sh floor15_3
 ```
 
 ```bash
@@ -77,7 +77,7 @@ source ~/SLAM/install/setup.bash
 
 ```bash
 cd ~/SLAM
-./start_navigation.sh /home/unitree/SLAM/maps/floor10.yaml
+./start_navigation.sh /home/unitree/SLAM/maps/floor15_3.yaml
 ```
 
 `start_navigation.sh` now auto-starts:

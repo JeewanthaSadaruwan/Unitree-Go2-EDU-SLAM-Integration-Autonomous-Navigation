@@ -89,7 +89,7 @@ controller_server:
 
     min_x_velocity_threshold: 0.001
     min_y_velocity_threshold: 0.001
-    min_theta_velocity_threshold: 0.001
+    min_theta_velocity_threshold: 0.05
 
     progress_checker_plugin: "progress_checker"
     goal_checker_plugins: ["goal_checker"]
@@ -98,15 +98,15 @@ controller_server:
     # More forgiving stuck detection (reduces false recoveries while rotating/re-aligning)
     progress_checker:
       plugin: "nav2_controller::SimpleProgressChecker"
-      required_movement_radius: 0.25
-      movement_time_allowance: 15.0
+      required_movement_radius: 0.03
+      movement_time_allowance: 40.0
 
     # Near-goal is acceptable (reduces final twitching)
     goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"
       xy_goal_tolerance: 0.45
-      yaw_goal_tolerance: 0.60
-      stateful: true
+      yaw_goal_tolerance: 0.35
+      stateful: false
 
     FollowPath:
       plugin: "dwb_core::DWBLocalPlanner"
@@ -114,13 +114,13 @@ controller_server:
 
       # Velocity limits (conservative for stability)
       min_vel_x: 0.0
-      max_vel_x: 0.25
+      max_vel_x: 0.8
       min_vel_y: 0.0
       max_vel_y: 0.0
-      max_vel_theta: 0.7          # slightly reduced to reduce aggressive spinning
-      min_speed_xy: 0.0
-      max_speed_xy: 0.25
-      min_speed_theta: 0.0
+      max_vel_theta: 0.9
+      min_speed_xy: 0.25
+      max_speed_xy: 0.5
+      min_speed_theta: 0.28
 
       # Acceleration limits
       acc_lim_x: 0.8
@@ -133,7 +133,7 @@ controller_server:
       # Trajectory sampling
       vx_samples: 20
       vy_samples: 1
-      vtheta_samples: 16          # reduced from 20 to reduce twitchiness + CPU
+      vtheta_samples: 24
       sim_time: 1.3               # slightly shorter simulation horizon
 
       # Sampling resolution
@@ -142,7 +142,7 @@ controller_server:
 
       transform_tolerance: 0.2
       xy_goal_tolerance: 0.45
-      trans_stopped_velocity: 0.05
+      trans_stopped_velocity: 0.03
       short_circuit_trajectory_evaluation: true
 
       critics:
@@ -160,8 +160,8 @@ controller_server:
       GoalAlign.scale: 16.0
       PathDist.scale: 28.0
       GoalDist.scale: 24.0
-      RotateToGoal.scale: 20.0
-      RotateToGoal.slowing_factor: 6.0
+      RotateToGoal.scale: 24.0
+      RotateToGoal.slowing_factor: 3.0
       RotateToGoal.lookahead_time: -1.0
 
 # ============================================================================
